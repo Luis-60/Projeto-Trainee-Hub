@@ -1,0 +1,49 @@
+.rodape{
+    background-color: #4D83AA;
+    color: white;
+    height: auto;
+    width:100%;
+    font-size: 16px;
+    font-family: "Inter", serif;
+}
+
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+
+.rodape p{
+    margin-bottom: 5px;
+}
+
+.rodape > div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    align-items: stretch;
+    padding: 0px 0px 20px;
+}
+
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4 {
+    display: flex;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box; /* Adiciona isso */
+    flex-direction: column;
+}
+
+
+.rodape span{
+    font-size: 30px;
+    color: white;
+    font-family: "JetBrains Mono", serif
+}
+
+.rodape-direitos{
+    width: 100%;
+    background-color: #346385;
+    margin: 0px;
+    text-align: center;
+}
