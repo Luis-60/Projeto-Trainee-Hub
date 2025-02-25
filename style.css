@@ -1,66 +1,40 @@
-.rodape{
-    background-color: #4D83AA;
-    color: white;
-    height: auto;
-    width:100%;
-    font-size: 16px;
-    font-family: "Inter", serif;
-}
 
-.rodape a{
-    text-decoration: none;
-    color: white;
-}
 
-.rodape p{
-    margin-bottom: 5px;
-}
-
-.rodape > div{
-    display: flex;
-    flex-wrap: wrap;
+.rodape {
     width: 100%;
-    justify-content: center;
-    margin: auto;
-    align-items: stretch;
-}
-
-.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4 {
     display: flex;
-    width: 350px;
-    padding: 20px;
-    box-sizing: border-box; /* Adiciona isso */
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.rodape span{
-    font-size: 30px;
-    color: white;
-    font-family: "JetBrains Mono", serif
-}
-
+/* Rodapé Direitos */
 .rodape-direitos {
     width: 100%;
+    padding: 10px 50px;
+    color: white;
+    font-family: "JetBrains Mono", serif;
     background-color: #346385;
-    padding: 10px 20px; /* Adiciona um espaço nas laterais */
-    margin: 0px;
-    text-align: center;
-    display: flex; /* Ativa flexbox */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: center; /* Alinha verticalmente */
+    display: flex;
+    align-items: center; /* Alinha os elementos verticalmente */
+    justify-content: space-between; /* Mantém espaçamento uniforme */
+    box-sizing: border-box;
 }
 
-/* Ajustes no logo */
+
 #logo-rodape {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 100px; 
     height: auto;
 }
 
-/* Remove sublinhado e adiciona espaçamento para Privacy Policy */
+/* Privacy Policy */
 .rodape-direitos a {
     text-decoration: none;
     color: white;
     font-size: 14px;
     font-weight: bold;
+}
+
+a:hover {
+    color: #a2c4db;
 }
