@@ -70,13 +70,6 @@ body {
     display: flex;
 }
 
-/* HISTÓRICO DE TREINAMENTOS */
-.container-historico {
-    max-width: 700px;  /* Ajuste a largura conforme necessário */
-    height: 350px;
-    overflow: hidden;
-}
-
 #myCarousel {
     width: 100%;
     height: 100%;
@@ -119,21 +112,34 @@ body {
 .container-main {
     display: grid; /* Define o layout como Grid */
     grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
-    gap: 20px; /* Espaço entre as colunas */
+    grid-template-rows: auto auto;
+    gap: 40px; /* Espaço entre as colunas */
     margin-left: 160px; /* Ajuste conforme necessário */
     margin-top: 50px; /* Ajuste conforme necessário */
+    margin-right: 160px;
+}
+
+
+/* HISTÓRICO DE TREINAMENTOS */
+.container-historico {
+    max-width: 600px;  /* Ajuste a largura conforme necessário */
+    height: 350px;
+    overflow: hidden;
+    grid-row: 1 /2;
+    grid-column: 1 / 2;
 }
 /*TREINAMENTOS EM ANDAMENTO*/
-.container-andamento{
-    margin-top: 80px;
-    margin-left: 160px;
+.container-andamento {
     margin-bottom: 90px;
-    display: grid;
-    height: 400px;
-    width: 700px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 40px;
+    display: grid;
+    height: 400px;
+    width: 600px;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para os treinamentos */
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    gap: 60px;
 }
 
 .treinamento1, .treinamento2, .treinamento3, .treinamento4 {
@@ -148,25 +154,37 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    max-width: 400px;  /* Ajuste a largura conforme necessário */
+    max-width: 270px;  /* Ajuste a largura conforme necessário */
     height: 350px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
-.treinamento-p1, .treinamento-p2, 
-.treinamento-f1, .treinamento-f2{
+.treinamento-p1, .treinamento-p2{
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
-    border: 1px solido #ccc
+    border: 1px solid #ccc
 }
 
 /*TREINAMENTOS FUTUROS*/
-.container-futuros {
+.container-futuro {
     display: grid;
     grid-template-columns: 1fr;
+    margin-right: 60px;
     gap: 40px;
     max-width: 400px;
-    height: auto;
+    height: 400px;
+    grid-column: 2 / 3; /* Segunda coluna */
+    grid-row: 2 / 3;  
+}
+.treinamento-f1, .treinamento-f2{
+    background-color: #f0f0f0;
+    height: 170px;
+    width: 270px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc
 }
 
 /*RODAPÉ*/
