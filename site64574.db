@@ -1,0 +1,80 @@
+CREATE TABLE Setor (
+    idSetor INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(50)
+)
+
+CREATE TABLE Tipo (
+    idTipo INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(50)
+)
+
+CREATE TABLE Documento (
+    idDocumento INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(240)
+)
+
+CREATE TABLE Aula (
+    idAula INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(120),
+    Descricao (500),
+    FOREIGN KEY (idDocumento) REFERENCES Documento(IdDocumento)
+)
+
+CREATE TABLE Modulos (
+    idModulos INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(120),
+    Descricao VARCHAR(500),
+    Sequencia INTEGER,
+    FOREIGN KEY (idAula) REFERENCES Aula(idAula)
+)
+
+CREATE TABLE Usuarios (
+    idUsuarios INT IDENTITY(1,1) PRIMARY KEY,
+    Email VARCHAR(100),
+    Matricula VARCHAR(50),
+    Senha VARCHAR(50),
+    Cargo VARCHAR(50),
+    Idade INTEGER,
+    Imagem VARCHAR(100),
+    QtdTreinamentos INTEGER,
+    FOREIGN KEY (idSetor) REFERENCES Setor(idSetor),
+    FOREIGN KEY (idTipo) REFERENCES Tipo(idTipo),
+)
+
+CREATE TABLE Empresa (
+    idEmpresa INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(50),
+    Logo VARCHAR(50),
+    Descricao VARCHAR(500),
+    Email VARCHAR(100),
+    Telefone VARCHAR(20),
+    Codigo VARCHAR(20),
+    FOREIGN KEY (idUsuarios) REFERENCES Usuarios(idUsuarios)
+
+)
+CREATE TABLE Treinamentos (
+    idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(50),
+    Descricao VARCHAR(500),
+    Imagem VARCHAR(100),
+    DataInicio DATETIME,
+    DataFim DATETIME,
+    Instrutor VARCHAR(240),
+    Duracao INTEGER,
+    Entidades VARCHAR(240),
+    FOREIGN KEY (idModulos) REFERENCES Modulos(idModulos),
+    FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
+)
+
+Usuarios_Treinamentos (
+    idTreinamentos INT,
+    idUsuarios INT,
+    Avaliacao FLOAT,
+    DataInicio DATETIME,
+    DataTermino DATETIME,
+    StatusTreinamento VARCHAR(50),
+    Progresso FLOAT,
+    PRIMARY KEY(idUsuarios, idTreinamentos),
+    FOREIGN KEY (idUsuarios) REFERENCES Usuarios(idUsuarios),
+    FOREIGN KEY (idTreinamentos) REFERENCES Treinamentos(idTreinamentos)
+)

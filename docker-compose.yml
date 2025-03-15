@@ -1,0 +1,39 @@
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql_server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Password123
+    ports:
+      - "1433:1433"  # Porta de comunicação do SQL Server
+    networks:
+      - sqlnet
+    volumes:
+      - mssql_data:/var/opt/mssql  # Persistir dados
+
+  dotnet_app:
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    container_name: dotnet_app
+    working_dir: /app
+    volumes:
+      - ./app:/app  # Diretório local da aplicação .NET
+    command: >
+      bash -c "dotnet build && dotnet run"
+    depends_on:
+      - mssql  # Garantir que o SQL Server esteja ativo primeiro
+    networks:
+      - sqlnet
+    ports:
+      - "5000:5000"  # Porta da aplicação .NET
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=mssql;Database=master;User Id=sa;Password=YourStrong!Password123;
+
+networks:
+  sqlnet:
+    driver: bridge
+
+volumes:
+  mssql_data:
+    driver: local
