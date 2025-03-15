@@ -8,6 +8,12 @@ CREATE TABLE Tipo (
     Nome VARCHAR(50)
 )
 
+INSERT INTO Tipo 
+VALUES ('Usuario'),
+('Administrador'),
+('Gestor'),
+('Encarregados');
+
 CREATE TABLE Documento (
     idDocumento INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(240)
@@ -78,3 +84,4 @@ Usuarios_Treinamentos (
     FOREIGN KEY (idUsuarios) REFERENCES Usuarios(idUsuarios),
     FOREIGN KEY (idTreinamentos) REFERENCES Treinamentos(idTreinamentos)
 )
+

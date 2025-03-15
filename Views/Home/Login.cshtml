@@ -1,7 +1,14 @@
 @{
     ViewData["Title"] = "Login";
 }
-
+<style>
+    header{display: display;}
+    .headerbar-conteudo{display: none;}
+    body {
+        background-color: #4D83AA; /* Cor padrão */
+    }
+    
+</style>
 
 <div id="Login_Tela" class="tela-de-login">
     <h2>LOGIN</h2>
@@ -17,13 +24,16 @@
 
     <div class="lembrar-esqueci">
         <label>
-            <input type="checkbox"> Lembrar de mim
+            <input type="checkbox" class="lembrar-esqueci"> Lembrar de mim
         </label>
         <a href="#">Esqueceu sua senha?</a>
     </div>
-    <form action="#" method="post">
+    <form action="/Home/Index" method="post">
     <div class="enviar-formulario">  
-        <button for="enviar">ENTRAR</button>
+        <a asp-area="" asp-controller="Home" asp-action="Index">
+            <button for="enviar">ENTRAR</button>
+        </a>
+        
     </div>
     </form>  
     <p class="solicitar-acesso">Não tem acesso? <a href="#">Solicite</a></p>
@@ -31,13 +41,13 @@
 <div class="logo-empresas">
 
     <div class="LogoEMPRESA">
-        <img src="LOGO EMPRESA.png">
+        <img src="~/images/LOGO EMPRESA.png">
     </div>
 
     <div class="RetanguloDIVISOR"></div>
 
     <div class="LogoTRAINEE">
-        <img src="TraineeHUBLOGO.png">
+        <img src="~/images/TraineeHUBLOGO.png">
     </div>
     
 </div>
