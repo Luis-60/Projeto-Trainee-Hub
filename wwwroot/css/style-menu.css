@@ -1,0 +1,347 @@
+/*CARROSSEL*/
+
+.conteudo #myCarousel {
+    width: 100%;
+    height: 480px;
+}
+
+.conteudo #myCarousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo #myCarousel .carousel-inner .item {
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo #myCarousel .carousel-inner .item img {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: 100%; /* Faz a imagem ocupar toda a altura */
+    object-fit: cover; /* Faz a imagem preencher sem distorcer */
+    display: block; /* Evita espaços extras ao redor da imagem */
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.conteudo #myCarousel .carousel-caption h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px; /* Ajuste o tamanho */
+    font-weight: 600; /* Deixe mais grosso ou fino */
+    color: #fff; /* Cor do texto */
+}
+.conteudo #myCarousel .carousel-inner .item img:hover{
+    transform: scale(1.1)
+}
+
+.conteudo #myCarousel .carousel-caption h3:hover ~ .item img{
+    transform: scale(1.1); /* Aumenta a imagem quando passar o mouse no h3 */
+    transition: transform 0.3s ease-in-out; /* Suaviza a animação */
+}
+/*CONTAINER MAIN*/
+.container-main {
+    display: grid; /* Define o layout como Grid */
+    grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
+    grid-template-rows: auto;
+    gap: 20px; /* Espaço entre as colunas */
+    margin: 0 auto;
+    margin-left: 160px; /* Ajuste conforme necessário */
+    margin-top: 70px; /* Ajuste conforme necessário */
+    margin-right: 160px;
+}
+
+/* HISTÓRICO DE TREINAMENTOS */
+.container-historico {
+    width: 800px;  /* Ajuste a largura conforme necessário */
+    height: 520px;
+    overflow: hidden;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    overflow: hidden;
+}
+
+/*TREINAMENTOS EM ANDAMENTO*/
+.container-andamento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    display: grid;
+    width: 900px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.bloco_treinamento-andamento{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    
+}
+.list-andamento{
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+.list-andamento img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.moldura{
+    width:400px;
+    height: 130px;
+    
+}
+.list-andamento a{
+    text-decoration: none;
+    color: #0A2D46;
+}
+
+.list-andamento a:hover{
+    text-decoration: none;
+    color: #0A2D46;
+}
+
+.list-andamento .card-date{
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Inter", bold;
+    color: rgb(100, 100, 100);
+}
+
+.list-andamento:hover img{
+    filter: brightness(50%); /* Reduz o brilho da imagem no hover */
+}
+
+.list-andamento .card-title{
+    padding: 20px;
+    font-size: 36px;
+    font-family: "Inter", bold;
+    color: #0A2D46;
+}
+
+/*PROGRESS BAR TREINAMENTO EM ANDAMENTO*/
+
+.progressbar{
+    position: relative;
+    width: 100%;
+    height:10px;
+    background-color: #4d83a9;
+}
+
+.progressbar span{
+    position: absolute;
+    height: 10px;
+    color: rgb(0, 0, 0);
+    background: #0A2D46;
+}
+/*TREINAMENTOS PENDENTES*/
+.container-pendentes {
+    position: relative;
+    display: grid;
+    align-self: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 270px;  /* Ajuste a largura conforme necessário */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.list-pendentes .card-title{
+    font-family: "Inter", bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4D83AA;
+    z-index: 30;
+}
+
+.list-pendentes .card-date{
+    font-family: "Inter", bold;
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+    z-index: 30;
+}
+
+.list-pendentes img{
+    height: 200px;
+}
+
+.list-pendentes{
+    border-bottom: 1px solid #7B7B7B;
+    margin-bottom: 10px;
+}
+
+.moldura-pendentes{
+    width: 300px;
+    height: 160px;
+}
+
+.moldura-pendentes img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.moldura-pendentes:hover img{
+    filter: brightness(50%); /* Reduz o brilho da imagem no hover */
+}
+/*TREINAMENTOS FUTUROS*/
+.container-futuro {
+    max-height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-right: 60px;
+    gap: 40px;
+    max-width: 400px;
+    grid-column: 2 / 3; /* Segunda coluna */
+    grid-row: 2 / 3;  
+}
+
+.bloco_treinamento-futuro {
+    display: grid;
+    gap: 20px; /* Diminui o espaçamento entre os itens */
+}
+
+.list-futuro img{
+    height: 200px;
+}
+
+.list-futuro:last-child{
+    border-bottom: none;
+}
+.list-futuro .card-title{
+    font-family: "Inter", bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4D83AA;
+}
+
+.list-futuro .card-date{
+    font-family: "Inter", bold;
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+}
+
+.list-futuro{
+    border-bottom: 1px solid #7B7B7B;
+}
+.moldura-futuro{
+    width: 300px;
+    height: 160px;
+}
+
+.moldura-futuro img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.moldura-futuro:hover img{
+    filter: brightness(50%); /* Reduz o brilho da imagem no hover */
+}
+
+/*TÍTULOS*/
+
+.andamento-title,
+.historico-title,
+.pendentes-title,
+.futuro-title {
+    position: relative; /* Mantém os títulos dentro do fluxo */
+    font-weight: 700;
+    font-family: "Inter", bold;
+    font-size: 24px;
+    color: #4D83AA;
+    margin-bottom: 20px; /* Garante espaçamento entre o título e o conteúdo */
+    margin-top: 0px;
+}
+
+.andamento-title{
+    margin-left: 15px;
+}
+
+/*MENU*/
+.off-screen-menu{
+    background-color: rgb(34, 37, 39);
+    height: 100vh;
+    width: 100%;
+    max-width: 220px;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3 ease;
+}
+
+.off-screen-menu.active{
+    left: 0;
+    z-index: 10;
+}
+
+.menu{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 11;
+    margin-top: 5px;
+}
+
+.menu span{
+    height: 5px;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease
+}
+
+.menu span:nth-child(1){
+    top: 25%
+}
+
+.menu span:nth-child(3){
+    top: 75%
+}
+
+.menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg)
+}
+
+.menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.menu h3{
+    left: 50px;
+    bottom: 9px;
+    position: relative;
+}

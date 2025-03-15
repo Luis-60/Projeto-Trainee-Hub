@@ -1,0 +1,39 @@
+body {
+    background-color: #E9E9E9;
+    font-family: "Mukta Vaani", sans-serif;
+}
+.Modulos {
+    display: grid;
+    width: 90%;
+    height: 190px;
+    border: 1px solid black;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 30px;
+    margin-left: 70px;
+}
+.Modulos .Botoes {
+    display: flex;
+    background-color: #4D83AA;
+    align-items: center;
+    justify-items: end;
+}
+.Modulos .selecionar {
+    background-color: #00ff00;
+    align-content: end;
+    justify-content: center;
+}
+.Botoes button {
+    background-color: #4D83AA;
+}
+.Botoes .excluir button {
+    background-color: #ff0000;
+}
+.Botoes .conteudo label {
+    color: #ffff;
+    text-align: center;
+}
+.Botoes .selecionar label {
+    color: #000;
+}
