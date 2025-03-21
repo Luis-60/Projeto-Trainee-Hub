@@ -1,3 +1,4 @@
+@model Usuarios
 @{
     ViewData["Title"] = "Login";
 }
@@ -12,29 +13,26 @@
 
 <div id="Login_Tela" class="tela-de-login">
     <h2>LOGIN</h2>
-    <form action="#" method="post">
-    <div class="informacoes">
-        <label for="matricula">Matrícula</label>
-        <input type="text" id="matricula" placeholder="">
-
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="">
-    </div>
+    <form asp-action="Login" asp-controller="Home" method="post">
+        <div class="informacoes">
+            <label asp-for="Matricula">Matrícula</label>
+            <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required>
+            
+            <label asp-for="Senha">Senha</label>
+            <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required>
+        </div>
     </form>
 
-    <div class="lembrar-esqueci">
-        <label>
-            <input type="checkbox" class="lembrar-esqueci"> Lembrar de mim
-        </label>
-        <a href="#">Esqueceu sua senha?</a>
-    </div>
-    <form action="/Home/Index" method="post">
-    <div class="enviar-formulario">  
-        <a asp-area="" asp-controller="Home" asp-action="Index">
+        <div class="lembrar-esqueci">
+            <label>
+                <input type="checkbox" class="lembrar-esqueci"> Lembrar de mim
+            </label>
+            <a href="#">Esqueceu sua senha?</a>
+        </div>
+    <form asp-action="Login" asp-controller="Home" method="post">
+        <div class="enviar-formulario">  
             <button for="enviar">ENTRAR</button>
-        </a>
-        
-    </div>
+        </div>
     </form>  
     <p class="solicitar-acesso">Não tem acesso? <a href="#">Solicite</a></p>
 </div>
