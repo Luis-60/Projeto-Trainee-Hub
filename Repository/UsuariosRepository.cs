@@ -21,10 +21,10 @@ namespace Projeto_Trainee_Hub.Repository
             return await _context.Usuarios.ToListAsync();
         }
 
-        public async Task<Usuarios?> LoginAsync(string matricula, string senha)
+        public Usuarios? ValidarUsuario(string matricula, string senha)
         {
-            return await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.Matricula == matricula && u.Senha == senha);
+            return _context.Usuarios
+                .FirstOrDefault(u => u.Matricula == matricula && u.Senha == senha);
         }
 
         public async Task<IEnumerable<Usuarios>> FindAsync(Expression<Func<Usuarios, bool>> predicate)

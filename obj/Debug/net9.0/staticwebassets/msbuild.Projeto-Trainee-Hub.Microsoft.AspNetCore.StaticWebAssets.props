@@ -36,6 +36,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-aula.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-aulas.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Projeto-Trainee-Hub</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
+      <RelativePath>css/style-aulas.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i9366fsrl2</Fingerprint>
+      <Integrity>BjjRLI2GgKxqJAs2+I5jXvmauvwXxZBy10tj0iuI16Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-aulas.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-login.css'))">
       <SourceType>Package</SourceType>
       <SourceId>Projeto-Trainee-Hub</SourceId>
@@ -48,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f84qfvlvpj</Fingerprint>
-      <Integrity>EQ24bW4B+jOFco5e98cWEzwfLFZzf6EFUJ4AwO3AKXc=</Integrity>
+      <Fingerprint>l4xcjpq36e</Fingerprint>
+      <Integrity>tYlqHANKPUVPIWp7LRcy5BlssrPfmIBCMcMx2IcYmQY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-login.css'))</OriginalItemSpec>
@@ -84,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>raklafzyz6</Fingerprint>
-      <Integrity>A/Cd+FaKISIbzEvdqB2kwfAkNaBPjV6v1w0g9U9AXgM=</Integrity>
+      <Fingerprint>8moov7rtnz</Fingerprint>
+      <Integrity>YIJieDtag6XuT5AcBXY4nAh0WaOGS1pU/MfvwvWd2BI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style-modulos.css'))</OriginalItemSpec>

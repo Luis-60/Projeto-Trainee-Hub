@@ -13,7 +13,12 @@ public class AdminController : Controller
         _logger = logger;
     }
 
-    public IActionResult SSTreinamentos()
+    public IActionResult SSModulos()
+    {
+        return View();
+    }
+
+    public IActionResult SSAulas()
     {
         return View();
     }

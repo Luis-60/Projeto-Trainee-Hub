@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/css/style-aula.css"
     },
     {
+      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-aulas.css",
+      "PackagePath": "staticwebassets/css/style-aulas.css"
+    },
+    {
       "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
       "PackagePath": "staticwebassets/css/style-login.css"
     },

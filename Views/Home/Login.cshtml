@@ -11,29 +11,38 @@
     
 </style>
 
+
 <div id="Login_Tela" class="tela-de-login">
     <h2>LOGIN</h2>
+
     <form asp-action="Login" asp-controller="Home" method="post">
+        @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
+        {
+            <div class="alert alert-danger">
+                @ViewData["ErrorMessage"]
+            </div>
+        }
+
         <div class="informacoes">
             <label asp-for="Matricula">Matrícula</label>
-            <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required>
+            <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required />
             
             <label asp-for="Senha">Senha</label>
-            <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required>
+            <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required />
         </div>
-    </form>
 
         <div class="lembrar-esqueci">
             <label>
-                <input type="checkbox" class="lembrar-esqueci"> Lembrar de mim
+                <input type="checkbox" class="lembrar-esqueci" /> Lembrar de mim
             </label>
             <a href="#">Esqueceu sua senha?</a>
         </div>
-    <form asp-action="Login" asp-controller="Home" method="post">
+
         <div class="enviar-formulario">  
-            <button for="enviar">ENTRAR</button>
+            <button type="submit">ENTRAR</button>
         </div>
     </form>  
+
     <p class="solicitar-acesso">Não tem acesso? <a href="#">Solicite</a></p>
 </div>
 <div class="logo-empresas">

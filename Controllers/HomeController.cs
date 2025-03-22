@@ -38,28 +38,34 @@ public class HomeController : Controller
         return View();
     }   
     
-    [HttpPost]
-    public async Task<IActionResult> Login(Usuarios usuario)
-    
+[HttpPost]
+public async Task<IActionResult> Login(Usuarios usuario)
+{
+    if (ModelState.IsValid)
     {
-        if (ModelState.IsValid)
+        // Valida as credenciais do usuário
+        var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
+        
+        if (usuarioExistente != null)
         {
-            var usuarioExistente = await _usuariosRepository.LoginAsync(usuario.Matricula!, usuario.Senha!);                 
+            // Armazena a matrícula do usuário na sessão
+            HttpContext.Session.SetString("UsuarioMatricula", usuarioExistente.Matricula!);
             
-            if (usuarioExistente != null)
-            {
-                HttpContext.Session.SetString("UsuarioMatricula", usuarioExistente.Matricula!);
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Matrícula ou senha inválida");
-            }
-            
+            // Redireciona para a página inicial (ou outra área do sistema)
+            return RedirectToAction("Index", "Home");
         }
-        return View(usuario);
+        else
+        {
+            // Se o login falhar, adiciona um erro ao ModelState
+            ModelState.AddModelError(string.Empty, "Matrícula ou senha inválida");
+        }
     }
+    
+    // Se houver falha no login, exibe a tela de login novamente com a mensagem de erro
+    return View(usuario);
+}
 
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
