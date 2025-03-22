@@ -21,9 +21,16 @@ namespace Projeto_Trainee_Hub.Repository
             return await _context.Usuarios.ToListAsync();
         }
 
+        public async Task<Usuarios?> ObterPorMatriculaAsync(string matricula)
+        {
+            return await _context.Usuarios
+            .Include(u => u.IdSetorNavigation)
+            .FirstOrDefaultAsync(u => u.Matricula == matricula);
+        }
         public Usuarios? ValidarUsuario(string matricula, string senha)
         {
             return _context.Usuarios
+                .Include(u => u.IdSetorNavigation)
                 .FirstOrDefault(u => u.Matricula == matricula && u.Senha == senha);
         }
 

@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "Perfil";
 }
-
+@model Usuarios
 <div class="container-body">
     <div class="container-photo">
         <div class="user-photo">
@@ -13,23 +13,23 @@
         <div class="user-info">
             <div class="nome">
                 <h3>Nome</h3>
-                <label>lorem ipsum</label>
+                <label>@Model.Nome</label>
             </div>
             <div class="email">
                 <h3>Email</h3>
-                <label>lorem ipsum</label>
+                <label>@Model.Email</label>
             </div>
             <div class="matricula">
                 <h3>Matrícula</h3>
-                <label>lorem ipsum</label>
+                <label>@Model.Matricula</label>
             </div>
             <div class="setor">
                 <h3>Setor</h3>
-                <label>lorem ipsum</label>
+                <label>@Model.IdSetorNavigation.Nome</label>
             </div>
             <div class="treinamentos-concluidos">
                 <h3>Treinamentos Concluídos</h3>
-                <label>0</label>
+                <label>@Model.QtdTreinamentos</label>
             </div>
         </div>
     </div>

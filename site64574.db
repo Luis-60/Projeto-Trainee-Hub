@@ -34,18 +34,6 @@ CREATE TABLE Modulos (
     FOREIGN KEY (idAula) REFERENCES Aula(idAula)
 )
 
-CREATE TABLE Usuarios (
-    idUsuarios INT IDENTITY(1,1) PRIMARY KEY,
-    Email VARCHAR(100),
-    Matricula VARCHAR(50),
-    Senha VARCHAR(50),
-    Cargo VARCHAR(50),
-    Idade INTEGER,
-    Imagem VARCHAR(100),
-    QtdTreinamentos INTEGER,
-    FOREIGN KEY (idSetor) REFERENCES Setor(idSetor),
-    FOREIGN KEY (idTipo) REFERENCES Tipo(idTipo),
-)
 
 CREATE TABLE Empresa (
     idEmpresa INT IDENTITY(1,1) PRIMARY KEY,
@@ -56,8 +44,8 @@ CREATE TABLE Empresa (
     Telefone VARCHAR(20),
     Codigo VARCHAR(20),
     FOREIGN KEY (idUsuarios) REFERENCES Usuarios(idUsuarios)
-
 )
+
 CREATE TABLE Treinamentos (
     idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50),

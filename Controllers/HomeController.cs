@@ -28,9 +28,24 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Perfil()
+    
+    public async Task<IActionResult> Perfil()
     {
-        return View();
+        var matricula = HttpContext.Session.GetString("UsuarioMatricula");
+
+        if (string.IsNullOrEmpty(matricula))
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
+        var usuario = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
+        return View(usuario);
     }
 
     public IActionResult Login()
@@ -43,7 +58,7 @@ public async Task<IActionResult> Login(Usuarios usuario)
 {
     if (ModelState.IsValid)
     {
-        // Valida as credenciais do usuário
+
         var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
         
         if (usuarioExistente != null)

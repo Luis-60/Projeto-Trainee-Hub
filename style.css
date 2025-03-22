@@ -1,26 +1,28 @@
-
-
+/*Luís pelo amor de Deus, CUIDADO ;-; FORAM MUITAS GAMBIARRAS*/
+body {
+    background-color: #4D83AA;
+    font-family: "Mukta Vaani", sans-serif;
+}
 .tela-de-login {
     background-color: #ffffff;
     text-align: center;
     width: 450px;
-    height: 520px;
+    height: 510px;
     border-radius: 20px;
-    position: relative;
-    left: 60%;
-    top:  5%;
-    z-index: 20;
+    position: absolute;
+    right: 20vh;
+    top:  10vh;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .tela-de-login h2 {
-    padding-top: 70px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 .tela-de-login .informacoes label{
     display:block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 7px;
     margin-left: 85px;
@@ -28,7 +30,6 @@
     width: 50vh;
     text-align: left;
 }
-
 .tela-de-login input {
     width: 60%;
     height: 30px;
@@ -37,9 +38,6 @@
     padding-left: 10px;
     background-color: #F2F2F2;
     margin-bottom: 15px;
-}
-.tela-de-login .lembrar-esqueci input{
-    width: 30px;
 }
 .lembrar-esqueci {
     display: flex;
@@ -50,59 +48,6 @@
     font-size: 12px;
     width: 400px;
 }
-.lembrar-esqueci label {
-    display: flex;
-    align-items: center;
-}
-.lembrar-esqueci input {
-    margin: 5px;
-    scale: 0.7;
-}
-
-.lembrar-esqueci a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.tela-de-login button {
-    width: 60%;
-    background-color: #2c5376;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.solicitar-acesso {
-    font-size: 12px;
-    margin-top: 15px;
-}
-
-.solicitar-acesso a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #007BFF;
-}
-.logo-empresas {
-    display: flex;
-    position: absolute;
-    left: 30vh;
-    top: 37vh;
-}
-.logo-empresas img {
-    height: 160px;
-}
-
-.logo-empresas .LogoTRAINEE img{
-    margin-left: 25px;
-}
-
 .lembrar-esqueci label {
     display: flex;
     align-items: center;
@@ -153,14 +98,21 @@
     width: 427.01px;
     height: 272px;
 }
-
+.logo-empresas .RetanguloDIVISOR {
+    background-color: rgba(255, 255, 255, 0.795);
+    width: 1vh;
+    height: 25vh;
+    margin-right: 25px;
+}
 .Bordao {
+    position: relative;
+    top: 70vh;
     left: 17vh;
     width: 600px;
+    height: 100px;
     text-align: center;
 }
 .Bordao h2 {
-    font-family: 'Inter', bold;
     color: white;
     font-size: 35px;
 

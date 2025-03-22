@@ -29,12 +29,11 @@
 .bloco_treinamento {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
-    gap: 40px; /* Espaço entre os itens */
+    gap: 85px; /* Espaço entre os itens */
     padding: 0;
     list-style: none;
 }
 
-/* Faz os itens ocuparem o espaço máximo disponível dentro de cada célula */
 .list-andamento {
     width: 100%;
 }
@@ -66,4 +65,10 @@
     cursor: pointer;
     width: 450px;
 
+}
+
+label {
+    font-family: 'Inter', bold;
+    font-size: 18px;
+    color: #0A2D46;
 }

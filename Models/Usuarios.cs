@@ -32,4 +32,5 @@ public partial class Usuarios
     public virtual Tipo? IdTipoNavigation { get; set; }
 
     public virtual ICollection<UsuariosTreinamento> UsuariosTreinamentos { get; set; } = new List<UsuariosTreinamento>();
+    public string? Nome { get; set; }
 }
