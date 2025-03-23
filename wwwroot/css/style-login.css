@@ -39,7 +39,9 @@
     margin-bottom: 15px;
 }
 .tela-de-login .lembrar-esqueci input{
-    width: 30px;
+    width: 20px;
+    height: 14px;
+    margin-top: 0px;
 }
 .lembrar-esqueci {
     display: flex;
@@ -53,6 +55,8 @@
 .lembrar-esqueci label {
     display: flex;
     align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 .lembrar-esqueci input {
     margin: 5px;
@@ -152,16 +156,4 @@
 .logo-empresas img {
     width: 427.01px;
     height: 272px;
-}
-
-.Bordao {
-    left: 17vh;
-    width: 600px;
-    text-align: center;
-}
-.Bordao h2 {
-    font-family: 'Inter', bold;
-    color: white;
-    font-size: 35px;
-
 }

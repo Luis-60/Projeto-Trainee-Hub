@@ -6,6 +6,7 @@ namespace Projeto_Trainee_Hub.Models;
 public partial class Usuarios
 {
     public int IdUsuarios { get; set; }
+    public string? Nome { get; set; }
 
     public string? Email { get; set; }
 
@@ -25,12 +26,12 @@ public partial class Usuarios
 
     public int? IdTipo { get; set; }
 
-    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
-
     public virtual Setor? IdSetorNavigation { get; set; }
 
     public virtual Tipo? IdTipoNavigation { get; set; }
+    
+    public virtual Empresa? IdEmpresaNavigation { get; set; }
 
     public virtual ICollection<UsuariosTreinamento> UsuariosTreinamentos { get; set; } = new List<UsuariosTreinamento>();
-    public string? Nome { get; set; }
+    
 }

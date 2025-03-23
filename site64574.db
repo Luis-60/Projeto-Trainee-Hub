@@ -22,8 +22,9 @@ CREATE TABLE Documento (
 CREATE TABLE Aula (
     idAula INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(120),
-    Descricao (500),
-    FOREIGN KEY (idDocumento) REFERENCES Documento(IdDocumento)
+    Descricao VARCHAR(500),
+    idDocumento INT,
+    FOREIGN KEY (idDocumento) REFERENCES Documento(idDocumento)
 )
 
 CREATE TABLE Modulos (
@@ -31,6 +32,7 @@ CREATE TABLE Modulos (
     Nome VARCHAR(120),
     Descricao VARCHAR(500),
     Sequencia INTEGER,
+    idAula INT,
     FOREIGN KEY (idAula) REFERENCES Aula(idAula)
 )
 
@@ -42,8 +44,24 @@ CREATE TABLE Empresa (
     Descricao VARCHAR(500),
     Email VARCHAR(100),
     Telefone VARCHAR(20),
-    Codigo VARCHAR(20),
-    FOREIGN KEY (idUsuarios) REFERENCES Usuarios(idUsuarios)
+    Codigo VARCHAR(20)
+)
+
+CREATE TABLE Usuarios (
+    idUsuarios INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(250),
+    Email VARCHAR(100),
+    Matricula VARCHAR(50),
+    Senha VARCHAR(50),
+    Idade INTEGER,
+    Imagem VARCHAR(100),
+    QtdTreinamentos INT,
+    idSetor INT,
+    idTipo INT,
+    idEmpresa INT,
+    FOREIGN KEY (idSetor) REFERENCES Setor(idSetor),
+    FOREIGN KEY (idTipo) REFERENCES Tipo(idTipo),
+    FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )
 
 CREATE TABLE Treinamentos (
@@ -56,11 +74,13 @@ CREATE TABLE Treinamentos (
     Instrutor VARCHAR(240),
     Duracao INTEGER,
     Entidades VARCHAR(240),
+    idModulos INT,
+    idEmpresa INT,
     FOREIGN KEY (idModulos) REFERENCES Modulos(idModulos),
     FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )
 
-Usuarios_Treinamentos (
+CREATE TABLE Usuarios_Treinamentos (
     idTreinamentos INT,
     idUsuarios INT,
     Avaliacao FLOAT,

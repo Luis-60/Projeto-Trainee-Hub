@@ -25,13 +25,9 @@
         }
 
         <div class="informacoes">
-            <label asp-for="Nome">Matrícula</label>
-            <input asp-for="Nome" id="Nome" placeholder="Digite sua matrícula" required />
-            @* <datalist name="Empresa" id="Empresas">
-                <option value="Nissan"></option>
-                <option value="Arno"></option>
-                <option value="Lucas"></option>
-            </datalist> *@
+            <label asp-for="idEmpresaNavigation">Empresa</label>
+            <input asp-for="idEmpresaNavigation" id="Nome" placeholder="Digite o nome da empresa" required />
+            
             <label asp-for="Matricula">Matrícula</label>
             <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required />
             
@@ -57,9 +53,5 @@
     <div class="LogoTRAINEE">
         <img src="~/images/TraineeHUBLOGO.png">
     </div>
-    <div class="Bordao">
-        <h2>O conhecimento da sua empresa sempre ao seu alcance</h2>
-    </div>
-
 </div>
   
