@@ -25,6 +25,7 @@ namespace Projeto_Trainee_Hub.Repository
         {
             return await _context.Usuarios
             .Include(u => u.IdSetorNavigation)
+            .Include(u => u.IdTipoNavigation)
             .FirstOrDefaultAsync(u => u.Matricula == matricula);
         }
         public Usuarios? ValidarUsuario(string matricula, string senha)

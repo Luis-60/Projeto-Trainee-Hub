@@ -66,8 +66,20 @@ public async Task<IActionResult> Login(Usuarios usuario)
             // Armazena a matrícula do usuário na sessão
             HttpContext.Session.SetString("UsuarioMatricula", usuarioExistente.Matricula!);
             
-            // Redireciona para a página inicial (ou outra área do sistema)
-            return RedirectToAction("Index", "Home");
+            int idTipo = usuarioExistente.IdTipo ?? 0;
+
+            switch (idTipo)
+            {
+                case 1:
+                    return RedirectToAction("Index", "Home");
+                case 2:
+                    return RedirectToAction("SSAulas", "Admin");
+                case 3:
+                    return RedirectToAction("Dashboard", "Gestor");
+                case 4:
+                    return RedirectToAction("Dashboard", "Encarregados");
+
+            }
         }
         else
         {
