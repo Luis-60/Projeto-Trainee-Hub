@@ -19,9 +19,7 @@ public partial class Empresa
 
     public string? Codigo { get; set; }
 
-    public int? IdUsuarios { get; set; }
-
-    public virtual Usuarios? IdUsuariosNavigation { get; set; }
+    public virtual ICollection<Usuarios> Usuarios { get; set; } = new List<Usuarios>();
 
     public virtual ICollection<Treinamento> Treinamentos { get; set; } = new List<Treinamento>();
 }

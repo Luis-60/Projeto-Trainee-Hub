@@ -86,7 +86,6 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.IdUsuarios).HasColumnName("idUsuarios");
             entity.Property(e => e.Logo)
                 .HasMaxLength(50)
                 .IsUnicode(false);
@@ -96,10 +95,6 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Telefone)
                 .HasMaxLength(20)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.IdUsuariosNavigation).WithMany(p => p.Empresas)
-                .HasForeignKey(d => d.IdUsuarios)
-                .HasConstraintName("FK__Empresa__idUsuar__3AA1AEB8");
         });
 
         modelBuilder.Entity<Modulo>(entity =>
@@ -183,14 +178,15 @@ public partial class MasterContext : DbContext
             entity.HasKey(e => e.IdUsuarios).HasName("PK__Usuarios__3940559AA9142AAD");
 
             entity.Property(e => e.IdUsuarios).HasColumnName("idUsuarios");
-            entity.Property(e => e.Cargo)
-                .HasMaxLength(50)
+            entity.Property(e => e.Nome).HasColumnName("Nome")
+                .HasMaxLength(250)
                 .IsUnicode(false);
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.IdSetor).HasColumnName("idSetor");
             entity.Property(e => e.IdTipo).HasColumnName("idTipo");
+            entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
             entity.Property(e => e.Imagem)
                 .HasMaxLength(100)
                 .IsUnicode(false);
@@ -208,6 +204,10 @@ public partial class MasterContext : DbContext
             entity.HasOne(d => d.IdTipoNavigation).WithMany(p => p.Usuarios)
                 .HasForeignKey(d => d.IdTipo)
                 .HasConstraintName("FK__Usuarios__idTipo__37C5420D");
+                
+            entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Usuarios)
+                .HasForeignKey(d => d.IdEmpresa)
+                .HasConstraintName("FK__Usuarios__idEmpr__6E2152BE");
         });
 
         modelBuilder.Entity<UsuariosTreinamento>(entity =>

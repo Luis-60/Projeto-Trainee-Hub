@@ -27,11 +27,11 @@ namespace Projeto_Trainee_Hub.Repository
             .Include(u => u.IdSetorNavigation)
             .FirstOrDefaultAsync(u => u.Matricula == matricula);
         }
-        public Usuarios? ValidarUsuario(string empresa, string matricula, string senha)
+        public Usuarios? ValidarUsuario(string matricula, string senha)
         {
             return _context.Usuarios
-                .Include(u => u.IdSetorNavigation)
-                .FirstOrDefault(u => u.IdEmpresaNavigation == empresa && u => u.Matricula == matricula && u.Senha == senha);
+                .Include(u => u.IdEmpresaNavigation)
+                .FirstOrDefault(u => u.Matricula == matricula && u.Senha == senha);
         }
 
         public async Task<IEnumerable<Usuarios>> FindAsync(Expression<Func<Usuarios, bool>> predicate)

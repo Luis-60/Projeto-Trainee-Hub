@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hVba/QIOgVXIfI31NU8TdIYcT9hBU0MLTvmm159fNK0=",
+  "Hash": "bZqkWRehVfDGY0fyibzbokH9dEeOUUgdShN7kGn8cgQ=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -1403,12 +1403,12 @@
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-iheetslchz.gz",
+      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style-login#[.{fingerprint=iheetslchz}]?.css.gz",
+      "RelativePath": "css/style-login#[.{fingerprint=k7u95rnv1q}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "grk7te1u21",
-      "Integrity": "3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg=",
+      "Fingerprint": "qpln76krxp",
+      "Integrity": "rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css"
@@ -1501,8 +1501,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "iheetslchz",
-      "Integrity": "KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M=",
+      "Fingerprint": "k7u95rnv1q",
+      "Integrity": "0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style-login.css"
@@ -3703,12 +3703,12 @@
     },
     {
       "Route": "css/style-login.css",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-iheetslchz.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001375515818"
+          "Quality": "0.001453488372"
         }
       ],
       "ResponseHeaders": [
@@ -3718,15 +3718,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "726"
+          "Value": "687"
         },
         {
           "Name": "ETag",
-          "Value": "\"3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg=\""
+          "Value": "\"rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3746,13 +3746,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M=\""
+          "Value": "W/\"0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M="
+          "Value": "sha256-0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI="
         }
       ]
     },
@@ -3767,7 +3767,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2989"
+          "Value": "2910"
         },
         {
           "Name": "Content-Type",
@@ -3775,11 +3775,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M=\""
+          "Value": "\"0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3789,13 +3789,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M="
+          "Value": "sha256-0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI="
         }
       ]
     },
     {
       "Route": "css/style-login.css.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-iheetslchz.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3804,7 +3804,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "726"
+          "Value": "687"
         },
         {
           "Name": "Content-Type",
@@ -3812,11 +3812,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg=\""
+          "Value": "\"rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3834,18 +3834,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg="
+          "Value": "sha256-rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo="
         }
       ]
     },
     {
-      "Route": "css/style-login.iheetslchz.css",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-iheetslchz.gz",
+      "Route": "css/style-login.k7u95rnv1q.css",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001375515818"
+          "Quality": "0.001453488372"
         }
       ],
       "ResponseHeaders": [
@@ -3855,15 +3855,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "726"
+          "Value": "687"
         },
         {
           "Name": "ETag",
-          "Value": "\"3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg=\""
+          "Value": "\"rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3883,13 +3883,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M=\""
+          "Value": "W/\"0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "iheetslchz"
+          "Value": "k7u95rnv1q"
         },
         {
           "Name": "label",
@@ -3897,12 +3897,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M="
+          "Value": "sha256-0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI="
         }
       ]
     },
     {
-      "Route": "css/style-login.iheetslchz.css",
+      "Route": "css/style-login.k7u95rnv1q.css",
       "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3912,7 +3912,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2989"
+          "Value": "2910"
         },
         {
           "Name": "Content-Type",
@@ -3920,11 +3920,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M=\""
+          "Value": "\"0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3934,7 +3934,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "iheetslchz"
+          "Value": "k7u95rnv1q"
         },
         {
           "Name": "label",
@@ -3942,13 +3942,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KkLAudCWZ8fp21NyWjHIXafLBExNUrse2BozgfHC88M="
+          "Value": "sha256-0F0cgwLBAzq95NhS/UJi/cHtZhynvSe66WL7w0CI8PI="
         }
       ]
     },
     {
-      "Route": "css/style-login.iheetslchz.css.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-iheetslchz.gz",
+      "Route": "css/style-login.k7u95rnv1q.css.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3957,7 +3957,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "726"
+          "Value": "687"
         },
         {
           "Name": "Content-Type",
@@ -3965,11 +3965,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg=\""
+          "Value": "\"rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 03:12:14 GMT"
+          "Value": "Sun, 23 Mar 2025 01:16:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3987,7 +3987,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "iheetslchz"
+          "Value": "k7u95rnv1q"
         },
         {
           "Name": "label",
@@ -3995,7 +3995,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3ClCROAGv3dN1fZSfdsABaEdBw38yhjdhPX7bTZlHZg="
+          "Value": "sha256-rgy322/RRxEsplmAtMT3m/4kaYyxSz4vhJqh2aFjgSo="
         }
       ]
     },

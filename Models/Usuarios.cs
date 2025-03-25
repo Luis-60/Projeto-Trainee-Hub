@@ -13,9 +13,7 @@ public partial class Usuarios
     public string? Matricula { get; set; }
 
     public string? Senha { get; set; }
-
-    public string? Cargo { get; set; }
-
+    
     public int? Idade { get; set; }
 
     public string? Imagem { get; set; }
@@ -25,11 +23,13 @@ public partial class Usuarios
     public int? IdSetor { get; set; }
 
     public int? IdTipo { get; set; }
+    
+    public int? IdEmpresa { get; set; }
 
     public virtual Setor? IdSetorNavigation { get; set; }
 
     public virtual Tipo? IdTipoNavigation { get; set; }
-    
+
     public virtual Empresa? IdEmpresaNavigation { get; set; }
 
     public virtual ICollection<UsuariosTreinamento> UsuariosTreinamentos { get; set; } = new List<UsuariosTreinamento>();
