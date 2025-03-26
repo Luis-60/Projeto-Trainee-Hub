@@ -1,8 +1,18 @@
 using Projeto_Trainee_Hub.Repository;
 using Projeto_Trainee_Hub.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Home/Login"; // Página de login
+        options.AccessDeniedPath = "/Home/AcessoNegado"; // Página para acessos negados
+    });
+
+builder.Services.AddAuthorization();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

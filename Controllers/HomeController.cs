@@ -1,4 +1,7 @@
 using System.Diagnostics;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
@@ -53,44 +56,56 @@ public class HomeController : Controller
         return View();
     }   
     
-[HttpPost]
-public async Task<IActionResult> Login(Usuarios usuario)
-{
-    if (ModelState.IsValid)
+    [HttpPost]
+    public async Task<IActionResult> Login(Usuarios usuario)
     {
+        
 
         var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
         
-        if (usuarioExistente != null)
+        var claims = new List<Claim>
         {
-            // Armazena a matrícula do usuário na sessão
-            HttpContext.Session.SetString("UsuarioMatricula", usuarioExistente.Matricula!);
-            
-            int idTipo = usuarioExistente.IdTipo ?? 0;
+            new Claim(ClaimTypes.Name, usuarioExistente.Nome),
+            new Claim(ClaimTypes.Role, usuarioExistente.IdTipo.ToString()),
+            new Claim(ClaimTypes.Email, usuarioExistente.Email)
 
-            switch (idTipo)
-            {
-                case 1:
-                    return RedirectToAction("Index", "Home");
-                case 2:
-                    return RedirectToAction("SSAulas", "Admin");
-                case 3:
-                    return RedirectToAction("Dashboard", "Gestor");
-                case 4:
-                    return RedirectToAction("Dashboard", "Encarregados");
+        };
 
-            }
-        }
-        else
+        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+        var authProperties = new AuthenticationProperties
         {
-            // Se o login falhar, adiciona um erro ao ModelState
-            ModelState.AddModelError(string.Empty, "Matrícula ou senha inválida");
-        }
+            IsPersistent = true,
+        };
+
+        await HttpContext.SignInAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme,
+            new ClaimsPrincipal(claimsIdentity),
+            authProperties
+        
+        );
+        switch (usuarioExistente.IdTipo)
+        {
+            case 1:
+                return RedirectToAction("Index", "Home");
+            case 2:
+                return RedirectToAction("SSAulas", "Admin");
+            case 3:
+                return RedirectToAction("Dashboard", "Gestor");
+            case 4:
+                return RedirectToAction("Dashboard", "Encarregados");
+            default:
+                return RedirectToAction("Index", "Home");
+        };
+        
     }
-    
-    // Se houver falha no login, exibe a tela de login novamente com a mensagem de erro
-    return View(usuario);
-}
+
+    [HttpPost]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Login", "Home");
+    }
 
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

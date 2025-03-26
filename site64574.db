@@ -3,6 +3,18 @@ CREATE TABLE Setor (
     Nome VARCHAR(50)
 )
 
+INSERT INTO Setor (Nome) VALUES 
+('Recursos Humanos'),
+('Financeiro'),
+('Tecnologia da Informação'),
+('Marketing'),
+('Vendas'),
+('Produção'),
+('Logística'),
+('Jurídico'),
+('Pesquisa e Desenvolvimento'),
+('Atendimento ao Cliente');
+
 CREATE TABLE Tipo (
     idTipo INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50)
@@ -47,6 +59,7 @@ CREATE TABLE Empresa (
     Codigo VARCHAR(20)
 )
 
+
 CREATE TABLE Usuarios (
     idUsuarios INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(250),
@@ -64,6 +77,13 @@ CREATE TABLE Usuarios (
     FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )
 
+INSERT INTO Usuarios (Nome, Email, Matricula, Senha, Idade, Imagem, QtdTreinamentos, idSetor, idTipo, idEmpresa) VALUES 
+('João Silva', 'joao.silva@email.com', 'MAT12345', 'SenhaSegura1', 30, 'joao.jpg', 5, 1, 2, 1),
+('Maria Souza', 'maria.souza@email.com', 'MAT67890', 'SenhaSegura2', 28, 'maria.jpg', 3, 2, 1, 1),
+('Carlos Oliveira', 'carlos.oliveira@email.com', 'MAT11223', 'SenhaSegura3', 35, 'carlos.jpg', 7, 3, 3, 2),
+('Ana Lima', 'ana.lima@email.com', 'MAT44556', 'SenhaSegura4', 25, 'ana.jpg', 2, 4, 1, 2),
+('Pedro Santos', 'pedro.santos@email.com', 'MAT77889', 'SenhaSegura5', 40, 'pedro.jpg', 10, 5, 4, 3);
+
 CREATE TABLE Treinamentos (
     idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50),
@@ -79,6 +99,14 @@ CREATE TABLE Treinamentos (
     FOREIGN KEY (idModulos) REFERENCES Modulos(idModulos),
     FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )
+
+INSERT INTO Empresa (Nome, Logo, Descricao, Email, Telefone, Codigo)  
+VALUES  
+('Tech Solutions', 'tech_logo.png', 'Empresa de tecnologia especializada em softwares.', 'contato@techsolutions.com', '(11) 98765-4321', 'TS12345'),  
+('EducaCorp', 'educa_logo.png', 'Plataforma de treinamentos corporativos.', 'suporte@educacorp.com', '(21) 92345-6789', 'EC98765'),  
+('HealthCare Ltda', 'health_logo.png', 'Empresa focada em soluções para o setor da saúde.', 'atendimento@healthcare.com', '(31) 99876-5432', 'HC54321'),  
+('AutoDrive', 'autodrive_logo.png', 'Desenvolvimento de sistemas para a indústria automotiva.', 'info@autodrive.com', '(41) 97654-3210', 'AD11223'),  
+('EcoGreen', 'ecogreen_logo.png', 'Soluções sustentáveis para empresas.', 'contact@ecogreen.com', '(51) 96543-2109', 'EG44556');  
 
 CREATE TABLE Usuarios_Treinamentos (
     idTreinamentos INT,

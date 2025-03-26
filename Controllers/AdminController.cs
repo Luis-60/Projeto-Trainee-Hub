@@ -2,8 +2,10 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.Models;
 
+using Microsoft.AspNetCore.Authorization;
 namespace Projeto_Trainee_Hub.Controllers;
 
+[Authorize(Roles = "2")]
 public class AdminController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -12,7 +14,11 @@ public class AdminController : Controller
     {
         _logger = logger;
     }
-
+    public IActionResult Perfil()
+    {
+        return View();
+    }
+    
     public IActionResult SSModulos()
     {
         return View();

@@ -27,7 +27,14 @@
         <div class="headerbar-conteudo">
             <div class="off-screen-menu">
                 <ul>
-                    <a asp-area="" asp-controller="Home" asp-action="Index"><li>Menu</li></a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-area="" asp-controller="Admin" asp-action="Index"><li>Menu</li></a>
+                    }
+                    else
+                    {
+                        <a asp-area="" asp-controller="Home" asp-action="Index"><li>Menu</li></a>
+                    }
                     <li>Sobre</li>
                     <li>Contato</li>
                 </ul>
@@ -51,7 +58,7 @@
             </div>
             <div class="perfil">
                 <div class="icone-perfil">
-                    <a asp-area="" asp-controller="Home" asp-action="Perfil">
+                    <a asp-area="" asp-controller="@(User.IsInRole("2") ? "Admin" : "Home")" asp-action="Perfil">
                         <img src="~/images/IconePerfil.png">
                     </a>
                 </div>    
