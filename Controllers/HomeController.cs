@@ -8,6 +8,7 @@ using Projeto_Trainee_Hub.Repository;
 
 namespace Projeto_Trainee_Hub.Controllers;
 
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -60,7 +61,6 @@ public class HomeController : Controller
     public async Task<IActionResult> Login(Usuarios usuario)
     {
         
-
         var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
         
         var claims = new List<Claim>
@@ -87,15 +87,15 @@ public class HomeController : Controller
         switch (usuarioExistente.IdTipo)
         {
             case 1:
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Usuario");
             case 2:
-                return RedirectToAction("SSAulas", "Admin");
+                return RedirectToAction("Perfil", "Admin");
             case 3:
                 return RedirectToAction("Dashboard", "Gestor");
             case 4:
                 return RedirectToAction("Dashboard", "Encarregados");
             default:
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "Home");
         };
         
     }

@@ -1,22 +1,29 @@
 using System.Diagnostics;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
-using Projeto_Trainee_Hub.Repository;
+using Microsoft.AspNetCore.Authorization;
+namespace Projeto_Trainee_Hub.Controllers;
 
-[Authorize(Roles = "2")]
-public class AdminController : Controller
+[Authorize(Roles = "4")]
+public class EncarregadoController : Controller
 {
-    private readonly ILogger<AdminController> _logger;
+    private readonly ILogger<HomeController> _logger;
 
-    public AdminController(ILogger<AdminController> logger)
+    public EncarregadoController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
     public IActionResult Perfil()
+    {
+        return View();
+    }
+    
+    public IActionResult SSModulos()
+    {
+        return View();
+    }
+
+    public IActionResult SSAulas()
     {
         return View();
     }
