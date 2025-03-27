@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+@using Projeto_Trainee_Hub.Controllers;
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -27,13 +29,13 @@
         <div class="headerbar-conteudo">
             <div class="off-screen-menu">
                 <ul>
-                    @if (User.IsInRole("Admin"))
+                    @if (User.IsInRole("2"))
                     {
-                        <a asp-area="" asp-controller="Admin" asp-action="Index"><li>Menu</li></a>
+                        <a asp-area="" asp-controller="Admin" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)"><li>Menu</li></a>
                     }
                     else
                     {
-                        <a asp-area="" asp-controller="Home" asp-action="Index"><li>Menu</li></a>
+                        <a asp-area="" asp-controller="Usuario" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)"><li>Menu</li></a>
                     }
                     <li>Sobre</li>
                     <li>Contato</li>
@@ -51,14 +53,14 @@
                 </div>
                 <div class="retangulo"></div>
                 <div class="logo-trainee">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                         <img src="~/images/TRAINEEHUBLOGO.png">
                     </a>
                 </div>
             </div>
             <div class="perfil">
                 <div class="icone-perfil">
-                    <a asp-area="" asp-controller="@(User.IsInRole("2") ? "Admin" : "Home")" asp-action="Perfil">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                         <img src="~/images/IconePerfil.png">
                     </a>
                 </div>    

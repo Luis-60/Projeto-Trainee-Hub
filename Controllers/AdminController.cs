@@ -11,14 +11,17 @@ using Projeto_Trainee_Hub.Repository;
 public class AdminController : Controller
 {
     private readonly ILogger<AdminController> _logger;
+    private readonly UsuariosRepository _usuariosRepository;
 
-    public AdminController(ILogger<AdminController> logger)
+    public AdminController(ILogger<AdminController> logger, UsuariosRepository usuariosRepository)
     {
         _logger = logger;
+        _usuariosRepository = usuariosRepository;
     }
-    public IActionResult Perfil()
+    public async Task<IActionResult> PerfilAsync(string matricula)
     {
-        return View();
+        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        return View(usuarioExistente);
     }
 
 

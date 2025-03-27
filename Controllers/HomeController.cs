@@ -62,9 +62,14 @@ public class HomeController : Controller
     {
         
         var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
-        
+        if (usuarioExistente == null)
+        {
+            ModelState.AddModelError(string.Empty, "Matrícula ou senha inválidos.");
+            return View();
+        }
         var claims = new List<Claim>
         {
+            new Claim(ClaimTypes.NameIdentifier, usuarioExistente.Matricula),
             new Claim(ClaimTypes.Name, usuarioExistente.Nome),
             new Claim(ClaimTypes.Role, usuarioExistente.IdTipo.ToString()),
             new Claim(ClaimTypes.Email, usuarioExistente.Email)
@@ -87,9 +92,9 @@ public class HomeController : Controller
         switch (usuarioExistente.IdTipo)
         {
             case 1:
-                return RedirectToAction("Index", "Usuario");
+                return RedirectToAction("Index", "Usuario", new{matricula=usuario.Matricula});
             case 2:
-                return RedirectToAction("Perfil", "Admin");
+                return RedirectToAction("Perfil", "Admin", new{matricula=usuario.Matricula});
             case 3:
                 return RedirectToAction("Dashboard", "Gestor");
             case 4:

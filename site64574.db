@@ -3,17 +3,17 @@ CREATE TABLE Setor (
     Nome VARCHAR(50)
 )
 
-INSERT INTO Setor (Nome) VALUES 
-('Recursos Humanos'),
-('Financeiro'),
-('Tecnologia da Informação'),
-('Marketing'),
-('Vendas'),
-('Produção'),
-('Logística'),
-('Jurídico'),
-('Pesquisa e Desenvolvimento'),
-('Atendimento ao Cliente');
+INSERT INTO Setor (IdSetor, Nome) VALUES 
+(1, 'Recursos Humanos'),
+(2, 'Financeiro'),
+(3, 'Tecnologia da Informação'),
+(4, 'Marketing'),
+(5, 'Vendas'),
+(6, 'Produção'),
+(7,'Logística'),
+(8, 'Jurídico'),
+(9, 'Pesquisa e Desenvolvimento'),
+(10, 'Atendimento ao Cliente');
 
 CREATE TABLE Tipo (
     idTipo INT IDENTITY(1,1) PRIMARY KEY,

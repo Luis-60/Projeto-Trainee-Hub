@@ -34,7 +34,7 @@ public partial class MasterContext : DbContext
     public virtual DbSet<UsuariosTreinamento> UsuariosTreinamentos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=172.18.0.2;Database=master;User Id=sa;Password=\"YourStrong!Password123\";TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=172.22.0.2;Database=master;User Id=sa;Password=\"YourStrong!Password123\";TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

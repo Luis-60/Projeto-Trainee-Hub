@@ -12,26 +12,35 @@ namespace Projeto_Trainee_Hub.Controllers;
 [Authorize(Roles = "1")]
 public class UsuarioController : Controller
 {
+    
     private readonly ILogger<UsuarioController> _logger;
     private readonly UsuariosRepository _usuariosRepository;
     public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository)
     {
         _logger = logger;
         _usuariosRepository = usuariosRepository;
+        
     }
 
-    public IActionResult Index()
-    {
-        return View();
+    public async Task<IActionResult> IndexAsync(string matricula)
+    {   
+        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        return View(usuarioExistente);
     }
 
     public IActionResult Privacy()
     {
         return View();
     }
-    public IActionResult Aula()
+    public async Task<IActionResult> AulaAsync(string matricula)
     {
-        return View();
+        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        return View(usuarioExistente);
+    }
+    public async Task<IActionResult> PerfilAsync(string matricula)
+    {
+        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        return View(usuarioExistente);
     }
 
     
