@@ -4679,25 +4679,25 @@
     ]
   },
   "packageFolders": {
-    "/home/luis/.nuget/packages/": {}
+    "/home/nti-user/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+      "projectUniqueName": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
       "projectName": "Projeto-Trainee-Hub",
-      "projectPath": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
-      "packagesPath": "/home/luis/.nuget/packages/",
-      "outputPath": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/",
+      "projectPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+      "packagesPath": "/home/nti-user/.nuget/packages/",
+      "outputPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/luis/.nuget/NuGet/NuGet.Config"
+        "/home/nti-user/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4752,7 +4752,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

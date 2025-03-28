@@ -29,13 +29,14 @@
 .bloco_treinamento {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
-    gap: 85px; /* Espaço entre os itens */
+    gap: 45px; /* Espaço entre os itens */
     padding: 0;
     list-style: none;
 }
 
 .list-andamento {
-    width: 100%;
+    width: 95%;
+    max-height: 300px;
 }
 
 .container-treinamento h1{
@@ -53,7 +54,7 @@
 .EditarPerfil{
     position: relative;
     background-color: #547A95;
-    color: #D9D9D9;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     font-family: 'Inter', bold;
@@ -63,8 +64,11 @@
     font-size: 24px;
     margin-top: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
     width: 450px;
-
+}
+.EditarPerfil:hover{
+    background-color: #0A2D46;
 }
 
 label {
@@ -90,7 +94,17 @@ label {
     font-family: 'Inter', bold;
 }
 
-/*MODAL*/
-.modal{
-    background-color: #547A95;
+.btnAbrirAdd{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #255374;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+.btnAbrirAdd:hover{
+    background-color: #0A2D46;
 }

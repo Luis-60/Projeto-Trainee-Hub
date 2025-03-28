@@ -56,15 +56,83 @@ for (i = 0; i < acc.length; i++) {
 }
 
 //Abrir Modal
+const modal = document.querySelector('.modal');
+const btnAbrir = document.querySelector('.btnAbrirAdd'); // Botão para abrir a modal
+const btnFechar = document.querySelector('.btnClose'); // Botão para fechar a modal
+const modalContent = document.querySelector('.modal-treinamento'); // Conteúdo da modal
 
-const modal = document.querySelector('.modal')
-
-function AbrirAdd(){
-  modal.classList.add('active')
+// Função para abrir a modal
+function AbrirAdd() {
+  modal.classList.add('active');
 }
 
-function closeModal(){
+// Função para fechar a modal
+function closeModal() {
   modal.classList.remove('active');
-
+  document.getElementById("nome").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("datainicio").value = "";
+  document.getElementById("datafim").value = "";
+  document.getElementById("images").value = "";
 }
 
+// Fecha a modal ao clicar no botão "SAIR"
+btnFechar.addEventListener('click', closeModal);
+
+// Fecha a modal ao clicar fora do conteúdo dela
+modal.addEventListener('click', function (event) {
+    if (!modalContent.contains(event.target)) {
+        closeModal();
+    }
+});
+
+// Adiciona evento ao botão de abrir a modal
+btnAbrir.addEventListener('click', AbrirAdd);
+
+//Adicionar e Excluir Conteúdos
+function addTreinamento() {
+  // Capturar os valores dos inputs
+  const nome = document.getElementById("nome").value;
+  const descricao = document.getElementById("descricao").value;
+  const dataInicio = document.getElementById("datainicio").value;
+  const dataFim = document.getElementById("datafim").value;
+  const imagemInput = document.getElementById("images");
+  
+  // Verificar se um arquivo de imagem foi selecionado
+  let imagemSrc = "~/images/image 1.png"; // Imagem padrão caso nenhuma seja escolhida
+  if (imagemInput.files.length > 0) {
+      const imagemURL = URL.createObjectURL(imagemInput.files[0]); 
+      imagemSrc = imagemURL;
+  }
+
+  // Criar um novo item de lista (li)
+  const newListItem = document.createElement("li");
+  newListItem.classList.add("list-andamento");
+
+  // Montar o HTML dinâmico
+  newListItem.innerHTML = `
+      <a href="#">
+          <div class="moldura">
+              <img src="${imagemSrc}" alt="Imagem do Treinamento">
+          </div>
+          <div class="card-content">
+              <div class="card-title">${nome}</div>
+              <div class="card-date">DATA INÍCIO: ${dataInicio}</div>
+              
+          </div>
+      </a>
+  `;
+
+  // Adicionar o novo item à lista de treinamentos
+  document.querySelector(".bloco_treinamento").appendChild(newListItem);
+
+  // Fechar o modal após adicionar o treinamento
+  closeModal();
+
+  // Limpar os campos do formulário
+  document.getElementById("nome").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("datainicio").value = "";
+  document.getElementById("datafim").value = "";
+  document.getElementById("images").value = "";
+}

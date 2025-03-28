@@ -1,319 +1,323 @@
 {
   "Files": [
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-aula.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-aula.css",
       "PackagePath": "staticwebassets/css/style-aula.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-aulas.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-aulas.css",
       "PackagePath": "staticwebassets/css/style-aulas.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
       "PackagePath": "staticwebassets/css/style-login.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-menu.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-menu.css",
       "PackagePath": "staticwebassets/css/style-menu.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-modulos.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
+      "PackagePath": "staticwebassets/css/style-modal.css"
+    },
+    {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modulos.css",
       "PackagePath": "staticwebassets/css/style-modulos.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css",
       "PackagePath": "staticwebassets/css/style-perfil.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/favicon.ico",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/Group 16 (1).png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/Group 16 (1).png",
       "PackagePath": "staticwebassets/images/Group 16 (1).png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/Group 17 (1).png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/Group 17 (1).png",
       "PackagePath": "staticwebassets/images/Group 17 (1).png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/Group 4.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/Group 4.png",
       "PackagePath": "staticwebassets/images/Group 4.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/IconePerfil(2).png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/IconePerfil(2).png",
       "PackagePath": "staticwebassets/images/IconePerfil(2).png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/IconePerfil.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/IconePerfil.png",
       "PackagePath": "staticwebassets/images/IconePerfil.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/LOGO EMPRESA.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/LOGO EMPRESA.png",
       "PackagePath": "staticwebassets/images/LOGO EMPRESA.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/OIP.jpeg",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/OIP.jpeg",
       "PackagePath": "staticwebassets/images/OIP.jpeg"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/TRAINEEHUBLOGO.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/TRAINEEHUBLOGO.png",
       "PackagePath": "staticwebassets/images/TRAINEEHUBLOGO.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/image 1.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/image 1.png",
       "PackagePath": "staticwebassets/images/image 1.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/image 2.png",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/image 2.png",
       "PackagePath": "staticwebassets/images/image 2.png"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/js/site.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
     },
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery/dist/jquery.slim.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
     },
     {

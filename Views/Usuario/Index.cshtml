@@ -1,4 +1,7 @@
-﻿@{
+﻿@model Usuarios
+@using System.Security.Claims;
+@using Projeto_Trainee_Hub.Controllers;
+@{
     ViewData["Title"] = "Menu";
 }
 
@@ -21,7 +24,7 @@
             <div class="carousel-inner">
 
                 <div class="item active">
-                    <a asp-area="" asp-controller="Home" asp-action="Aula">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                         <img src="~/images/OIP.jpeg">
                         <div class="carousel-caption">
                             <h3>Treinamento de Compliance</h3>
@@ -30,7 +33,7 @@
                 </div>
 
                 <div class="item">
-                    <a asp-area="" asp-controller="Home" asp-action="Aula">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                         <div class="carousel-caption">
                             <h3>Treinamento de RN-11</h3>
                         </div>
@@ -39,7 +42,7 @@
                 </div>
                 
                 <div class="item">
-                    <a asp-area="" asp-controller="Home" asp-action="Aula">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aula">
                         <img src="~/images/image 2.png">
                         <div class="carousel-caption">
                             <h3>Treinamento de Código de Conduta e Ética</h3>
@@ -68,7 +71,7 @@
             <ul class="bloco_treinamento-pendentes">
                 <li class="list-pendentes">
                     <div class="moldura-pendentes">
-                        <a asp-area="" asp-controller="Home" asp-action="Aula">
+                        <a asp-area="" asp-controller="Usuario" asp-action="Aula">
                             <img src="~/images/image 2.png">
                         </a>
                     </div>

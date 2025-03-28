@@ -75,7 +75,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 40px;
+    gap: 20px;
     
 }
 .list-andamento{
@@ -86,7 +86,7 @@
 .list-andamento img{
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s ease-in-out;
@@ -120,7 +120,7 @@
 
 .list-andamento .card-title{
     padding: 20px;
-    font-size: 36px;
+    font-size: 28px;
     font-family: "Inter", bold;
     color: #0A2D46;
 }
@@ -236,6 +236,7 @@
 
 .list-futuro{
     border-bottom: 1px solid #7B7B7B;
+    max-width: 300px;
 }
 .moldura-futuro{
     width: 300px;
