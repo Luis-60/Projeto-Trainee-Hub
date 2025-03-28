@@ -86,13 +86,12 @@ INSERT INTO Usuarios (Nome, Email, Matricula, Senha, Idade, Imagem, QtdTreinamen
 
 CREATE TABLE Treinamentos (
     idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
-    idCriador INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50),
     Descricao VARCHAR(500),
     Imagem VARCHAR(100),
+    Instrutor VARCHAR(240)
     DataInicio DATETIME,
     DataFim DATETIME,
-    Instrutor VARCHAR(240),
     Duracao INTEGER,
     Entidades VARCHAR(240),
     idModulos INT,
