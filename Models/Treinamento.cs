@@ -6,7 +6,8 @@ namespace Projeto_Trainee_Hub.Models;
 public partial class Treinamento
 {
     public int IdTreinamentos { get; set; }
-
+    
+    
     public string? Nome { get; set; }
 
     public string? Descricao { get; set; }
@@ -26,7 +27,10 @@ public partial class Treinamento
     public int? IdModulos { get; set; }
 
     public int? IdEmpresa { get; set; }
+    public int? IdCriador { get; set; }
 
+    public virtual Usuarios? IdCriadorNavigation { get; set;}
+    
     public virtual Empresa? IdEmpresaNavigation { get; set; }
 
     public virtual Modulo? IdModulosNavigation { get; set; }

@@ -31,7 +31,7 @@ public partial class Usuarios
     public virtual Tipo? IdTipoNavigation { get; set; }
 
     public virtual Empresa? IdEmpresaNavigation { get; set; }
-
+    public virtual ICollection<Treinamento> Treinamentos { get; set; } = new List<Treinamento>();
     public virtual ICollection<UsuariosTreinamento> UsuariosTreinamentos { get; set; } = new List<UsuariosTreinamento>();
     
 }

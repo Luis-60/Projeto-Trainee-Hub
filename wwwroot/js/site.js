@@ -8,6 +8,7 @@
         span.style.width = progressWidth + '%';
     });
 });
+
 document.querySelectorAll('.progressbar span').forEach(function(span) {
     // Pega o valor de data-width do span
     const progressWidth = span.getAttribute('data-width');

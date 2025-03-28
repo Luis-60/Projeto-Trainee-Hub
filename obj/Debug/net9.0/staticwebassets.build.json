@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mlqdugIHJRURnm7AJVM9t5B1RWQDIEEpBDJE6P1jKls=",
+  "Hash": "h968Z1xpjQU9CdpqU+LD7LvlZNy3tAdTsJ9TWfNVsFk=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -311,12 +311,12 @@
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-k3udqk0fzp.gz",
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "js/site#[.{fingerprint=k3udqk0fzp}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=j8pnqs8blz}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -325,8 +325,8 @@
       "RelatedAsset": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uw3b1yh4mr",
-      "Integrity": "cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8=",
+      "Fingerprint": "5l9uns5qre",
+      "Integrity": "9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js"
@@ -353,12 +353,12 @@
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-smwj6gy5eh.gz",
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style-perfil#[.{fingerprint=smwj6gy5eh}]?.css.gz",
+      "RelativePath": "css/style-perfil#[.{fingerprint=kmzi7wq2xf}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -367,8 +367,8 @@
       "RelatedAsset": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vv9rt1sudz",
-      "Integrity": "y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks=",
+      "Fingerprint": "74zthughzh",
+      "Integrity": "+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css"
@@ -752,12 +752,12 @@
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-315xj8g3xm.gz",
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style-modal#[.{fingerprint=315xj8g3xm}]?.css.gz",
+      "RelativePath": "css/style-modal#[.{fingerprint=uzg5gxzjop}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -766,8 +766,8 @@
       "RelatedAsset": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3cabw77qf0",
-      "Integrity": "7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw=",
+      "Fingerprint": "5a5skf777y",
+      "Integrity": "Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css"
@@ -1151,12 +1151,12 @@
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-xbe8l0n8w1.gz",
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style-menu#[.{fingerprint=xbe8l0n8w1}]?.css.gz",
+      "RelativePath": "css/style-menu#[.{fingerprint=pof8zdid9v}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1165,8 +1165,8 @@
       "RelatedAsset": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-menu.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wp16dmuyrm",
-      "Integrity": "NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY=",
+      "Fingerprint": "icmys8w4o6",
+      "Integrity": "Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-menu.css"
@@ -1543,8 +1543,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xbe8l0n8w1",
-      "Integrity": "jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE=",
+      "Fingerprint": "pof8zdid9v",
+      "Integrity": "l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style-menu.css"
@@ -1564,8 +1564,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "315xj8g3xm",
-      "Integrity": "t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ=",
+      "Fingerprint": "uzg5gxzjop",
+      "Integrity": "SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style-modal.css"
@@ -1606,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "smwj6gy5eh",
-      "Integrity": "9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y=",
+      "Fingerprint": "kmzi7wq2xf",
+      "Integrity": "3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style-perfil.css"
@@ -1879,8 +1879,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k3udqk0fzp",
-      "Integrity": "oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8=",
+      "Fingerprint": "j8pnqs8blz",
+      "Integrity": "fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -4043,12 +4043,12 @@
     },
     {
       "Route": "css/style-menu.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-xbe8l0n8w1.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000546149645"
+          "Quality": "0.000541125541"
         }
       ],
       "ResponseHeaders": [
@@ -4058,15 +4058,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1830"
+          "Value": "1847"
         },
         {
           "Name": "ETag",
-          "Value": "\"NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY=\""
+          "Value": "\"Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4086,13 +4086,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE=\""
+          "Value": "W/\"l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE="
+          "Value": "sha256-l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA="
         }
       ]
     },
@@ -4107,7 +4107,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6914"
+          "Value": "6935"
         },
         {
           "Name": "Content-Type",
@@ -4115,11 +4115,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE=\""
+          "Value": "\"l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4129,13 +4129,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE="
+          "Value": "sha256-l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA="
         }
       ]
     },
     {
       "Route": "css/style-menu.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-xbe8l0n8w1.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4144,7 +4144,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1830"
+          "Value": "1847"
         },
         {
           "Name": "Content-Type",
@@ -4152,11 +4152,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY=\""
+          "Value": "\"Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4174,18 +4174,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY="
+          "Value": "sha256-Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc="
         }
       ]
     },
     {
-      "Route": "css/style-menu.xbe8l0n8w1.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-xbe8l0n8w1.gz",
+      "Route": "css/style-menu.pof8zdid9v.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000546149645"
+          "Quality": "0.000541125541"
         }
       ],
       "ResponseHeaders": [
@@ -4195,15 +4195,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1830"
+          "Value": "1847"
         },
         {
           "Name": "ETag",
-          "Value": "\"NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY=\""
+          "Value": "\"Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4223,13 +4223,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE=\""
+          "Value": "W/\"l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xbe8l0n8w1"
+          "Value": "pof8zdid9v"
         },
         {
           "Name": "label",
@@ -4237,12 +4237,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE="
+          "Value": "sha256-l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA="
         }
       ]
     },
     {
-      "Route": "css/style-menu.xbe8l0n8w1.css",
+      "Route": "css/style-menu.pof8zdid9v.css",
       "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-menu.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4252,7 +4252,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6914"
+          "Value": "6935"
         },
         {
           "Name": "Content-Type",
@@ -4260,11 +4260,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE=\""
+          "Value": "\"l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4274,7 +4274,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xbe8l0n8w1"
+          "Value": "pof8zdid9v"
         },
         {
           "Name": "label",
@@ -4282,13 +4282,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jZ/QtyYeBp5ewyKtgTgeU6LKR9V/rLwWwsvvTvGUtBE="
+          "Value": "sha256-l0exTUTcLgPGsU64mAIYJWlrSKhj7VS/A8l3F6Qk0qA="
         }
       ]
     },
     {
-      "Route": "css/style-menu.xbe8l0n8w1.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-xbe8l0n8w1.gz",
+      "Route": "css/style-menu.pof8zdid9v.css.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4297,7 +4297,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1830"
+          "Value": "1847"
         },
         {
           "Name": "Content-Type",
@@ -4305,11 +4305,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY=\""
+          "Value": "\"Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 16:06:15 GMT"
+          "Value": "Fri, 28 Mar 2025 19:13:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4327,7 +4327,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xbe8l0n8w1"
+          "Value": "pof8zdid9v"
         },
         {
           "Name": "label",
@@ -4335,18 +4335,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NPMWzVeKC1d+ooPde31pJiQBG+0bIK5zFCtK7FelBuY="
+          "Value": "sha256-Xp5pbUbIpKH7N4+4iduQSe92aJfi6zASPpKiwcVHUUc="
         }
       ]
     },
     {
-      "Route": "css/style-modal.315xj8g3xm.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-315xj8g3xm.gz",
+      "Route": "css/style-modal.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000854700855"
+          "Quality": "0.000765696784"
         }
       ],
       "ResponseHeaders": [
@@ -4356,19 +4356,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1169"
+          "Value": "1305"
         },
         {
           "Name": "ETag",
-          "Value": "\"7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw=\""
+          "Value": "\"Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -4384,26 +4384,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ=\""
+          "Value": "W/\"SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "315xj8g3xm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/style-modal.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ="
+          "Value": "sha256-SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw="
         }
       ]
     },
     {
-      "Route": "css/style-modal.315xj8g3xm.css",
+      "Route": "css/style-modal.css",
       "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4413,7 +4405,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3673"
+          "Value": "4262"
         },
         {
           "Name": "Content-Type",
@@ -4421,11 +4413,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ=\""
+          "Value": "\"SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw="
+        }
+      ]
+    },
+    {
+      "Route": "css/style-modal.css.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style-modal.uzg5gxzjop.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000765696784"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1305"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uzg5gxzjop"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style-modal.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw="
+        }
+      ]
+    },
+    {
+      "Route": "css/style-modal.uzg5gxzjop.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4435,7 +4572,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "315xj8g3xm"
+          "Value": "uzg5gxzjop"
         },
         {
           "Name": "label",
@@ -4443,13 +4580,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ="
+          "Value": "sha256-SgkX7PfRizIbNSsC+B36kU56JMOuyLKE6UDPBPJWxhw="
         }
       ]
     },
     {
-      "Route": "css/style-modal.315xj8g3xm.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-315xj8g3xm.gz",
+      "Route": "css/style-modal.uzg5gxzjop.css.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4458,7 +4595,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1169"
+          "Value": "1305"
         },
         {
           "Name": "Content-Type",
@@ -4466,11 +4603,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw=\""
+          "Value": "\"Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
+          "Value": "Fri, 28 Mar 2025 18:19:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4488,7 +4625,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "315xj8g3xm"
+          "Value": "uzg5gxzjop"
         },
         {
           "Name": "label",
@@ -4496,144 +4633,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw="
-        }
-      ]
-    },
-    {
-      "Route": "css/style-modal.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-315xj8g3xm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000854700855"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1169"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/style-modal.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3673"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-t2p4v5x26+NHYMwiDB973AC90cCxHs+KoKYCfVMQIxQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/style-modal.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-315xj8g3xm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1169"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7WrOvbHOBjTEidPO1mQBTTD9CjOMbT64RLY2O21f+mw="
+          "Value": "sha256-Q5bvHuFRbtDIHln1973AkOzqXdMmzh+9meRPsm/u7k8="
         }
       ]
     },
@@ -4937,12 +4937,12 @@
     },
     {
       "Route": "css/style-perfil.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-smwj6gy5eh.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000625000000"
+          "Quality": "0.001329787234"
         }
       ],
       "ResponseHeaders": [
@@ -4952,15 +4952,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1599"
+          "Value": "751"
         },
         {
           "Name": "ETag",
-          "Value": "\"y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks=\""
+          "Value": "\"+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4980,13 +4980,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y=\""
+          "Value": "W/\"3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y="
+          "Value": "sha256-3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000="
         }
       ]
     },
@@ -5001,7 +5001,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5388"
+          "Value": "2094"
         },
         {
           "Name": "Content-Type",
@@ -5009,11 +5009,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y=\""
+          "Value": "\"3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5023,13 +5023,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y="
+          "Value": "sha256-3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000="
         }
       ]
     },
     {
       "Route": "css/style-perfil.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-smwj6gy5eh.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5038,7 +5038,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1599"
+          "Value": "751"
         },
         {
           "Name": "Content-Type",
@@ -5046,11 +5046,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks=\""
+          "Value": "\"+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5068,18 +5068,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks="
+          "Value": "sha256-+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4="
         }
       ]
     },
     {
-      "Route": "css/style-perfil.smwj6gy5eh.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-smwj6gy5eh.gz",
+      "Route": "css/style-perfil.kmzi7wq2xf.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000625000000"
+          "Quality": "0.001329787234"
         }
       ],
       "ResponseHeaders": [
@@ -5089,15 +5089,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1599"
+          "Value": "751"
         },
         {
           "Name": "ETag",
-          "Value": "\"y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks=\""
+          "Value": "\"+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5117,13 +5117,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y=\""
+          "Value": "W/\"3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "smwj6gy5eh"
+          "Value": "kmzi7wq2xf"
         },
         {
           "Name": "label",
@@ -5131,12 +5131,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y="
+          "Value": "sha256-3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000="
         }
       ]
     },
     {
-      "Route": "css/style-perfil.smwj6gy5eh.css",
+      "Route": "css/style-perfil.kmzi7wq2xf.css",
       "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5146,7 +5146,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5388"
+          "Value": "2094"
         },
         {
           "Name": "Content-Type",
@@ -5154,11 +5154,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y=\""
+          "Value": "\"3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5168,7 +5168,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "smwj6gy5eh"
+          "Value": "kmzi7wq2xf"
         },
         {
           "Name": "label",
@@ -5176,13 +5176,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9JHLffO1gD0YqVfMc+P/rlTYeMEEcrWOHrQotScuI7Y="
+          "Value": "sha256-3Iu20ko9rxVaWo3ROe9mOKbWJqJzRvN1R7/Em5c6000="
         }
       ]
     },
     {
-      "Route": "css/style-perfil.smwj6gy5eh.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-smwj6gy5eh.gz",
+      "Route": "css/style-perfil.kmzi7wq2xf.css.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5191,7 +5191,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1599"
+          "Value": "751"
         },
         {
           "Name": "Content-Type",
@@ -5199,11 +5199,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks=\""
+          "Value": "\"+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 17:43:03 GMT"
+          "Value": "Fri, 28 Mar 2025 19:11:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5221,7 +5221,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "smwj6gy5eh"
+          "Value": "kmzi7wq2xf"
         },
         {
           "Name": "label",
@@ -5229,7 +5229,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-y4sfeV13YHF/c0kQ4NYMgsD43Kgr5K5Yoy9Yp5fV2ks="
+          "Value": "sha256-+X/NVCof7hvpFytWCQpqkrg34gVaWW13LNhaM1Yci+4="
         }
       ]
     },
@@ -6650,13 +6650,13 @@
       ]
     },
     {
-      "Route": "js/site.js",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-k3udqk0fzp.gz",
+      "Route": "js/site.j8pnqs8blz.js",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001076426265"
+          "Quality": "0.000663129973"
         }
       ],
       "ResponseHeaders": [
@@ -6666,19 +6666,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "928"
+          "Value": "1507"
         },
         {
           "Name": "ETag",
-          "Value": "\"cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8=\""
+          "Value": "\"9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -6694,18 +6694,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8=\""
+          "Value": "W/\"fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "j8pnqs8blz"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8="
+          "Value": "sha256-fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o="
         }
       ]
     },
     {
-      "Route": "js/site.js",
+      "Route": "js/site.j8pnqs8blz.js",
       "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6715,7 +6723,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2886"
+          "Value": "4832"
         },
         {
           "Name": "Content-Type",
@@ -6723,121 +6731,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8=\""
+          "Value": "\"fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-k3udqk0fzp.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "928"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.k3udqk0fzp.js",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-k3udqk0fzp.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001076426265"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "928"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k3udqk0fzp"
+          "Value": "j8pnqs8blz"
         },
         {
           "Name": "label",
@@ -6845,13 +6753,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8="
+          "Value": "sha256-fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o="
         }
       ]
     },
     {
-      "Route": "js/site.k3udqk0fzp.js",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
+      "Route": "js/site.j8pnqs8blz.js.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6860,7 +6768,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2886"
+          "Value": "1507"
         },
         {
           "Name": "Content-Type",
@@ -6868,56 +6776,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8=\""
+          "Value": "\"9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "k3udqk0fzp"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-oMN1FdBPAQ1gwIfR+nEkFb13ED9vaJuzEHlua+XdWH8="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.k3udqk0fzp.js.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-k3udqk0fzp.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "928"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 16:08:13 GMT"
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6935,7 +6798,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k3udqk0fzp"
+          "Value": "j8pnqs8blz"
         },
         {
           "Name": "label",
@@ -6943,7 +6806,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cp5JBE9n7bWoX3GcmNt/RAezdEmZKojbxueqezYU/F8="
+          "Value": "sha256-9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000663129973"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1507"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fZYUNvmbbb2tmjab2KI8XeSEEkogyJWlB+vSzTE4c7o="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1507"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 19:51:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9zzi8F2RFjagHMJLU/E678cBCKnRtrpfpaG2/0+U9H0="
         }
       ]
     },

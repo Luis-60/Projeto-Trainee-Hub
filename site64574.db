@@ -86,6 +86,7 @@ INSERT INTO Usuarios (Nome, Email, Matricula, Senha, Idade, Imagem, QtdTreinamen
 
 CREATE TABLE Treinamentos (
     idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
+    idCriador INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50),
     Descricao VARCHAR(500),
     Imagem VARCHAR(100),
@@ -96,6 +97,8 @@ CREATE TABLE Treinamentos (
     Entidades VARCHAR(240),
     idModulos INT,
     idEmpresa INT,
+    idCriador INT,
+    FOREIGN KEY (idCriador) REFERENCES Usuarios(idUsuarios),
     FOREIGN KEY (idModulos) REFERENCES Modulos(idModulos),
     FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )

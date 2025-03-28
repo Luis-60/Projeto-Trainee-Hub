@@ -163,7 +163,10 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Nome)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-
+            entity.HasOne(d => d.IdCriadorNavigation).WithMany(p => p.Treinamentos)
+                .HasForeignKey(d => d.IdCriador)
+                .HasConstraintName("FK__Treinamen__idCri__5EDF0F2E");
+                
             entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Treinamentos)
                 .HasForeignKey(d => d.IdEmpresa)
                 .HasConstraintName("FK__Treinamen__idEmp__3E723F9C");
@@ -208,6 +211,7 @@ public partial class MasterContext : DbContext
             entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Usuarios)
                 .HasForeignKey(d => d.IdEmpresa)
                 .HasConstraintName("FK__Usuarios__idEmpr__6E2152BE");
+            
         });
 
         modelBuilder.Entity<UsuariosTreinamento>(entity =>
