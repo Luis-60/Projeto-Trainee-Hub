@@ -1,68 +1,58 @@
-// using Microsoft.EntityFrameworkCore;
-// using System;
-// using System.Collections.Generic;
-// using System.Linq;
-// using System.Linq.Expressions;
-// using System.Threading.Tasks;
-// using Projeto_Trainee_Hub.Models;
-// namespace Projeto_Trainee_Hub.Repository
-// {
-//     public interface IGenericRepository<T> where T : class
-//     {
-//         Task<IEnumerable<T>> GetAllAsync();
-//         Task<T> GetByIdAsync(int id);
-//         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
-//         Task AddAsync(T entity);
-//         Task UpdateAsync(T entity);
-//         Task DeleteAsync(int id);
-//     }
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+using Projeto_Trainee_Hub.Models;
+namespace Projeto_Trainee_Hub.Repository
+{
 
-//     public class GenericRepository<T> : IGenericRepository<T> where T : class
-//     {
-//         private readonly MasterContext _context;
-//         private readonly DbSet<T> _dbSet;
+    public class ModuloRepository 
+    {
+        private readonly MasterContext _context;
+        public ModuloRepository(MasterContext context)
+        {
+            _context = context;
+        }
 
-//         public GenericRepository(MasterContext context)
-//         {
-//             _context = context;
-//             _dbSet = _context.Set<T>();
-//         }
+        public async Task<List<Modulo>> GetAllAsync()
+        {
+            return await _context.Modulos.ToListAsync();
+        }
 
-//         public async Task<IEnumerable<T>> GetAllAsync()
-//         {
-//             return await _dbSet.ToListAsync();
-//         }
+        public async Task<Modulo?> ObterPorIdCriadorAsync(int id)
+        {
+            return await _context.Modulos
+                .Include(m => m.IdAulaNavigation)
+                .FirstOrDefaultAsync(m => m.IdModulos == id);
+        }
 
-//         public async Task<T> GetByIdAsync(int id)
-//         {
-//             return await _dbSet.FindAsync(id);
-//         }
+        public async Task<IEnumerable<Modulo>> FindAsync(Expression<Func<Modulo, bool>> predicate)
+        {
+            return await _context.Modulos.Where(predicate).ToListAsync();
+        }
 
-//         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
-//         {
-//             return await _dbSet.Where(predicate).ToListAsync();
-//         }
+        public async Task AddAsync(Modulo entity)
+        {
+            await _context.Modulos.AddAsync(entity);
+            await _context.SaveChangesAsync();
+        }
 
-//         public async Task AddAsync(T entity)
-//         {
-//             await _dbSet.AddAsync(entity);
-//             await _context.SaveChangesAsync();
-//         }
+        public async Task UpdateAsync(Modulo entity)
+        {
+            _context.Modulos.Update(entity);
+            await _context.SaveChangesAsync();
+        }
 
-//         public async Task UpdateAsync(T entity)
-//         {
-//             _dbSet.Update(entity);
-//             await _context.SaveChangesAsync();
-//         }
-
-//         public async Task DeleteAsync(int id)
-//         {
-//             var entity = await _dbSet.FindAsync(id);
-//             if (entity != null)
-//             {
-//                 _dbSet.Remove(entity);
-//                 await _context.SaveChangesAsync();
-//             }
-//         }
-//     }
-// }
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await _context.Modulos.FindAsync(id);
+            if (entity != null)
+            {
+                _context.Modulos.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
+        }
+    }
+}
