@@ -93,7 +93,6 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/8lsj9gtyzq-bqjiyaj88i.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/v9u2alsoj7-wof7unmvz1.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-neid62zr7v.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-njmozi15c1.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Azure.Core.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Azure.Identity.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Humanizer.dll
@@ -230,7 +229,6 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-.10ED0647.Up2Date
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-i9366fsrl2.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-8moov7rtnz.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-wj3j0gpral.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/appsettings.Development.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/appsettings.json
@@ -464,3 +462,5 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.pdb
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
+/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-7ov391b8qj.gz
+/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-e8plr01g8j.gz

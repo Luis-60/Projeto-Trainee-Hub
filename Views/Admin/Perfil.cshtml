@@ -34,7 +34,13 @@
         </div>
     </div>
     <div class="container-treinamento">
-        <h1>TREINAMENTOS</h1>
+        <div class="topo">
+            <h1>TREINAMENTOS</h1>
+            <button class="btnAbrirAdd" type="button" onclick="AbrirAdd()">
+                Adicionar
+            </button>
+        </div>
+        
         <ul class="bloco_treinamento">
             <li class="list-andamento">
                 <a href="#">
@@ -121,5 +127,27 @@
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="modal">
+        <div class="modal-treinamento">
+            <h1>CRIAR TREINAMENTO</h1>
+            <label for="nome" id="nome" name="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome">
+
+            <label for="descricao" id="descricao" name="descricao">Descrição:</label><br>
+            <input type="text" id="descricao" name="descricao">
+            
+            <label for="datainicio" id="datainicio" name="datainicio">Data Início:</label><br>
+            <input type="date" id="datainicio" name="datainicio">
+            
+            <label for="datafim" id="datafim" name="datafim">Data Fim:</label><br>
+            <input type="date" id="datafim" name="datafim">
+
+            <label for="imagem" id="imagem" name="imagem">imagem Ilustratíva:</label><br>
+            <input type="file" id="imagem" name="imagem">
+            
+            <button class="btnAddTreinamento" onclick="addTreinamento()">CRIAR</button>
+            <button class="btnClose" onclick="closeModal()">SAIR</button>
+        </div>
     </div>
 </div>

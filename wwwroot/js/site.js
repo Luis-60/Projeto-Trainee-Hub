@@ -54,3 +54,17 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+//Abrir Modal
+
+const modal = document.querySelector('.modal')
+
+function AbrirAdd(){
+  modal.classList.add('active')
+}
+
+function closeModal(){
+  modal.classList.remove('active');
+
+}
+

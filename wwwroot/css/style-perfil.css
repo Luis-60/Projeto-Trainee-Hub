@@ -72,3 +72,25 @@ label {
     font-size: 18px;
     color: #0A2D46;
 }
+.topo h1{
+    width: 1300px;
+}
+
+.topo{
+    display: flex;
+    align-items: center;
+}
+
+.topo .add-treinamento{
+    border: none;
+    width: 90px;
+    font-size: 18px;
+    border-radius: 10px;
+    height: 30px;
+    font-family: 'Inter', bold;
+}
+
+/*MODAL*/
+.modal{
+    background-color: #547A95;
+}
