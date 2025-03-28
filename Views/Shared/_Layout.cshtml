@@ -61,9 +61,18 @@
             </div>
             <div class="perfil">
                 <div class="icone-perfil">
-                    <a asp-area="" asp-controller="Usuario" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
-                        <img src="~/images/IconePerfil.png">
-                    </a>
+                    @if (User.IsInRole("2"))
+                    {
+                        <a asp-area="" asp-controller="Admin" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                            <img src="~/images/IconePerfil.png">
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-area="" asp-controller="Usuario" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                            <img src="~/images/IconePerfil.png">
+                        </a>
+                    }
                 </div>    
             </div>
         </div>
