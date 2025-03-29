@@ -89,7 +89,7 @@ CREATE TABLE Treinamentos (
     Nome VARCHAR(50),
     Descricao VARCHAR(500),
     Imagem VARCHAR(100),
-    Instrutor VARCHAR(240)
+    Instrutor VARCHAR(240),
     DataInicio DATETIME,
     DataFim DATETIME,
     Duracao INTEGER,

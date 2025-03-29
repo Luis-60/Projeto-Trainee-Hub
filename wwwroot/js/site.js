@@ -71,13 +71,13 @@ function AbrirAdd() {
 function closeModal() {
   modal.classList.remove('active');
   document.getElementById("nome").value = "";
+  document.getElementById("instrutor").value = "";
   document.getElementById("descricao").value = "";
   document.getElementById("datainicio").value = "";
   document.getElementById("datafim").value = "";
-  document.getElementById("images").value = "";
+  document.getElementById("images-treinamento").value = "";
 }
 
-// Fecha a modal ao clicar no botão "SAIR"
 btnFechar.addEventListener('click', closeModal);
 
 // Fecha a modal ao clicar fora do conteúdo dela
@@ -94,10 +94,11 @@ btnAbrir.addEventListener('click', AbrirAdd);
 function addTreinamento() {
   // Capturar os valores dos inputs
   const nome = document.getElementById("nome").value;
+  const instrutor = document.getElementById("instrutor").value;
   const descricao = document.getElementById("descricao").value;
   const dataInicio = document.getElementById("datainicio").value;
   const dataFim = document.getElementById("datafim").value;
-  const imagemInput = document.getElementById("images");
+  const imagemInput = document.getElementById("images-treinamento");
   
   // Verificar se um arquivo de imagem foi selecionado
   let imagemSrc = "~/images/image 1.png"; // Imagem padrão caso nenhuma seja escolhida
@@ -123,9 +124,29 @@ function addTreinamento() {
           </div>
       </a>
   `;
+  
 
   // Adicionar o novo item à lista de treinamentos
   document.querySelector(".bloco_treinamento").appendChild(newListItem);
+  //Adicionar Imagem ao Folder
+  const fileInput = document.getElementById("images-treinamento");
+  const file = fileInput.files[0];
+
+  if (!file) {
+      alert("Selecione um arquivo primeiro!");
+      return;
+  }
+
+  const formData = new FormData();
+  formData.append("file", file);
+
+  fetch("/api/upload/treinamentos", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => alert(data.message))
+  .catch(error => console.error("Erro:", error));
 
   // Fechar o modal após adicionar o treinamento
   closeModal();
@@ -133,7 +154,12 @@ function addTreinamento() {
   // Limpar os campos do formulário
   document.getElementById("nome").value = "";
   document.getElementById("descricao").value = "";
+  document.getElementById("instrutor").value = "";
   document.getElementById("datainicio").value = "";
   document.getElementById("datafim").value = "";
-  document.getElementById("images").value = "";
+  document.getElementById("images-treinamento").value = "";
 }
+
+document.getElementById("dropcontainer").addEventListener("click", function() {
+  document.getElementById("images-treinamento").click(); // Simula o clique no input
+});
