@@ -1,0 +1,206 @@
+/*MODAL*/
+.modal {
+    width: 100vw;
+    height: 100vh;
+    /* Para ocupar toda a altura da tela */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    align-items: center;
+    /* Centraliza verticalmente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adiciona um fundo escuro semi-transparente */
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Inter', bold;
+    color: #25445a;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #25445a;
+}
+
+.modal-aula {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: 900px;
+    position: relative;
+    animation: modal 0.4s;
+}
+
+.input-nome {
+    min-height: 15px;
+    width: 95%;
+    margin-bottom: 20px;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
+
+textarea {
+    min-height: 140px;
+    width: 95%;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'Inter', serif;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    background: #6f93f6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Inter', bold;
+    color: #25445a;
+    display: block;
+}
+
+.btnClose {
+    background: #f082ac
+}
+
+.btnClose:hover {
+    background: #ec5f95;
+}
+
+.btnAddAula:hover {
+    background: #275df1;
+}
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+    background: #cccccc;
+    border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+    color: #222;
+}
+
+.drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+.upload-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.file-list {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    max-height: 300px; 
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.file-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.file-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.container-data {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.container-datafim,
+.container-datainicio {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-x{
+    display: flex;
+    justify-content: flex-end;
+}
+i:hover {
+    cursor: pointer;
+    
+}
