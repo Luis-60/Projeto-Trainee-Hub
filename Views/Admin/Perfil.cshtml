@@ -131,33 +131,38 @@
     <div class="modal">
         <div class="modal-treinamento">
             <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
-
-            <div class="inputnome">
-                <label for="nome"name="nome">Nome:</label><br>
-                <input placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" name="nome">
-            </div>      
-            <label for="descricao" name="descricao">Descrição:</label><br>
-            <textarea placeholder="Descreva o treinamento" id="descricao" name="descricao"></textarea>
-            <div class="container-data">
-                <div class="container-datainicio">
-                    <label for="datainicio" name="datainicio">Data de Início:</label><br>
-                    <input type="date" id="datainicio" name="datainicio">
+            <form asp-asp-controller="Teinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
+                <div class="inputnome">
+                    <label for="nome"name="nome">Nome:</label><br>
+                    <input placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" name="nome" required>
+                </div>      
+                <div class="input-instrutor">
+                    <label for="instrutor" name="instrutor">Instrutor:</label><br>
+                    <input placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" name="instrutor" required>
+                </div>        
+                <label for="descricao" name="descricao">Descrição:</label><br>
+                <textarea placeholder="Descreva o treinamento" id="descricao" name="descricao"></textarea required>
+                <div class="container-data">
+                    <div class="container-datainicio">
+                        <label for="datainicio" name="datainicio">Data de Início:</label><br>
+                        <input type="date" id="datainicio" name="datainicio" required>
+                    </div>
+                    <div class="container-datafim">
+                        <label for="datafim" name="datafim">Data de Fim:</label><br>
+                        <input type="date" id="datafim" name="datafim" required>
+                    </div>
                 </div>
-                <div class="container-datafim">
-                    <label for="datafim" name="datafim">Data de Fim:</label><br>
-                    <input type="date" id="datafim" name="datafim">
-                </div>
-            </div>
-            <label for="imagem" id="imagem" name="imagem">Imagem Ilustrativa:</label><br>
-            <label for="images" class="drop-container" id="dropcontainer">
-                <span class="drop-title">Insira o Arquivo aqui</span>
-                ou
-                <input type="file" id="images" accept="image/*" required>
-              </label>
+                <label for="imagem" id="imagem" name="imagem">Imagem Ilustrativa:</label><br>
+                <label for="images" class="drop-container" id="dropcontainer">
+                    <span class="drop-title">Insira o Arquivo aqui</span>
+                    ou
+                    <input type="file" id="images-treinamento" accept="image/*" required required>
+                </label>
+            </form>
               
             
             <div class="buttons"> 
-                <button class="btnAddTreinamento" onclick="addTreinamento()">CRIAR</button>
+                <button class="btnAddTreinamento" type="submit" onclick="addTreinamento()">CRIAR</button>
                 <button class="btnClose" onclick="closeModal()">SAIR</button>
             </div>                
         </div>

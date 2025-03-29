@@ -63,13 +63,13 @@
                 <div class="icone-perfil">
                     @if (User.IsInRole("2"))
                     {
-                        <a asp-area="" asp-controller="Admin" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a asp-area="" asp-controller="Admin" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                             <img src="~/images/IconePerfil.png">
                         </a>
                     }
                     else
                     {
-                        <a asp-area="" asp-controller="Usuario" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a asp-area="" asp-controller="Usuario" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                             <img src="~/images/IconePerfil.png">
                         </a>
                     }
@@ -102,5 +102,6 @@
 
 </footer>
 <script src="~/js/site.js" asp-append-version="true"></script >
+
 </body>
 </html>

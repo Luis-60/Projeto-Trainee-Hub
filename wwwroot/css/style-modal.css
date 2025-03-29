@@ -24,7 +24,7 @@
 
 /* Cor da barra de rolagem */
 .modal-treinamento::-webkit-scrollbar-thumb {
-    background: #6f93f6; /* Azul */
+    background: #6f93f6;
     border-radius: 10px;
 }
 
@@ -83,6 +83,19 @@
     background: #f3f3f3;
 }
 
+.input-instrutor input{
+    min-height: 15px;
+    width: 95%;
+    margin-bottom: 20px;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
 textarea {
     min-height: 140px;
     width: 95%;
@@ -152,8 +165,8 @@ label {
     justify-content: center;
     align-items: center;
     background-color: #f3f3f3;
-    height: 200px;
-    padding: 20px;
+    height: 300px;
+    padding: 50px;
     border-radius: 10px;
     border: 2px dashed #555;
     color: #444;
@@ -172,14 +185,16 @@ label {
 
 .drop-title {
     color: #444;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
+    color:#25445a;
     text-align: center;
     transition: color .2s ease-in-out;
 }
 
 input[type="file"] {
     font-family: "Inter", sans-serif;
+    font-size: 14px;
 
 }
 

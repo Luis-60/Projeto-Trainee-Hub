@@ -37,6 +37,7 @@ public class UsuarioController : Controller
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
         return View(usuarioExistente);
     }
+    
     public async Task<IActionResult> PerfilAsync(string matricula)
     {
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);

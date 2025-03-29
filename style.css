@@ -143,6 +143,19 @@ input[type="file"] {
 
 }
 
+.instrutor {
+    min-height: 15px;
+    width: 95%;
+    margin-bottom: 20px;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
 input[type="date"] {
     background-color: #f3f3f3;
     padding: 5px;

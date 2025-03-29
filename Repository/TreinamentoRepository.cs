@@ -34,10 +34,11 @@ namespace Projeto_Trainee_Hub.Repository
             return await _context.Treinamentos.Where(predicate).ToListAsync();
         }
 
-        public async Task AddAsync(Treinamento entity)
+        public async Task<Treinamento> CriarTreinamento(Treinamento treinamento)
         {
-            await _context.Treinamentos.AddAsync(entity);
+            _context.Treinamentos.Add(treinamento);
             await _context.SaveChangesAsync();
+            return treinamento;
         }
 
         public async Task UpdateAsync(Treinamento entity)
