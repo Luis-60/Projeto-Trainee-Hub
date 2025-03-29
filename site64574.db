@@ -3,17 +3,17 @@ CREATE TABLE Setor (
     Nome VARCHAR(50)
 )
 
-INSERT INTO Setor (IdSetor, Nome) VALUES 
-(1, 'Recursos Humanos'),
-(2, 'Financeiro'),
-(3, 'Tecnologia da Informação'),
-(4, 'Marketing'),
-(5, 'Vendas'),
-(6, 'Produção'),
-(7,'Logística'),
-(8, 'Jurídico'),
-(9, 'Pesquisa e Desenvolvimento'),
-(10, 'Atendimento ao Cliente');
+INSERT INTO Setor VALUES 
+('Recursos Humanos'),
+('Financeiro'),
+('Tecnologia da Informação'),
+('Marketing'),
+('Vendas'),
+('Produção'),
+('Logística'),
+('Jurídico'),
+('Pesquisa e Desenvolvimento'),
+('Atendimento ao Cliente');
 
 CREATE TABLE Tipo (
     idTipo INT IDENTITY(1,1) PRIMARY KEY,
@@ -26,27 +26,6 @@ VALUES ('Usuario'),
 ('Gestor'),
 ('Encarregados');
 
-CREATE TABLE Documento (
-    idDocumento INT IDENTITY(1,1) PRIMARY KEY,
-    Nome VARCHAR(240)
-)
-
-CREATE TABLE Aula (
-    idAula INT IDENTITY(1,1) PRIMARY KEY,
-    Nome VARCHAR(120),
-    Descricao VARCHAR(500),
-    idDocumento INT,
-    FOREIGN KEY (idDocumento) REFERENCES Documento(idDocumento)
-)
-
-CREATE TABLE Modulos (
-    idModulos INT IDENTITY(1,1) PRIMARY KEY,
-    Nome VARCHAR(120),
-    Descricao VARCHAR(500),
-    Sequencia INTEGER,
-    idAula INT,
-    FOREIGN KEY (idAula) REFERENCES Aula(idAula)
-)
 
 
 CREATE TABLE Empresa (
@@ -94,13 +73,35 @@ CREATE TABLE Treinamentos (
     DataFim DATETIME,
     Duracao INTEGER,
     Entidades VARCHAR(240),
-    idModulos INT,
     idEmpresa INT,
     idCriador INT,
     FOREIGN KEY (idCriador) REFERENCES Usuarios(idUsuarios),
-    FOREIGN KEY (idModulos) REFERENCES Modulos(idModulos),
     FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
 )
+
+CREATE TABLE Modulos (
+    idModulos INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(120),
+    Descricao VARCHAR(500),
+    Sequencia INTEGER,
+    idTreinamento INT,
+	
+    FOREIGN KEY (idTreinamento) REFERENCES Treinamentos(idTreinamentos)
+)
+CREATE TABLE Aula (
+    idAula INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(120),
+    Descricao VARCHAR(500),
+    idModulo INT,
+    FOREIGN KEY (idModulo) REFERENCES Modulos(idModulos)
+)
+CREATE TABLE Documento (
+    idDocumento INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(240),
+	idAula INT,
+	FOREIGN KEY (idAula) REFERENCES Aula(idAula)
+)
+
 
 INSERT INTO Empresa (Nome, Logo, Descricao, Email, Telefone, Codigo)  
 VALUES  
