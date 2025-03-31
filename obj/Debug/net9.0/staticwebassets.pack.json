@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets/images/image 2.png"
     },
     {
+      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/46c946ff-c890-4fc3-89d4-5acb00781809.jpeg",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/46c946ff-c890-4fc3-89d4-5acb00781809.jpeg"
+    },
+    {
       "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
