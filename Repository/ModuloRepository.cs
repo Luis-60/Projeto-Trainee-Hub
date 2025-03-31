@@ -24,7 +24,7 @@ namespace Projeto_Trainee_Hub.Repository
         public async Task<Modulo?> ObterPorIdCriadorAsync(int id)
         {
             return await _context.Modulos
-                .Include(m => m.IdAulaNavigation)
+                .Include(m => m.IdTreinamentoNavigation)
                 .FirstOrDefaultAsync(m => m.IdModulos == id);
         }
 

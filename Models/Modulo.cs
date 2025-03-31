@@ -13,7 +13,7 @@ public partial class Modulo
 
     public int? Sequencia { get; set; }
     public int IdTreinamento { get; set; }
-    public virtual Treinamento? IdTreinamentoNavigation { get; set; }
+    public virtual Treinamento IdTreinamentoNavigation { get; set; } = null!;
     public virtual ICollection<Aula> Aulas { get; set; } = new List<Aula>();
 
 }

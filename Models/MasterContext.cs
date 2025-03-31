@@ -48,7 +48,6 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Descricao)
                 .HasMaxLength(500)
                 .IsUnicode(false);
-            entity.Property(e => e.IdModulo).HasColumnName("idModulo");
             entity.Property(e => e.Nome)
                 .HasMaxLength(120)
                 .IsUnicode(false);
@@ -66,7 +65,6 @@ public partial class MasterContext : DbContext
             entity.ToTable("Documento");
 
             entity.Property(e => e.IdDocumento).HasColumnName("idDocumento");
-            entity.Property(e => e.IdAulaNavigation).HasColumnName("idAula");
             entity.Property(e => e.Nome)
                 .HasMaxLength(240)
                 .IsUnicode(false);
@@ -110,7 +108,6 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Descricao)
                 .HasMaxLength(500)
                 .IsUnicode(false);
-            entity.Property(e => e.IdTreinamento).HasColumnName("idTreinamento");
             entity.Property(e => e.Nome)
                 .HasMaxLength(120)
                 .IsUnicode(false);
