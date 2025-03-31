@@ -12,10 +12,8 @@ public partial class Modulo
     public string? Descricao { get; set; }
 
     public int? Sequencia { get; set; }
+    public int IdTreinamento { get; set; }
+    public virtual Treinamento? IdTreinamentoNavigation { get; set; }
+    public virtual ICollection<Aula> Aulas { get; set; } = new List<Aula>();
 
-    public int? IdAula { get; set; }
-
-    public virtual Aula? IdAulaNavigation { get; set; }
-
-    public virtual ICollection<Treinamento> Treinamentos { get; set; } = new List<Treinamento>();
 }

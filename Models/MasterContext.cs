@@ -34,7 +34,7 @@ public partial class MasterContext : DbContext
     public virtual DbSet<UsuariosTreinamento> UsuariosTreinamentos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=172.18.0.2;Database=master;User Id=sa;Password=\"YourStrong!Password123\";TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=172.22.0.2;Database=master;User Id=sa;Password=\"YourStrong!Password123\";TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -48,14 +48,15 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Descricao)
                 .HasMaxLength(500)
                 .IsUnicode(false);
-            entity.Property(e => e.IdDocumento).HasColumnName("idDocumento");
+            entity.Property(e => e.IdModulo).HasColumnName("idModulo");
             entity.Property(e => e.Nome)
                 .HasMaxLength(120)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdDocumentoNavigation).WithMany(p => p.Aulas)
-                .HasForeignKey(d => d.IdDocumento)
-                .HasConstraintName("FK__Aula__idDocument__3118447E");
+            entity.HasOne(d => d.IdModuloNavigation).WithMany(p => p.Aulas)
+                .HasForeignKey(d => d.IdModulo)
+                .HasConstraintName("FK__Aula__idModulo__031C6FA4");
+                
         });
 
         modelBuilder.Entity<Documento>(entity =>
@@ -65,9 +66,13 @@ public partial class MasterContext : DbContext
             entity.ToTable("Documento");
 
             entity.Property(e => e.IdDocumento).HasColumnName("idDocumento");
+            entity.Property(e => e.IdAulaNavigation).HasColumnName("idAula");
             entity.Property(e => e.Nome)
                 .HasMaxLength(240)
                 .IsUnicode(false);
+            entity.HasOne(d => d.IdAulaNavigation).WithMany(p => p.Documentos)
+                .HasForeignKey(d => d.IdAula)
+                .HasConstraintName("FK__Documento__idAul__05F8DC4F");
         });
 
         modelBuilder.Entity<Empresa>(entity =>
@@ -105,14 +110,14 @@ public partial class MasterContext : DbContext
             entity.Property(e => e.Descricao)
                 .HasMaxLength(500)
                 .IsUnicode(false);
-            entity.Property(e => e.IdAula).HasColumnName("idAula");
+            entity.Property(e => e.IdTreinamento).HasColumnName("idTreinamento");
             entity.Property(e => e.Nome)
                 .HasMaxLength(120)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdAulaNavigation).WithMany(p => p.Modulos)
-                .HasForeignKey(d => d.IdAula)
-                .HasConstraintName("FK__Modulos__idAula__33F4B129");
+            entity.HasOne(d => d.IdTreinamentoNavigation).WithMany(p => p.Modulos)
+                .HasForeignKey(d => d.IdTreinamento)
+                .HasConstraintName("FK__Modulos__idTrein__004002F9");
         });
 
         modelBuilder.Entity<Setor>(entity =>
@@ -153,7 +158,6 @@ public partial class MasterContext : DbContext
                 .HasMaxLength(240)
                 .IsUnicode(false);
             entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
-            entity.Property(e => e.IdModulos).HasColumnName("idModulos");
             entity.Property(e => e.Imagem)
                 .HasMaxLength(100)
                 .IsUnicode(false);
@@ -165,15 +169,12 @@ public partial class MasterContext : DbContext
                 .IsUnicode(false);
             entity.HasOne(d => d.IdCriadorNavigation).WithMany(p => p.Treinamentos)
                 .HasForeignKey(d => d.IdCriador)
-                .HasConstraintName("FK__Treinamen__idCri__5EDF0F2E");
+                .HasConstraintName("FK__Treinamen__idCri__7C6F7215");
                 
             entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Treinamentos)
                 .HasForeignKey(d => d.IdEmpresa)
-                .HasConstraintName("FK__Treinamen__idEmp__3E723F9C");
+                .HasConstraintName("FK__Treinamen__idEmp__7D63964E");
 
-            entity.HasOne(d => d.IdModulosNavigation).WithMany(p => p.Treinamentos)
-                .HasForeignKey(d => d.IdModulos)
-                .HasConstraintName("FK__Treinamen__idMod__3D7E1B63");
         });
 
         modelBuilder.Entity<Usuarios>(entity =>

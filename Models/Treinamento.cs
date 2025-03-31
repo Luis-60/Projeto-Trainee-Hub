@@ -24,16 +24,12 @@ public partial class Treinamento
 
     public string? Entidades { get; set; }
 
-    public int? IdModulos { get; set; }
-
     public int? IdEmpresa { get; set; }
+
     public int? IdCriador { get; set; }
-
-    public virtual Usuarios? IdCriadorNavigation { get; set;}
     
+    public virtual Usuarios? IdCriadorNavigation { get; set;}
     public virtual Empresa? IdEmpresaNavigation { get; set; }
-
-    public virtual Modulo? IdModulosNavigation { get; set; }
-
+    public virtual ICollection<Modulo> Modulos { get; set; } = new List<Modulo>();
     public virtual ICollection<UsuariosTreinamento> UsuariosTreinamentos { get; set; } = new List<UsuariosTreinamento>();
 }

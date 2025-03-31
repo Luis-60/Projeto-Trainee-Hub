@@ -85,7 +85,6 @@ CREATE TABLE Modulos (
     Descricao VARCHAR(500),
     Sequencia INTEGER,
     idTreinamento INT,
-	
     FOREIGN KEY (idTreinamento) REFERENCES Treinamentos(idTreinamentos)
 )
 CREATE TABLE Aula (
@@ -101,7 +100,6 @@ CREATE TABLE Documento (
 	idAula INT,
 	FOREIGN KEY (idAula) REFERENCES Aula(idAula)
 )
-
 
 INSERT INTO Empresa (Nome, Logo, Descricao, Email, Telefone, Codigo)  
 VALUES  

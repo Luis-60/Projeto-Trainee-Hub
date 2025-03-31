@@ -380,7 +380,6 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/v9u2alsoj7-wof7unmvz1.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-i9366fsrl2.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-8moov7rtnz.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-neid62zr7v.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/bx4532srpu-61n19gt1b8.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/8lsj9gtyzq-bqjiyaj88i.gz
@@ -457,12 +456,13 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.pdb
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-pof8zdid9v.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-uzg5gxzjop.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-j8pnqs8blz.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-2l90jaoke8.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-pq3awnirhh.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-2l90jaoke8.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-pq3awnirhh.gz

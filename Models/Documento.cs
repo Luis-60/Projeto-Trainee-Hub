@@ -9,5 +9,6 @@ public partial class Documento
 
     public string? Nome { get; set; }
 
-    public virtual ICollection<Aula> Aulas { get; set; } = new List<Aula>();
+    public int IdAula { get; set; }
+    public virtual Aula? IdAulaNavigation {get; set;}
 }

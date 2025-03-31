@@ -11,9 +11,9 @@ public partial class Aula
 
     public string? Descricao { get; set; }
 
-    public int? IdDocumento { get; set; }
+    public int IdModulo { get; set; }
 
-    public virtual Documento? IdDocumentoNavigation { get; set; }
+    public virtual Modulo? IdModuloNavigation { get; set; }
+    public virtual ICollection<Documento> Documentos { get; set; } = new List<Documento>();
 
-    public virtual ICollection<Modulo> Modulos { get; set; } = new List<Modulo>();
 }
