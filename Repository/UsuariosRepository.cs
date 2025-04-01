@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Projeto_Trainee_Hub.Models;
+
 namespace Projeto_Trainee_Hub.Repository
 {
 
@@ -60,6 +61,11 @@ namespace Projeto_Trainee_Hub.Repository
                 _context.Usuarios.Remove(entity);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public Usuarios? ObterUsuarioLogado(HttpContext httpContext)
+        {
+            throw new NotImplementedException();
         }
     }
 }

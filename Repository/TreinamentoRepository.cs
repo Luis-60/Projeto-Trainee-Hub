@@ -55,5 +55,14 @@ namespace Projeto_Trainee_Hub.Repository
                 await _context.SaveChangesAsync();
             }
         }
+        public void Adicionar(Treinamento treinamento)
+        {
+            _context.Treinamentos.Add(treinamento);
+        }
+
+        public void Salvar()
+        {
+            _context.SaveChanges();
+        }
     }
 }

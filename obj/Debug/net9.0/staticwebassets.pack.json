@@ -77,6 +77,22 @@
       "PackagePath": "staticwebassets/images/image 2.png"
     },
     {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/3eb4827d-914a-46fe-9f4a-f8158af6ceb3.png",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/3eb4827d-914a-46fe-9f4a-f8158af6ceb3.png"
+    },
+    {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/a321784c-8542-4a0e-ab9c-526298c63f22.png",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/a321784c-8542-4a0e-ab9c-526298c63f22.png"
+    },
+    {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/c9c34699-b0d4-4140-8394-d644fabe5a8d.png",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/c9c34699-b0d4-4140-8394-d644fabe5a8d.png"
+    },
+    {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/e4771433-95e6-45cd-ad55-ce0dd4f6e75f.png",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/e4771433-95e6-45cd-ad55-ce0dd4f6e75f.png"
+    },
+    {
       "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

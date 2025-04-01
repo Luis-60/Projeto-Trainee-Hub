@@ -1,0 +1,169 @@
+@{
+    ViewData["Title"] = "Perfil";
+}
+@model Usuarios
+<div class="container-body">
+    <div class="container-photo">
+        <div class="user-photo">
+            <img src="~/images/IconePerfil(2).png">
+            <button class="EditarPerfil" type="button">Editar Perfil</button>
+        </div>
+    </div>
+    <div class="container-info">
+        <div class="user-info">
+            <div class="nome">
+                <h3>Nome</h3>
+                <label>@Model.Nome</label>
+            </div>
+            <div class="email">
+                <h3>Email</h3>
+                <label>@Model.Email</label>
+            </div>
+            <div class="matricula">
+                <h3>Matrícula</h3>
+                <label>@Model.Matricula</label>
+            </div>
+            <div class="setor">
+                <h3>Setor</h3>
+                <label>@Model.IdSetorNavigation.Nome</label>
+            </div>
+            <div class="treinamentos-concluidos">
+                <h3>Treinamentos Concluídos</h3>
+                <label>@Model.QtdTreinamentos</label>
+            </div>
+        </div>
+    </div>
+    <div class="container-treinamento">
+        <div class="topo">
+            <h1>TREINAMENTOS</h1>
+            <button class="btnAbrirAdd" type="button" onclick="AbrirAdd()">
+                Adicionar
+            </button>
+        </div>
+        
+        <ul class="bloco_treinamento">
+            @* <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="100"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="10"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="100"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="50"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="50"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-andamento">
+                <a href="#">
+                    <div class="moldura">
+                        <img src="~/images/image 2.png">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">TREINAMENTO DE RN11</div>
+                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
+                        <div class="progressbar">
+                            <span data-width="50"></span>
+                        </div>
+                    </div>
+                </a>
+            </li> *@
+        </ul>
+    </div>
+    <div class="modal">
+        <div class="modal-treinamento">
+            <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
+            <form asp-controller="Teinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
+                <div class="inputnome">
+                    <label for="nome"name="nome">Nome:</label><br>
+                    <input placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" name="nome" required>
+                </div>      
+                <div class="input-instrutor">
+                    <label for="instrutor" name="instrutor">Instrutor:</label><br>
+                    <input placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" name="instrutor" required>
+                </div>        
+                <label for="descricao" name="descricao">Descrição:</label><br>
+                <textarea placeholder="Descreva o treinamento" id="descricao" name="descricao"></textarea required>
+                <div class="container-data">
+                    <div class="container-datainicio">
+                        <label for="datainicio" name="datainicio">Data de Início:</label><br>
+                        <input type="date" id="datainicio" name="datainicio" required>
+                    </div>
+                    <div class="container-datafim">
+                        <label for="datafim" name="datafim">Data de Fim:</label><br>
+                        <input type="date" id="datafim" name="datafim" required>
+                    </div>
+                </div>
+                <label for="imagem" id="imagem" name="imagem">Imagem Ilustrativa:</label><br>
+                <label for="images" class="drop-container" id="dropcontainer">
+                    <span class="drop-title">Insira o Arquivo aqui</span>
+                    ou
+                    <input type="file" id="images-treinamento" accept="image/*" required>
+                </label>
+                <div class="buttons"> 
+                    <button class="btnAddTreinamento" type="submit" onclick="addTreinamento()">CRIAR</button>
+                    <button class="btnClose" onclick="closeModal()">SAIR</button>
+                </div>   
+            </form>
+                           
+        </div>
+    </div>
+</div>

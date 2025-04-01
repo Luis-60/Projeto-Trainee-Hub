@@ -1,0 +1,51 @@
+
+@model Treinamento
+<div class="modal">
+        <div class="modal-treinamento">
+            <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
+            <form asp-controller="Treinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
+                <div class="inputnome">
+                    <label asp-for="@Model.Nome" name="nome">Nome:</label><br>
+                    <input asp-for="@Model.Nome" placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" name="nome" required>
+                </div>      
+
+                <div class="input-instrutor">
+                    <label asp-for="@Model.Instrutor" name="instrutor">Instrutor:</label><br>
+                    <input asp-for="@Model.Instrutor" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" name="instrutor" required>
+                </div>
+
+                <label asp-for="@Model.Descricao" name="descricao">Descrição:</label><br>
+                <textarea placeholder="Descreva o treinamento" id="descricao" asp-for="@Model.Descricao" name="descricao" required></textarea>
+                
+                <div class="container-data">
+                    <div class="container-datainicio">
+                        <label asp-for="@Model.DataInicio" name="datainicio">Data de Início:</label><br>
+                        <input type="date" id="datainicio" asp-for="@Model.DataInicio" name="datainicio" required>
+                    </div>
+                    <div class="container-datafim">
+                        <label asp-for="@Model.DataFim" name="datafim">Data de Fim:</label><br>
+                        <input type="date" id="datafim" asp-for="@Model.DataFim" name="datafim" required>
+                    </div>
+                </div>
+                
+                <label asp-for="@Model.Imagem" id="imagem" name="imagem">Imagem Ilustrativa:</label><br>
+                <label asp-for="@Model.Imagem" class="drop-container" id="dropcontainer"> 
+                    <span class="drop-title">Insira o Arquivo aqui</span>
+                    ou
+                    <input asp-for="@Model.Imagem" type="file" name="imagem" id="images-treinamento"  accept="image/*" required>
+                </label>
+
+                <input type="hidden" name="duracao" id="duracao" asp-for="@Model.Duracao"> 
+                <input type="hidden" name="entidades" id="entidades" asp-for="@Model.Entidades" value="@(@Model?.IdEmpresaNavigation?.Nome ?? "")">
+                <input type="hidden" name="idEmpresa" id="idEmpresa" asp-for="@Model.IdEmpresa" value="@(@Model?.IdEmpresa ?? 0)">
+                <input type="hidden" name="idCriador" id="IdCriador" asp-for="@Model.IdCriador" value="@(@Model?.IdCriador ?? 0)">
+
+                <div class="buttons"> 
+                    <button class="btnAddTreinamento" type="submit" onclick="addTreinamento()">CRIAR</button>
+                    <button class="btnClose" onclick="closeModal()">SAIR</button>
+                </div>   
+            </form>
+                           
+        </div>
+    </div>
+</div>

@@ -7,7 +7,6 @@ public partial class Treinamento
 {
     public int IdTreinamentos { get; set; }
     
-    
     public string? Nome { get; set; }
 
     public string? Descricao { get; set; }

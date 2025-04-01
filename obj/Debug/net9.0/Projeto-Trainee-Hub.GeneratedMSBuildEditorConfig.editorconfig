@@ -28,8 +28,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/Components/FormularioTreinamento/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ29tcG9uZW50cy9Gb3JtdWxhcmlvVHJlaW5hbWVudG8vRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVyZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Encarregado/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vUGVyZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Encarregado/SSAulas.cshtml]

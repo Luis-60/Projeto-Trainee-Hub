@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
+using AspNetCoreGeneratedDocument;
 
 [Authorize(Roles = "2")]
 public class AdminController : Controller
@@ -22,6 +23,11 @@ public class AdminController : Controller
     {
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
         return View(usuarioExistente);
+
+    }
+    public ViewComponentResult FormularioTreinamento()
+    {
+        return ViewComponent("Views_Admin_FormularioTreinamento");
     }
 
 
