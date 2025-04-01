@@ -4,7 +4,6 @@ using Projeto_Trainee_Hub.Models;
 using Microsoft.AspNetCore.Authorization;
 namespace Projeto_Trainee_Hub.Controllers;
 
-[Authorize(Roles = "4")]
 public class EncarregadoController : Controller
 {
     private readonly ILogger<HomeController> _logger;

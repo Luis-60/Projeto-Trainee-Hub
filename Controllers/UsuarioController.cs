@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
-using Projeto_Trainee_Hub.Repository;
 
 namespace Projeto_Trainee_Hub.Controllers;
 
@@ -13,36 +12,36 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class UsuarioController : Controller
 {
     
-    private readonly ILogger<UsuarioController> _logger;
-    private readonly UsuariosRepository _usuariosRepository;
-    public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository)
-    {
-        _logger = logger;
-        _usuariosRepository = usuariosRepository;
+    // private readonly ILogger<UsuarioController> _logger;
+    // private readonly UsuariosRepository _usuariosRepository;
+    // public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository)
+    // {
+    //     _logger = logger;
+    //     _usuariosRepository = usuariosRepository;
         
-    }
+    // }
 
-    public async Task<IActionResult> IndexAsync(string matricula)
-    {   
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
-    }
+    // public async Task<IActionResult> IndexAsync(string matricula)
+    // {   
+    //     var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+    //     return View(usuarioExistente);
+    // }
 
     public IActionResult Privacy()
     {
         return View();
     }
-    public async Task<IActionResult> AulaAsync(string matricula)
-    {
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
-    }
+    // public async Task<IActionResult> AulaAsync(string matricula)
+    // {
+    //     var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+    //     return View(usuarioExistente);
+    // }
     
-    public async Task<IActionResult> PerfilAsync(string matricula)
-    {
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
-    }
+    // public async Task<IActionResult> PerfilAsync(string matricula)
+    // {
+    //     var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+    //     return View(usuarioExistente);
+    // }
 
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
