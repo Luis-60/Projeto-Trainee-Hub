@@ -1,8 +1,8 @@
-
 @{
     ViewData["Title"] = "Perfil";
 }
-@model Usuarios
+@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
+
 
 <div class="container-body">
     <div class="container-photo">
@@ -15,23 +15,23 @@
         <div class="user-info">
             <div class="nome">
                 <h3>Nome</h3>
-                <label>@Model.Nome</label>
+                <label>@Model.usuarios.Nome</label>
             </div>
             <div class="email">
                 <h3>Email</h3>
-                <label>@Model.Email</label>
+                <label>@Model.usuarios.Email</label>
             </div>
             <div class="matricula">
                 <h3>Matrícula</h3>
-                <label>@Model.Matricula</label>
+                <label>@Model.usuarios.Matricula</label>
             </div>
             <div class="setor">
                 <h3>Setor</h3>
-                <label>@Model.IdSetorNavigation.Nome</label>
+                <label>@Model.usuarios.IdSetorNavigation.Nome</label>
             </div>
             <div class="treinamentos-concluidos">
                 <h3>Treinamentos Concluídos</h3>
-                <label>@Model.QtdTreinamentos</label>
+                <label>@Model.usuarios.QtdTreinamentos</label>
             </div>
         </div>
     </div>
@@ -43,93 +43,72 @@
             </button>
         </div>
         
-        <ul class="bloco_treinamento">
-            @* <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="100"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
+        @* <ul class="bloco_treinamento">
+        @foreach(var treinamento in Model.treinamentos.Modulos) 
+        {
             <li class="list-andamento">
                 <a href="#">
                     <div class="moldura">
-                        <img src="~/images/image 2.png">
+                        <img src="~/images/upload/treinamentos/@Model.treinamentos.Imagem">
                     </div>
                     <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="10"></span>
-                        </div>
+                        <div class="card-title">@Model.treinamentos.Nome</div> <!-- Usando os dados de treinamento -->
+                        <div class="card-date">DATA ÍNICIO: @Model.treinamentos.DataInicio</div> <!-- Usando os dados de treinamento -->
                     </div>
                 </a>
             </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="100"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li> *@
-        </ul>
-    </div>
-    @await Component.InvokeAsync("FormularioTreinamento")
-    
+        }
+    </ul> *@
 </div>
+    
+
+<div class="modal">
+    <div class="modal-treinamento">
+        <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
+        <form asp-controller="Treinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
+            <div class="inputnome">
+                <label>Nome:</label><br>
+                <input asp-for="@Model.treinamentos.Nome" placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" required>
+            </div>      
+
+            <div class="input-instrutor">
+                <label>Instrutor:</label><br>
+                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
+            </div>
+
+            <label>Descrição:</label><br>
+            <textarea placeholder="Descreva o treinamento" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+            
+            <div class="container-data">
+                <div class="container-datainicio">
+                    <label>Data de Início:</label><br>
+                    <input type="date" id="datainicio" asp-for="@Model.treinamentos.DataInicio" required>
+                </div>
+                <div class="container-datafim">
+                    <label>Data de Fim:</label><br>
+                    <input type="date" id="datafim" asp-for="@Model.treinamentos.DataFim" required>
+                </div>
+            </div>
+            
+            <label id="imagem">Imagem Ilustrativa:</label><br>
+            <label asp-for="@Model.File" class="drop-container" id="dropcontainer"> 
+                <span class="drop-title">Insira o Arquivo aqui</span>
+                ou
+                <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*" required>
+            </label>
+
+            <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
+            <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios.IdEmpresa">
+            <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios.IdEmpresa">
+            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios.IdUsuarios">
+
+            <div class="buttons"> 
+                <button class="btnAddTreinamento" type="submit">CRIAR</button>
+                <button class="btnClose" onclick="closeModal()">SAIR</button>
+            </div>   
+        </form>
+                       
+    </div>
+</div>
+
+    

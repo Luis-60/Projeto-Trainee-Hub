@@ -22,10 +22,10 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<UsuariosRepository>();
 
+builder.Services.AddScoped<TreinamentoRepository>();
+
 builder.Services.AddDbContext<MasterContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddScoped<UsuariosRepository>();
 
 var app = builder.Build();
 

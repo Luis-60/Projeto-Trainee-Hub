@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {}
+    "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {}
   },
   "projects": {
-    "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {
+    "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+        "projectUniqueName": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
         "projectName": "Projeto-Trainee-Hub",
-        "projectPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
-        "packagesPath": "/home/nti-user/.nuget/packages/",
-        "outputPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/",
+        "projectPath": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+        "packagesPath": "/home/luis/.nuget/packages/",
+        "outputPath": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nti-user/.nuget/NuGet/NuGet.Config"
+          "/home/luis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,12 +39,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -74,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

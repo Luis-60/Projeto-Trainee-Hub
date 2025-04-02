@@ -10,41 +10,69 @@ namespace Projeto_Trainee_Hub.Controllers;
 using Projeto_Trainee_Hub.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Trainee_Hub.ViewModel;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 public class TreinamentosController : Controller
 {
     
     private readonly UsuariosRepository _usuariosRepository;
     private readonly TreinamentoRepository _treinamentoRepository;
+    private readonly string _baseUploadFolder = "wwwroot/images/upload/treinamentos";
+
     public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository)
     {
+        if (!Directory.Exists(_baseUploadFolder))
+        {
+            Directory.CreateDirectory(_baseUploadFolder);
+        }
         _treinamentoRepository = treinamentoRepository;
         _usuariosRepository = usuariosRepository;
     }
 
     [HttpPost]
-    public IActionResult CriarTreinamento(Treinamento model)
+    public async Task<IActionResult> CriarTreinamento(TreinamentoUsuariosViewModel treinamentoUsuarios)
     {
-        var usuarioLogado = _usuariosRepository.ObterUsuarioLogado(HttpContext);
-        if (usuarioLogado == null)
+        var NewMatricula = await _usuariosRepository.ObterMatriculaPorIdAsync(treinamentoUsuarios.treinamentos.IdCriador);
+        if (treinamentoUsuarios.File == null || treinamentoUsuarios.File.Length == 0)
         {
-            return RedirectToAction("Login", "Home");
+            return BadRequest("Nenhum Arquivo foi enviado");
         }
-
-        if (!ModelState.IsValid)
+        string fileName = Guid.NewGuid().ToString() + Path.GetExtension(treinamentoUsuarios.File.FileName);
+        string filePath = Path.Combine(_baseUploadFolder, fileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
         {
-            return View(model); // Retorna a view se houver erro na validação
+            await treinamentoUsuarios.File.CopyToAsync(stream);
         }
-
-        model.IdEmpresa = usuarioLogado.IdEmpresa;
-        model.IdCriador = usuarioLogado.IdUsuarios;
-        model.Entidades = usuarioLogado.IdEmpresaNavigation.Nome; // Nome da empresa
+    
+        treinamentoUsuarios.treinamentos.Imagem = fileName;
         
-        _treinamentoRepository.Adicionar(model); // Salva no banco
+        _treinamentoRepository.Adicionar(treinamentoUsuarios.treinamentos); // Salva no banco
         _treinamentoRepository.Salvar(); // Confirma a inserção
-
-        return RedirectToAction("Index"); // Redireciona para a lista de treinamentos
+        return RedirectToAction("SSModulos","Admin", new{matricula=NewMatricula});
     }
 
+    public async Task<IActionResult> Detalhes(int id)
+    {
+        var treinamento = await _treinamentoRepository.ObterPorIdAsync(id);
+        
+        if (treinamento == null)
+        {
+            return NotFound();
+        }
+
+        // Obtém o usuário relacionado ao treinamento
+        var usuario = treinamento.IdCriadorNavigation;
+
+        // Cria o ViewModel
+        var viewModel = new TreinamentoUsuariosViewModel
+        {
+            treinamentos = treinamento,
+            usuarios = usuario ?? new Usuarios() // Caso o usuário não exista, cria uma instância vazia
+        };
+
+        return View(viewModel); // Passa o ViewModel para a View
+    }
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

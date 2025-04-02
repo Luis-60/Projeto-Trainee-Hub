@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
 using AspNetCoreGeneratedDocument;
+using Projeto_Trainee_Hub.ViewModel;
 
 [Authorize(Roles = "2")]
 public class AdminController : Controller
@@ -22,15 +23,22 @@ public class AdminController : Controller
     public async Task<IActionResult> PerfilAsync(string matricula)
     {
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
-
+        if (usuarioExistente == null)
+        {
+            return View();
+        }
+        var treinamentoUsuarios = new Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarioExistente};
+        return View(treinamentoUsuarios);
     }
-    public ViewComponentResult FormularioTreinamento()
+    public async Task<IActionResult> SSModulosAsync(string matricula)
     {
-        return ViewComponent("Views_Admin_FormularioTreinamento");
+        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        if (usuarioExistente == null)
+        {
+            return RedirectToAction("Index");
+        }
+        return View(usuarioExistente);
     }
-
-
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

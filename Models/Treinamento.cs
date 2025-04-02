@@ -23,9 +23,9 @@ public partial class Treinamento
 
     public string? Entidades { get; set; }
 
-    public int? IdEmpresa { get; set; }
+    public int IdEmpresa { get; set; }
 
-    public int? IdCriador { get; set; }
+    public int IdCriador { get; set; }
     
     public virtual Usuarios? IdCriadorNavigation { get; set;}
     public virtual Empresa? IdEmpresaNavigation { get; set; }
