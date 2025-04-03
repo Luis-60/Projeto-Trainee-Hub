@@ -465,4 +465,4 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-2l90jaoke8.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-pq3awnirhh.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz

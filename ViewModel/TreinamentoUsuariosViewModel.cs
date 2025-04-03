@@ -9,5 +9,6 @@ public class TreinamentoUsuariosViewModel
     public Treinamento treinamentos { get; set;}
     public Usuarios usuarios { get; set;}
     public IFormFile File { get; set; }
+    public IEnumerable<Treinamento> listaTreinamentos { get; set; }
 
 }

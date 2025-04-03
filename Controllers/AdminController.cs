@@ -15,21 +15,35 @@ public class AdminController : Controller
     private readonly ILogger<AdminController> _logger;
     private readonly UsuariosRepository _usuariosRepository;
 
-    public AdminController(ILogger<AdminController> logger, UsuariosRepository usuariosRepository)
+    private readonly TreinamentoRepository _treinamentoRepository;
+
+    public AdminController(ILogger<AdminController> logger, UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository)
     {
         _logger = logger;
         _usuariosRepository = usuariosRepository;
+        _treinamentoRepository = treinamentoRepository;
     }
+    [HttpGet]
     public async Task<IActionResult> PerfilAsync(string matricula)
     {
+        
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
         if (usuarioExistente == null)
         {
             return View();
         }
-        var treinamentoUsuarios = new Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarioExistente};
+        var idUsuario = await _usuariosRepository.ObterIdPorMatriculaAsync(matricula);
+        if (idUsuario != null)
+        {
+            var usuarioTreinamentos = await _treinamentoRepository.ObterPorIdCriadorAsync(idUsuario);
+            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarioExistente, listaTreinamentos = usuarioTreinamentos};
+
         return View(treinamentoUsuarios);
+        }
+        
+        return RedirectToAction("Index");
     }
+
     public async Task<IActionResult> SSModulosAsync(string matricula)
     {
         var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);

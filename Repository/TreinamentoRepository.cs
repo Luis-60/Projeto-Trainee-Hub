@@ -28,6 +28,16 @@ namespace Projeto_Trainee_Hub.Repository
                 .FirstOrDefaultAsync(t => t.IdTreinamentos == id);
         }
 
+        public async Task <IEnumerable<Treinamento?>> ObterPorIdCriadorAsync(int id)
+        {
+            return await _context.Treinamentos
+                .Include(t => t.IdCriadorNavigation)
+                .Include(t => t.IdEmpresaNavigation)
+                .Where(t => t.IdCriador == id)
+                .ToListAsync();
+        }
+
+
         public async Task<IEnumerable<Treinamento>> FindAsync(Expression<Func<Treinamento, bool>> predicate)
         {
             return await _context.Treinamentos.Where(predicate).ToListAsync();

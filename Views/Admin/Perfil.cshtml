@@ -43,22 +43,22 @@
             </button>
         </div>
         
-        @* <ul class="bloco_treinamento">
-        @foreach(var treinamento in Model.treinamentos.Modulos) 
+        <ul class="bloco_treinamento">
+        @foreach(var treinamento in @Model.listaTreinamentos) 
         {
             <li class="list-andamento">
                 <a href="#">
                     <div class="moldura">
-                        <img src="~/images/upload/treinamentos/@Model.treinamentos.Imagem">
+                        <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                     </div>
                     <div class="card-content">
-                        <div class="card-title">@Model.treinamentos.Nome</div> <!-- Usando os dados de treinamento -->
-                        <div class="card-date">DATA ÍNICIO: @Model.treinamentos.DataInicio</div> <!-- Usando os dados de treinamento -->
+                        <div class="card-title">@treinamento.Nome</div> <!-- Usando os dados de treinamento -->
+                        <div class="card-date">DATA ÍNICIO: @treinamento.DataInicio</div> <!-- Usando os dados de treinamento -->
                     </div>
                 </a>
             </li>
         }
-    </ul> *@
+    </ul>
 </div>
     
 

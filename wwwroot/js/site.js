@@ -1,4 +1,5 @@
-﻿document.addEventListener('DOMContentLoaded', function() {
+﻿// Progress Bar
+document.addEventListener('DOMContentLoaded', function() {
     // Seleciona todos os spans dentro de .progressbar
     document.querySelectorAll('.progressbar span').forEach(function(span) {
         // Pega o valor de data-width do span
@@ -17,7 +18,7 @@ document.querySelectorAll('.progressbar span').forEach(function(span) {
     span.style.width = progressWidth + '%';
 });
 
-
+// Accordion
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.querySelector(".menu");
     const offScreenMenu = document.querySelector(".off-screen-menu");
@@ -92,46 +93,7 @@ btnAbrir.addEventListener('click', AbrirAdd);
 
 //Adicionar e Excluir Conteúdos
 function addTreinamento() {
-  // Capturar os valores dos inputs
-  const nome = document.getElementById("nome").value;
-  const instrutor = document.getElementById("instrutor").value;
-  const descricao = document.getElementById("descricao").value;
-  const dataInicio = document.getElementById("datainicio").value;
-  const dataFim = document.getElementById("datafim").value;
-  const imagemInput = document.getElementById("images-treinamento");
   
-  // Verificar se um arquivo de imagem foi selecionado
-  let imagemSrc = "~/images/image 1.png"; // Imagem padrão caso nenhuma seja escolhida
-  if (imagemInput.files.length > 0) {
-      const imagemURL = URL.createObjectURL(imagemInput.files[0]); 
-      imagemSrc = imagemURL;
-  }
-
-  // Criar um novo item de lista (li)
-  const newListItem = document.createElement("li");
-  newListItem.classList.add("list-andamento");
-
-  // Montar o HTML dinâmico
-  newListItem.innerHTML = `
-      <a href="#">
-          <div class="moldura">
-              <img src="${imagemSrc}" alt="Imagem do Treinamento">
-          </div>
-          <div class="card-content">
-              <div class="card-title">${nome}</div>
-              <div class="card-date">DATA INÍCIO: ${dataInicio}</div>
-              
-          </div>
-      </a>
-  `;
-  
-
-  // Adicionar o novo item à lista de treinamentos
-  document.querySelector(".bloco_treinamento").appendChild(newListItem);
-  //Adicionar Imagem ao Folder
-  const fileInput = document.getElementById("images-treinamento");
-  const file = fileInput.files[0];
-
   if (!file) {
       alert("Selecione um arquivo primeiro!");
       return;
