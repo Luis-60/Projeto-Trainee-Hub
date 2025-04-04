@@ -1,8 +1,8 @@
-@model Usuarios
-
 @{
     ViewData["Title"] = "Login";
 }
+@model Projeto_Trainee_Hub.ViewModel.LoginViewModel
+
 <style>
     header{display: display;}
     .headerbar-conteudo{display: none;}
@@ -25,19 +25,19 @@
         }
 
         <div class="informacoes">
-            <label asp-for="IdEmpresa">Empresa</label>
+            <label>Empresa</label>
             <input asp-for="IdEmpresa" id="Nome" placeholder="Digite o nome da empresa" required />
             
-            <label asp-for="Matricula">Matrícula</label>
+            <label>Matrícula</label>
             <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required />
             
-            <label asp-for="Senha">Senha</label>
+            <label>Senha</label>
             <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required />
         </div>
 
         <div class="lembrar-esqueci">
             <label>
-                <input type="checkbox" class="lembrar-esqueci"> Lembrar de mim
+                <input type="checkbox" Asp-for="LembrarMe"class="lembrar-esqueci"> Lembrar de mim
             </label>
             <a href="#">Esqueceu sua senha?</a>
         </div>

@@ -1,8 +1,9 @@
+
 @{
     ViewData["Title"] = "Perfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
-
 
 <div class="container-body">
     <div class="container-photo">
@@ -27,11 +28,11 @@
             </div>
             <div class="setor">
                 <h3>Setor</h3>
-                <label>@Model.usuarios.IdSetorNavigation.Nome</label>
+                <label>@Model.usuarios?.IdSetorNavigation?.Nome</label>
             </div>
             <div class="treinamentos-concluidos">
                 <h3>Treinamentos Concluídos</h3>
-                <label>@Model.usuarios.QtdTreinamentos</label>
+                <label>@Model.usuarios?.QtdTreinamentos</label>
             </div>
         </div>
     </div>
@@ -98,9 +99,9 @@
             </label>
 
             <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
-            <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios.IdEmpresa">
-            <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios.IdEmpresa">
-            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios.IdUsuarios">
+            <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
 
             <div class="buttons"> 
                 <button class="btnAddTreinamento" type="submit">CRIAR</button>

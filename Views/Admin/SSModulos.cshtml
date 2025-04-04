@@ -1,10 +1,12 @@
+@model Treinamento
 @{
     ViewData["Title"] = "Sistema de Submissão de Módulos";
 }
+
     <div class="texto_modulo">
-        <h1>NOME DO TREINAMENTO</h1>
+        <h1>@Model.Nome</h1>
         <div class="paragrafo_modulo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, eaque ducimus! Culpa temporibus placeat suscipit voluptas pariatur perspiciatis vero non ipsum ipsam dolor. Facere maiores ab ex ipsam amet fugiat dignissimos dicta, quisquam minus odit, fuga ea quod corporis hic repudiandae tenetur optio vel, nemo recusandae ratione alias illum repellat eligendi. Quaerat molestiae dignissimos temporibus enim, rem fugiat iste maiores eveniet optio et earum molestias laboriosam esse asperiores sint at necessitatibus facere velit illum. Blanditiis ullam possimus maxime distinctio porro beatae sed ratione dolores? Aliquid aspernatur aperiam laborum assumenda sint perspiciatis, debitis, esse vero voluptatibus consequuntur dolorum eius delectus? Ipsum.</p>
+            <p>@Model.Descricao</p>
         </div>
     </div>
     <hr>

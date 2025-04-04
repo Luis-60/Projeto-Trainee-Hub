@@ -3,6 +3,7 @@ using Projeto_Trainee_Hub.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Projeto_Trainee_Hub.Helper;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -13,12 +14,20 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 
 builder.Services.AddAuthorization();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession();
-builder.Services.AddHttpContextAccessor();
+builder.Services.AddDistributedMemoryCache(); //backing store for session
+builder.Services.AddSession(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+builder.Services.AddScoped<ISessao, Sessao>();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddScoped<UsuariosRepository>();
 
@@ -38,7 +47,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseSession();
+
 app.UseHttpsRedirection();
+
 app.UseRouting();
 
 app.UseAuthorization();

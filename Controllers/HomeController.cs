@@ -3,6 +3,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Trainee_Hub.Helper;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
 
@@ -12,11 +13,13 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
-    public HomeController(ILogger<HomeController> logger, UsuariosRepository usuariosRepository)
+    public HomeController(ILogger<HomeController> logger, UsuariosRepository usuariosRepository, ISessao sessao)
     {
         _logger = logger;
         _usuariosRepository = usuariosRepository;
+        _sessao = sessao;
     }
 
     public IActionResult Index()
@@ -62,11 +65,14 @@ public class HomeController : Controller
     {
         
         var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
+        
         if (usuarioExistente == null)
         {
             ModelState.AddModelError(string.Empty, "Matrícula ou senha inválidos.");
             return View();
         }
+        _sessao.CriarSessaoUsuario(usuarioExistente);
+        
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, usuarioExistente.Matricula),
@@ -82,22 +88,22 @@ public class HomeController : Controller
         {
             IsPersistent = true,
         };
-
+        var role = _sessao.BuscarSessaoUsuarioRole();
         await HttpContext.SignInAsync(
             CookieAuthenticationDefaults.AuthenticationScheme,
             new ClaimsPrincipal(claimsIdentity),
             authProperties
         
         );
-        switch (usuarioExistente.IdTipo)
+        switch (_sessao.BuscarSessaoUsuarioRole())
         {
-            case 1:
-                return RedirectToAction("Index", "Usuario", new{matricula=usuario.Matricula});
-            case 2:
-                return RedirectToAction("Perfil", "Admin", new{matricula=usuario.Matricula});
-            case 3:
+            case "1":
+                return RedirectToAction("Index", "Usuario");
+            case "2":
+                return RedirectToAction("Perfil", "Admin");
+            case "3":
                 return RedirectToAction("Dashboard", "Gestor");
-            case 4:
+            case "4":
                 return RedirectToAction("SSModulos", "Encarregado");
             default:
                 return RedirectToAction("Login", "Home");

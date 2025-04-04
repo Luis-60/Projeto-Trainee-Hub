@@ -3505,6 +3505,88 @@
       ]
     },
     {
+      "Route": "images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.69g0wrif2d.png",
+      "AssetFile": "images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tmEhpdtBv2upktqPauN1zc/D9VQ84tm2Fpqz/+c+mxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 17:23:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "69g0wrif2d"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tmEhpdtBv2upktqPauN1zc/D9VQ84tm2Fpqz/+c+mxM="
+        },
+        {
+          "Name": "label",
+          "Value": "images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png",
+      "AssetFile": "images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tmEhpdtBv2upktqPauN1zc/D9VQ84tm2Fpqz/+c+mxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 17:23:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tmEhpdtBv2upktqPauN1zc/D9VQ84tm2Fpqz/+c+mxM="
+        }
+      ]
+    },
+    {
       "Route": "images/upload/treinamentos/c85c7aad-c01d-4f70-9158-945dcefae87d.0e6ij31z54.png",
       "AssetFile": "images/upload/treinamentos/c85c7aad-c01d-4f70-9158-945dcefae87d.png",
       "Selectors": [],

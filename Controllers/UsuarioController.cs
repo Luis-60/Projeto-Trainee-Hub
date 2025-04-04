@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
+using Projeto_Trainee_Hub.Helper;
 
 namespace Projeto_Trainee_Hub.Controllers;
 
@@ -14,34 +15,48 @@ public class UsuarioController : Controller
 {
     
     private readonly ILogger<UsuarioController> _logger;
+    private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
-    public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository)
+    public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository, ISessao sessao)
     {
         _logger = logger;
         _usuariosRepository = usuariosRepository;
-        
+        _sessao = sessao;
     }
 
-    public async Task<IActionResult> IndexAsync(string matricula)
+    public async Task<IActionResult> IndexAsync()
     {   
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
+        return View(usuario);
     }
 
     public IActionResult Privacy()
     {
         return View();
     }
-    public async Task<IActionResult> AulaAsync(string matricula)
+    public async Task<IActionResult> AulaAsync()
     {
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+        return View(usuario);
     }
     
-    public async Task<IActionResult> PerfilAsync(string matricula)
+    public async Task<IActionResult> PerfilAsync()
     {
-        var usuarioExistente = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
-        return View(usuarioExistente);
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+        return View(usuario);
     }
 
     

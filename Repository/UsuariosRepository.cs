@@ -47,7 +47,6 @@ namespace Projeto_Trainee_Hub.Repository
         public Usuarios? ValidarUsuario(string matricula, string senha)
         {
             return _context.Usuarios
-                .Include(u => u.IdEmpresaNavigation)
                 .FirstOrDefault(u => u.Matricula == matricula && u.Senha == senha);
         }
 

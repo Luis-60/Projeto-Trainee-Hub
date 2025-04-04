@@ -12,15 +12,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.ViewModel;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Projeto_Trainee_Hub.Helper;
 
 public class TreinamentosController : Controller
 {
     
     private readonly UsuariosRepository _usuariosRepository;
     private readonly TreinamentoRepository _treinamentoRepository;
+    private readonly ISessao _sessao;
     private readonly string _baseUploadFolder = "wwwroot/images/upload/treinamentos";
 
-    public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository)
+    public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
     {
         if (!Directory.Exists(_baseUploadFolder))
         {
@@ -28,12 +30,17 @@ public class TreinamentosController : Controller
         }
         _treinamentoRepository = treinamentoRepository;
         _usuariosRepository = usuariosRepository;
+        _sessao = sessao;
     }
 
     [HttpPost]
     public async Task<IActionResult> CriarTreinamento(TreinamentoUsuariosViewModel treinamentoUsuarios)
     {
-        var NewMatricula = await _usuariosRepository.ObterMatriculaPorIdAsync(treinamentoUsuarios.treinamentos.IdCriador);
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
         if (treinamentoUsuarios.File == null || treinamentoUsuarios.File.Length == 0)
         {
             return BadRequest("Nenhum Arquivo foi enviado");
@@ -49,7 +56,7 @@ public class TreinamentosController : Controller
         
         _treinamentoRepository.Adicionar(treinamentoUsuarios.treinamentos); // Salva no banco
         _treinamentoRepository.Salvar(); // Confirma a inserção
-        return RedirectToAction("SSModulos","Admin", new{matricula=NewMatricula});
+        return RedirectToAction("SSModulos","Admin");
     }
 
     public async Task<IActionResult> Detalhes(int id)
