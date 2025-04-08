@@ -33,6 +33,7 @@ namespace Projeto_Trainee_Hub.Repository
             return await _context.Treinamentos
                 .Include(t => t.IdCriadorNavigation)
                 .Include(t => t.IdEmpresaNavigation)
+                .Include(t => t.IdCriadorNavigation.IdSetorNavigation)
                 .Where(t => t.IdCriador == id)
                 .ToListAsync();
         }

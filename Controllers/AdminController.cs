@@ -38,8 +38,9 @@ public class AdminController : Controller
         var idUsuario = usuario.IdUsuarios;
         if (idUsuario != null)
         {
+            var usuarios = await _usuariosRepository.ObterPorIdAsync(idUsuario);
             var usuarioTreinamentos = await _treinamentoRepository.ObterPorIdCriadorAsync(idUsuario);
-            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuario, listaTreinamentos = usuarioTreinamentos};
+            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarios, listaTreinamentos = usuarioTreinamentos};
 
         return View(treinamentoUsuarios);
         }

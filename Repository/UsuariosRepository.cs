@@ -36,6 +36,14 @@ namespace Projeto_Trainee_Hub.Repository
             .FirstOrDefaultAsync(u => u.Matricula == matricula);
             return usuario.IdUsuarios;
         }
+        public async Task<Usuarios?> ObterPorIdAsync(int id)
+        {
+            return await _context.Usuarios
+            .Include(u => u.IdSetorNavigation)
+            .Include(u => u.IdTipoNavigation)
+            .Include(u => u.IdEmpresaNavigation)
+            .FirstOrDefaultAsync(u => u.IdUsuarios == id);
+        }
         public async Task<string> ObterMatriculaPorIdAsync(int id)
         {
             var usuario = await _context.Usuarios
