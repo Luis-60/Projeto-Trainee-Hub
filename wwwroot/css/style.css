@@ -108,7 +108,7 @@ ul {
 
 /*RODAPÉ*/
 .rodape {
-  margin-top: 120px;
+  margin-top: auto;
   width: 100%;
   align-items: center;
   justify-content: center;

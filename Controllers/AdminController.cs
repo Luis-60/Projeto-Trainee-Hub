@@ -48,15 +48,19 @@ public class AdminController : Controller
         return RedirectToAction("Index");
     }
 
-    public async Task<IActionResult> SSModulosAsync()
+    public async Task<IActionResult> SSModulosAsync(int id)
     {
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
         {
             return RedirectToAction("Login", "Home");
         }
-        
-        return View(usuario);
+        var treinamento = await _treinamentoRepository.ObterPorIdAsync(id);
+        if (treinamento == null)
+        {
+            return NotFound(); // Retorna 404 se o treinamento não for encontrado
+        }
+        return View(treinamento);
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

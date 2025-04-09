@@ -56,7 +56,8 @@ public class TreinamentosController : Controller
         
         _treinamentoRepository.Adicionar(treinamentoUsuarios.treinamentos); // Salva no banco
         _treinamentoRepository.Salvar(); // Confirma a inserção
-        return RedirectToAction("SSModulos","Admin");
+        var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
+        return RedirectToAction("SSModulos","Admin", new {id});
     }
 
     public async Task<IActionResult> Detalhes(int id)
