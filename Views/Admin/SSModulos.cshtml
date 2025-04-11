@@ -3,27 +3,31 @@
     ViewData["Title"] = "Sistema de Submissão de Módulos";
 }
 
-    <div class="texto_modulo">
-        <h1>@Model.Nome</h1>
-        <div class="paragrafo_modulo">
-            <p>@Model.Descricao</p>
-        </div>
+<div class="texto_modulo">
+    <h1>@Model.Nome</h1>
+    <div class="paragrafo_modulo">
+        <p>@Model.Descricao</p>
     </div>
-    <hr>
     <div class="botao">
-        <button class="adicionar">ADICIONAR</button>
+        <button class="adicionar">Adicionar Módulo</button>
+        <button class="btn btn-primary">✏️</button>
+        <button class="btn btn-danger">🗑️</button>
     </div>
-    @* <div class="Modulos">
-        <div class="header">
-            <h2>MÓDULO 1 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
+</div>
+</div>
+<hr>
+
+@* <div class="Modulos">
+    <div class="header">
+        <h2>MÓDULO 1 - LOREM IPSUM</h2>
+        <div class="Botoes">
+            <button class="conteudo">📄 CONTEÚDO</button>
+            <button class="editar">✏️</button>
+            <button class="excluir">🗑️</button>
         </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo1">
-            <label for="modulo1">1. Lorem Ipsum</label>
-        </div>
-    </div> *@
+    </div>
+    <div class="selecionar">
+        <input type="checkbox" id="modulo1">
+        <label for="modulo1">1. Lorem Ipsum</label>
+    </div>
+</div> *@

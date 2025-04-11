@@ -33,10 +33,10 @@ public class TreinamentosController : Controller
         _sessao = sessao;
     }
 
-    public async Task<IActionResult< DeletarTreinamento(TreinamentoUsuariosViewModel treinamentosUsuarios)
-    {
-        return View()
-    }
+    // public async Task<IActionResult< DeletarTreinamento(TreinamentoUsuariosViewModel treinamentosUsuarios)
+    // {
+    //     return View()
+    // }
 
     [HttpPost]
     public async Task<IActionResult> CriarTreinamento(TreinamentoUsuariosViewModel treinamentoUsuarios)

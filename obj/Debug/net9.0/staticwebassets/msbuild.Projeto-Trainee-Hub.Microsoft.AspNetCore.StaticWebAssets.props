@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>neid62zr7v</Fingerprint>
-      <Integrity>kWM0FWiNYMzxJqvKO+zD6veKMNYeRD4HZ4DabM4rvNs=</Integrity>
+      <Fingerprint>jhhohna5nu</Fingerprint>
+      <Integrity>h7sm+tm0EsYIDQ4qx/klawphJkAbQ7mJ+1hxMARmqv0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</OriginalItemSpec>
@@ -342,167 +342,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\TRAINEEHUBLOGO.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\0ba807d4-9992-4a45-8faf-82506899c67c.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\1dc8cf36-1061-4e57-9846-b5b4fd2a1de8.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Projeto-Trainee-Hub</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png</RelativePath>
+      <RelativePath>images/upload/treinamentos/1dc8cf36-1061-4e57-9846-b5b4fd2a1de8.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>69g0wrif2d</Fingerprint>
-      <Integrity>tmEhpdtBv2upktqPauN1zc/D9VQ84tm2Fpqz/+c+mxM=</Integrity>
+      <Fingerprint>2tdlr5oq2p</Fingerprint>
+      <Integrity>2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\0ba807d4-9992-4a45-8faf-82506899c67c.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\1dc8cf36-1061-4e57-9846-b5b4fd2a1de8.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\4655f452-3703-4a64-a3cd-52233db48f01.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\9d0e088b-a19c-40dd-bb89-0291529d0d81.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Projeto-Trainee-Hub</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/4655f452-3703-4a64-a3cd-52233db48f01.jpg</RelativePath>
+      <RelativePath>images/upload/treinamentos/9d0e088b-a19c-40dd-bb89-0291529d0d81.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
+      <Fingerprint>2tdlr5oq2p</Fingerprint>
+      <Integrity>2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\4655f452-3703-4a64-a3cd-52233db48f01.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\482eeea2-6c32-4d62-a3bd-624491f03151.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/482eeea2-6c32-4d62-a3bd-624491f03151.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\482eeea2-6c32-4d62-a3bd-624491f03151.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\61bc3f3e-a080-462f-b01e-dc0d514d205b.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/61bc3f3e-a080-462f-b01e-dc0d514d205b.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0e6ij31z54</Fingerprint>
-      <Integrity>KGDlF3G8cEGkhQxcqNb737s4L4oZPW4061XCFvcWtLg=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\61bc3f3e-a080-462f-b01e-dc0d514d205b.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\7225555a-7a7c-41fd-bf9d-fc685f1c4c74.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/7225555a-7a7c-41fd-bf9d-fc685f1c4c74.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\7225555a-7a7c-41fd-bf9d-fc685f1c4c74.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\84301aad-510d-4ec0-88d8-262d6a476729.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/84301aad-510d-4ec0-88d8-262d6a476729.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\84301aad-510d-4ec0-88d8-262d6a476729.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\a5b3ac41-f328-4b2c-b8bb-8418992755e3.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/a5b3ac41-f328-4b2c-b8bb-8418992755e3.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\a5b3ac41-f328-4b2c-b8bb-8418992755e3.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\c85c7aad-c01d-4f70-9158-945dcefae87d.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/c85c7aad-c01d-4f70-9158-945dcefae87d.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0e6ij31z54</Fingerprint>
-      <Integrity>KGDlF3G8cEGkhQxcqNb737s4L4oZPW4061XCFvcWtLg=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\c85c7aad-c01d-4f70-9158-945dcefae87d.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\f0f1e20e-e3e8-413a-afa8-24191f5b94d1.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Projeto-Trainee-Hub</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
-      <RelativePath>images/upload/treinamentos/f0f1e20e-e3e8-413a-afa8-24191f5b94d1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kj9e9qksdf</Fingerprint>
-      <Integrity>MEcF/QnR1p6X1EhsX+P+p5bfZuN/Z221GY5owjlYLkw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\f0f1e20e-e3e8-413a-afa8-24191f5b94d1.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\9d0e088b-a19c-40dd-bb89-0291529d0d81.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))">
       <SourceType>Package</SourceType>
