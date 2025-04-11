@@ -63,51 +63,65 @@ public class TreinamentosController : Controller
     {
         var treinamentoId = treinamentoUsuarios.treinamentos.IdTreinamentos;
         var usuario = _sessao.BuscarSessaoUsuario();
+        
         if (usuario == null)
         {
             return RedirectToAction("Login", "Home");
         }
-        
-        if (treinamentoId == null)
+
+        if (treinamentoId == 0)
         {
             return NotFound();
         }
+
         var treinamento = await _treinamentoRepository.ObterPorIdSemRastreamentoAsync(treinamentoId);
         if (treinamento == null)
         {
             return NotFound();
         }
-        
+
         try
         {
-            if (treinamentoUsuarios.File == null || treinamentoUsuarios.File.Length == 0)
+            string fileName;
+
+            // ✅ Novo arquivo foi enviado
+            if (treinamentoUsuarios.File != null && treinamentoUsuarios.File.Length > 0)
             {
-                return BadRequest("Nenhum Arquivo foi enviado");
+                fileName = Guid.NewGuid().ToString() + Path.GetExtension(treinamentoUsuarios.File.FileName);
+                string filePath = Path.Combine(_baseUploadFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await treinamentoUsuarios.File.CopyToAsync(stream);
+                }
             }
-            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(treinamentoUsuarios.File.FileName);
-            string filePath = Path.Combine(_baseUploadFolder, fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            else
             {
-                await treinamentoUsuarios.File.CopyToAsync(stream);
+                // ✅ Nenhum novo arquivo enviado, mantém imagem existente
+                fileName = treinamento.Imagem;
             }
-        
+
+            // ✅ Aplica o nome da imagem no objeto final
             treinamentoUsuarios.treinamentos.Imagem = fileName;
-            await _treinamentoRepository.UpdateAsync(treinamentoUsuarios.treinamentos);    
+
+            // ✅ Salva as alterações
+            await _treinamentoRepository.UpdateAsync(treinamentoUsuarios.treinamentos);
             _treinamentoRepository.Salvar();
-            
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!TreinamentoExists(treinamento.IdTreinamentos))
+            if (!TreinamentoExists(treinamentoId))
             {
                 return NotFound();
-            
             }
-        }    
-        
+
+            throw; // Pode lançar novamente ou tratar de outra forma se quiser
+        }
         var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
         return RedirectToAction("SSModulos","Admin", new {id});
+    
     }
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> CriarTreinamento(TreinamentoUsuariosViewModel treinamentoUsuarios)

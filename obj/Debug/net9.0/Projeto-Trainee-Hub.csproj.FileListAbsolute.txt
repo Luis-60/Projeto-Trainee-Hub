@@ -466,5 +466,5 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-jhhohna5nu.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-jhhohna5nu.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-y308u93yjl.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-1n74y2zsap.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-rs0ot184as.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-43u1u2rbff.gz

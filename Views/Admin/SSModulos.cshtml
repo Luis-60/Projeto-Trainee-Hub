@@ -1,24 +1,31 @@
 @model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
 @{
     ViewData["Title"] = "Sistema de Submissão de Módulos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="texto_modulo">
-    <h1>@Model.treinamentos.Nome</h1>
-    <div class="paragrafo_modulo">
-        <p>@Model.treinamentos.Descricao</p>
+    <div class="d-flex align-items-center gap-4">
+        <h1 class="m-0">@Model.treinamentos.Nome</h1>
+        <p class="m-0 fs-1">@Model.treinamentos.Descricao</p>
     </div>
-    <div class="botao">
-        <button class="adicionar">Adicionar Módulo</button>
-        <button class="btn btn-primary"
-                onclick="AbrirAdd()">✏️</button>
+    <div class="d-flex justify-content-end align-items-center gap-3 p-3">
+    <button class="btn btn-success adicionar">Adicionar Módulo</button>
+
+    <button class="btn btn-primary btnAbrirAdd" onclick="AbrirAdd()">✏️ Editar</button>
+    <div class="btn-group">
         <form asp-controller="Treinamentos" asp-action="Deletar" method="post">
             @Html.AntiForgeryToken()
-            <input type="hidden" name="IdTreinamentos" id="treinamento" value="@Model.treinamentos.IdTreinamentos">
-            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?')">
+            <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que quer deletar o treinamento?')">
                 🗑 Delete
             </button>
         </form>
     </div>
+</div>
+
+</div>
+
+</div>
 </div>
 </div>
 <hr>
@@ -51,13 +58,21 @@
                 </div>
             </div>
             
-            <label id="imagem">Imagem Ilustrativa:</label><br>
+           <label id="imagem">Imagem Ilustrativa:</label><br>
+
             <label asp-for="@Model.File" class="drop-container" id="dropcontainer"> 
                 <span class="drop-title">Insira o Arquivo aqui</span>
                 ou
-                <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*" required>
+                <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*">
             </label>
 
+            @if (!string.IsNullOrEmpty(Model.treinamentos.Imagem))
+            {
+                <div class="mt-2 text-muted">
+                    📁 Arquivo atual: <strong>@Model.treinamentos.Imagem</strong>
+                </div>
+            }
+            
             <input type="hidden" id="treinamento" asp-for="@Model.treinamentos.IdTreinamentos" value="@Model.treinamentos.IdTreinamentos">
             <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
             <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
