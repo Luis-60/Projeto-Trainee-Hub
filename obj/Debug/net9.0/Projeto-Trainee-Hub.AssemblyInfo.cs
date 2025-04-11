@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projeto-Trainee-Hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c7920a091bfe3599554d6a0b69b74838ae5a4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73bedd06dcc6bbc3cb56cce8965cb442cca84b61")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projeto-Trainee-Hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projeto-Trainee-Hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

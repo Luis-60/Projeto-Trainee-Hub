@@ -54,10 +54,19 @@ public class UsuarioController : Controller
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
         {
-            return RedirectToAction("Login", "Home");
+            return View();
         }
-        return View(usuario);
+        
+        var idUsuario = usuario.IdUsuarios;
+        if (idUsuario != null)
+        {
+            var usuarios = await _usuariosRepository.ObterPorIdAsync(idUsuario);
+        return View(usuarios);
+        }
+        
+        return RedirectToAction("Index");
     }
+    
 
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

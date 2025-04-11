@@ -111,10 +111,15 @@ public class HomeController : Controller
         
     }
 
-    [HttpPost]
     public async Task<IActionResult> Logout()
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        // Clear the session
+        _sessao.RemoverSessaoUsuario();
+        // Sign out the user
+        HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        // Clear the authentication cookie
+        HttpContext.SignOutAsync();
+        // Clear the session cookie
         return RedirectToAction("Login", "Home");
     }
 

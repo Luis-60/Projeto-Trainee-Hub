@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3FHLCv2CIWQnW5K/chz3feHBUhVyBG8v0iz6VEzTREA=",
+  "Hash": "X5essNoOhnE0laMDN4gxD87H17WBoz0wTh0JhuD2Ssc=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -2178,6 +2178,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/upload/treinamentos/d60e9ea7-a5dd-41a9-811b-92f3e00391ad.png"
+    },
+    {
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png",
+      "SourceId": "Projeto-Trainee-Hub",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/",
+      "BasePath": "_content/Projeto-Trainee-Hub",
+      "RelativePath": "images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4dyjqaswe1",
+      "Integrity": "uLYyEcGPAFpLFyfc9SRvugW1WBcBq3pqFHMoOKUrMHs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png"
     },
     {
       "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/f0f1e20e-e3e8-413a-afa8-24191f5b94d1.jpg",
@@ -8233,6 +8254,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-RG+FmMhOd+qID4GkH/N8hnfe/JSoC0simh8mRRkkWAY="
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.4dyjqaswe1.png",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "834712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uLYyEcGPAFpLFyfc9SRvugW1WBcBq3pqFHMoOKUrMHs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 21:31:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4dyjqaswe1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uLYyEcGPAFpLFyfc9SRvugW1WBcBq3pqFHMoOKUrMHs="
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "834712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uLYyEcGPAFpLFyfc9SRvugW1WBcBq3pqFHMoOKUrMHs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 21:31:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uLYyEcGPAFpLFyfc9SRvugW1WBcBq3pqFHMoOKUrMHs="
         }
       ]
     },
