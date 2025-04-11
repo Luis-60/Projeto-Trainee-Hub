@@ -1,22 +1,76 @@
-@model Treinamento
+@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
 @{
     ViewData["Title"] = "Sistema de Submissão de Módulos";
 }
-
 <div class="texto_modulo">
-    <h1>@Model.Nome</h1>
+    <h1>@Model.treinamentos.Nome</h1>
     <div class="paragrafo_modulo">
-        <p>@Model.Descricao</p>
+        <p>@Model.treinamentos.Descricao</p>
     </div>
     <div class="botao">
         <button class="adicionar">Adicionar Módulo</button>
-        <button class="btn btn-primary">✏️</button>
-        <button class="btn btn-danger">🗑️</button>
+        <button class="btn btn-primary"
+                onclick="AbrirAdd()">✏️</button>
+        <form asp-controller="Treinamentos" asp-action="Deletar" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="IdTreinamentos" id="treinamento" value="@Model.treinamentos.IdTreinamentos">
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?')">
+                🗑 Delete
+            </button>
+        </form>
     </div>
 </div>
 </div>
 <hr>
 
+<div class="modal">
+    <div class="modal-treinamento">
+        <h1 class="titulo-modal">EDITAR TREINAMENTO</h1>
+        <form asp-controller="Treinamentos" asp-action="Editar" method="post" enctype="multipart/form-data">
+            <div class="inputnome">
+                <label>Nome:</label><br>
+                <input asp-for="@Model.treinamentos.Nome" placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" required>
+            </div>      
+
+            <div class="input-instrutor">
+                <label>Instrutor:</label><br>
+                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
+            </div>
+
+            <label>Descrição:</label><br>
+            <textarea placeholder="Descreva o treinamento" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+            
+            <div class="container-data">
+                <div class="container-datainicio">
+                    <label>Data de Início:</label><br>
+                    <input type="date" id="datainicio" asp-for="@Model.treinamentos.DataInicio" required>
+                </div>
+                <div class="container-datafim">
+                    <label>Data de Fim:</label><br>
+                    <input type="date" id="datafim" asp-for="@Model.treinamentos.DataFim" required>
+                </div>
+            </div>
+            
+            <label id="imagem">Imagem Ilustrativa:</label><br>
+            <label asp-for="@Model.File" class="drop-container" id="dropcontainer"> 
+                <span class="drop-title">Insira o Arquivo aqui</span>
+                ou
+                <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*" required>
+            </label>
+
+            <input type="hidden" id="treinamento" asp-for="@Model.treinamentos.IdTreinamentos" value="@Model.treinamentos.IdTreinamentos">
+            <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
+            <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
+
+            <div class="buttons"> 
+                <button class="btnAddTreinamento" type="submit">EDITAR</button>
+                <button class="btnClose" onclick="closeModal()">SAIR</button>
+            </div>   
+        </form>            
+    </div>
+</div>
 @* <div class="Modulos">
     <div class="header">
         <h2>MÓDULO 1 - LOREM IPSUM</h2>

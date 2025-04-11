@@ -13,16 +13,18 @@ using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.ViewModel;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Projeto_Trainee_Hub.Helper;
+using Microsoft.EntityFrameworkCore;
 
 public class TreinamentosController : Controller
 {
     
     private readonly UsuariosRepository _usuariosRepository;
     private readonly TreinamentoRepository _treinamentoRepository;
+    private readonly MasterContext _context;
     private readonly ISessao _sessao;
     private readonly string _baseUploadFolder = "wwwroot/images/upload/treinamentos";
 
-    public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
+    public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context)
     {
         if (!Directory.Exists(_baseUploadFolder))
         {
@@ -31,14 +33,83 @@ public class TreinamentosController : Controller
         _treinamentoRepository = treinamentoRepository;
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
+        _context = context;
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Deletar(int IdTreinamentos)
+    {
+        if (IdTreinamentos == 0)
+        {
+            return NotFound();
+        }
+
+        var treinamento = await _treinamentoRepository.ObterPorIdAsync(IdTreinamentos);
+        if (treinamento == null)
+        {
+            return NotFound();
+        }
+
+        _context.Treinamentos.Remove(treinamento);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Perfil", "Admin");
     }
 
-    // public async Task<IActionResult< DeletarTreinamento(TreinamentoUsuariosViewModel treinamentosUsuarios)
-    // {
-    //     return View()
-    // }
-
+    //função de editar treinamento
     [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Editar(TreinamentoUsuariosViewModel treinamentoUsuarios)
+    {
+        var treinamentoId = treinamentoUsuarios.treinamentos.IdTreinamentos;
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+        
+        if (treinamentoId == null)
+        {
+            return NotFound();
+        }
+        var treinamento = await _treinamentoRepository.ObterPorIdSemRastreamentoAsync(treinamentoId);
+        if (treinamento == null)
+        {
+            return NotFound();
+        }
+        
+        try
+        {
+            if (treinamentoUsuarios.File == null || treinamentoUsuarios.File.Length == 0)
+            {
+                return BadRequest("Nenhum Arquivo foi enviado");
+            }
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(treinamentoUsuarios.File.FileName);
+            string filePath = Path.Combine(_baseUploadFolder, fileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await treinamentoUsuarios.File.CopyToAsync(stream);
+            }
+        
+            treinamentoUsuarios.treinamentos.Imagem = fileName;
+            await _treinamentoRepository.UpdateAsync(treinamentoUsuarios.treinamentos);    
+            _treinamentoRepository.Salvar();
+            
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!TreinamentoExists(treinamento.IdTreinamentos))
+            {
+                return NotFound();
+            
+            }
+        }    
+        
+        var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
+        return RedirectToAction("SSModulos","Admin", new {id});
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> CriarTreinamento(TreinamentoUsuariosViewModel treinamentoUsuarios)
     {
         var usuario = _sessao.BuscarSessaoUsuario();
@@ -87,7 +158,10 @@ public class TreinamentosController : Controller
         return View(viewModel); // Passa o ViewModel para a View
     }
 
-
+    private bool TreinamentoExists(int id)
+        {
+            return _context.Treinamentos.Any(e => e.IdTreinamentos == id);
+        }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

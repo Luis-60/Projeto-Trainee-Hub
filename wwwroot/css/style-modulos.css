@@ -74,16 +74,7 @@ body {
   .Modulos .selecionar input[type="checkbox"] {
     margin-right: 10px;
   }
-  .botao {
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    margin-right: 50px;
-  }
-  .botao button{
-    width: 100px;
-    height: 40px;
-  }
+
   .adicionar {
     border: none;
     background-color: #4D83AA;

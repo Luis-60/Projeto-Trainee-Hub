@@ -27,6 +27,11 @@ namespace Projeto_Trainee_Hub.Repository
                 .Include(t => t.IdEmpresaNavigation)
                 .FirstOrDefaultAsync(t => t.IdTreinamentos == id);
         }
+        public async Task<Treinamento?> ObterPorIdSemRastreamentoAsync(int id)
+        {
+            return await _context.Treinamentos.AsNoTracking()
+                .FirstOrDefaultAsync(t => t.IdTreinamentos == id);
+        }
 
         public async Task <IEnumerable<Treinamento?>> ObterPorIdCriadorAsync(int id)
         {

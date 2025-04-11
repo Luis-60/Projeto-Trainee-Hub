@@ -81,8 +81,7 @@ body {
     margin-right: 50px;
   }
   .botao button{
-    width: 100px;
-    height: 40px;
+    border-radius: 30px;
   }
   .adicionar {
     border: none;

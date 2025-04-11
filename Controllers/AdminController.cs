@@ -58,9 +58,10 @@ public class AdminController : Controller
         var treinamento = await _treinamentoRepository.ObterPorIdAsync(id);
         if (treinamento == null)
         {
-            return NotFound(); // Retorna 404 se o treinamento não for encontrado
+            return NotFound(); 
         }
-        return View(treinamento);
+            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = treinamento, usuarios = usuario};
+        return View(treinamentoUsuarios);
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

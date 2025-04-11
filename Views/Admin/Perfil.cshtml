@@ -48,7 +48,7 @@
         @foreach(var treinamento in @Model.listaTreinamentos) 
         {
             <li class="list-andamento">
-                <a href="#">
+                <a asp-controller="Admin" asp-action="SSModulos" asp-route-id="@treinamento.IdTreinamentos">
                     <div class="moldura">
                         <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                     </div>
