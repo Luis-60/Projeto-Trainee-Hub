@@ -1,34 +1,6 @@
 {
   "Files": [
     {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-aula.css",
-      "PackagePath": "staticwebassets/css/style-aula.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-aulas.css",
-      "PackagePath": "staticwebassets/css/style-aulas.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-login.css",
-      "PackagePath": "staticwebassets/css/style-login.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-menu.css",
-      "PackagePath": "staticwebassets/css/style-menu.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-modal.css",
-      "PackagePath": "staticwebassets/css/style-modal.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-modulos.css",
-      "PackagePath": "staticwebassets/css/style-modulos.css"
-    },
-    {
-      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style-perfil.css",
-      "PackagePath": "staticwebassets/css/style-perfil.css"
-    },
-    {
       "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "PackagePath": "staticwebassets/css/style.css"
     },
@@ -75,6 +47,10 @@
     {
       "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/image 2.png",
       "PackagePath": "staticwebassets/images/image 2.png"
+    },
+    {
+      "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/08ff44cd-afb9-4837-9c8a-92f9252e04eb.png",
+      "PackagePath": "staticwebassets/images/upload/treinamentos/08ff44cd-afb9-4837-9c8a-92f9252e04eb.png"
     },
     {
       "Id": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/1dc8cf36-1061-4e57-9846-b5b4fd2a1de8.png",

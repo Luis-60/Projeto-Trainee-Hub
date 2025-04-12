@@ -9,17 +9,22 @@
         <p class="m-0 fs-1">@Model.treinamentos.Descricao</p>
     </div>
     <div class="d-flex justify-content-end align-items-center gap-3 p-3">
-    <button class="btn btn-success adicionar">Adicionar Módulo</button>
+        <!-- Button to add a new module -->
+        <button class="btn btn-success adicionar" onclick="AbrirCriarModulo()">Adicionar Módulo</button>
 
-    <button class="btn btn-primary btnAbrirAdd" onclick="AbrirAdd()">✏️ Editar</button>
-    <div class="btn-group">
-        <form asp-controller="Treinamentos" asp-action="Deletar" method="post">
-            @Html.AntiForgeryToken()
-            <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
-            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que quer deletar o treinamento?')">
-                🗑 Delete
-            </button>
-        </form>
+        <!-- Button to edit the training -->
+        <button class="btn btn-primary btnAbrirAdd" onclick="AbrirAdd()">✏️ Editar</button>
+
+        <!-- Form to delete the training -->
+        <div class="btn-group">
+            <form asp-controller="Treinamentos" asp-action="Deletar" method="post" onsubmit="return confirm('Tem certeza que quer deletar o treinamento?')">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
+                <button type="submit" class="btn btn-danger">
+                    🗑 Delete
+                </button>
+            </form>
+        </div>
     </div>
 </div>
 <hr>

@@ -90,7 +90,6 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/8lsj9gtyzq-bqjiyaj88i.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/v9u2alsoj7-wof7unmvz1.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Azure.Core.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Azure.Identity.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Humanizer.dll
@@ -225,7 +224,6 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.csproj.AssemblyReference.cache
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-.10ED0647.Up2Date
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/appsettings.Development.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/appsettings.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Projeto-Trainee-Hub.staticwebassets.runtime.json
@@ -453,18 +451,13 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Newtonsoft.Json.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Newtonsoft.Json.dll
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-jhhohna5nu.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-jhhohna5nu.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-rs0ot184as.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-43u1u2rbff.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-43u1u2rbff.gz
-/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-rs0ot184as.gz
+/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-kxrf47wbls.gz
