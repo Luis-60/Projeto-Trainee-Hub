@@ -1145,6 +1145,7 @@ a:hover {
     margin-right: 10px;
 }
 
+/*Menu Responsive*/
 @media (min-width: 1600px) {
     .body{
         font-size: 1.2rem;

@@ -6,12 +6,8 @@ namespace Projeto_Trainee_Hub.Models;
 
 public partial class MasterContext : DbContext
 {
-    public MasterContext()
-    {
-    }
-
-    public MasterContext(DbContextOptions<MasterContext> options)
-        : base(options)
+   public MasterContext(DbContextOptions<MasterContext> options)
+    : base(options)
     {
     }
 
@@ -32,9 +28,6 @@ public partial class MasterContext : DbContext
     public virtual DbSet<Usuarios> Usuarios { get; set; }
 
     public virtual DbSet<UsuariosTreinamento> UsuariosTreinamentos { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=172.18.0.2;Database=master;User Id=sa;Password=\"YourStrong!Password123\";TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
