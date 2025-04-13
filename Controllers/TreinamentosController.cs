@@ -55,7 +55,6 @@ public class TreinamentosController : Controller
         return RedirectToAction("Perfil", "Admin");
     }
 
-    //função de editar treinamento
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Editar(TreinamentoUsuariosViewModel treinamentoUsuarios)

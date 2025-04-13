@@ -39,7 +39,7 @@
     <div class="container-treinamento">
         <div class="topo">
             <h1>TREINAMENTOS</h1>
-            <button class="btnAbrirAdd" type="button" onclick="AbrirAdd()">
+            <button class="btnAbrirAdd" type="button" onclick="OpenModal('modal-treinamento')">
                 Adicionar
             </button>
         </div>
@@ -48,7 +48,7 @@
         @foreach(var treinamento in @Model.listaTreinamentos) 
         {
             <li class="list-andamento" style="width: 38rem;">
-                <a asp-controller="Admin" asp-action="SSModulos" asp-route-id="@treinamento.IdTreinamentos">
+                <a asp-controller="Admin" asp-action="Treinamentos" asp-route-id="@treinamento.IdTreinamentos">
                     <div class="moldura">
                         <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                     </div>
@@ -63,8 +63,8 @@
 </div>
     
 
-<div class="modal">
-    <div class="modal-treinamento">
+<div class="modal" id="modal-treinamento">
+    <div class="modal-content">
         <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
         <form asp-controller="Treinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
             <div class="inputnome">

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xxkflKdHFmgYbO6WwOQ7C0xdVbeiAmhtRI44zxerZmQ=",
+  "Hash": "6+xW6+y95pFvrFxnZzbPS/yjBsCsOdvAS3LjsbCNDCU=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -1611,6 +1611,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/upload/treinamentos/1dc8cf36-1061-4e57-9846-b5b4fd2a1de8.png"
+    },
+    {
+      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png",
+      "SourceId": "Projeto-Trainee-Hub",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/",
+      "BasePath": "_content/Projeto-Trainee-Hub",
+      "RelativePath": "images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2tdlr5oq2p",
+      "Integrity": "2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png"
     },
     {
       "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/78c0e18d-b3fc-4c18-a821-bedd58cb6356.png",
@@ -4525,6 +4546,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Fri, 11 Apr 2025 02:36:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo="
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.2tdlr5oq2p.png",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 14:37:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2tdlr5oq2p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo="
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/395ae0bb-40be-44a2-91ae-f1b4c39ddea4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 14:37:17 GMT"
         },
         {
           "Name": "Cache-Control",

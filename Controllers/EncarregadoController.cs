@@ -16,12 +16,12 @@ public class EncarregadoController : Controller
         return View();
     }
     
-    public IActionResult SSModulos()
+    public IActionResult Treinamentos()
     {
         return View();
     }
 
-    public IActionResult SSAulas()
+    public IActionResult Modulos()
     {
         return View();
     }

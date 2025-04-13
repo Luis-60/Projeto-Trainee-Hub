@@ -1,6 +1,6 @@
 @model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
 @{
-    ViewData["Title"] = "Sistema de Submissão de Módulos";
+    ViewData["Title"] = "Treinamentos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="texto_modulo">
@@ -10,10 +10,10 @@
     </div>
     <div class="d-flex justify-content-end align-items-center gap-3 p-3">
         <!-- Button to add a new module -->
-        <button class="btn btn-success adicionar" onclick="AbrirCriarModulo()">Adicionar Módulo</button>
+        <button class="btn btn-success adicionar" onclick="OpenModal('modal-modulo')">Adicionar Módulo</button>
 
         <!-- Button to edit the training -->
-        <button class="btn btn-primary btnAbrirAdd" onclick="AbrirAdd()">✏️ Editar</button>
+        <button class="btn btn-primary btnAbrirAdd" onclick="OpenModal('modal-treinamentoE')">✏️ Editar</button>
 
         <!-- Form to delete the training -->
         <div class="btn-group">
@@ -29,8 +29,8 @@
 </div>
 <hr>
 
-<div class="modal">
-    <div class="modal-treinamento">
+<div class="modal" id="modal-treinamentoE">
+    <div class="modal-content">
         <h1 class="titulo-modal">EDITAR TREINAMENTO</h1>
         <form asp-controller="Treinamentos" asp-action="Editar" method="post" enctype="multipart/form-data">
             <div class="inputnome">
@@ -86,8 +86,8 @@
     </div>
 </div>
 
-<div class="modal">
-        <div class="modal-modulo">
+<div class="modal" id="modal-modulo">
+        <div class="modal-content">
             <div class="icon-x">
                 <i id="close" class='bx bx-x close'>
                 

@@ -57,39 +57,55 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-//Abrir Modal
-const modal = document.querySelector('.modal');
-const btnAbrir = document.querySelector('.btnAbrirAdd'); // Botão para abrir a modal
-const btnFechar = document.querySelector('.btnClose'); // Botão para fechar a modal
-const modalContent = document.querySelector('.modal-treinamento'); // Conteúdo da modal
-
-// Função para abrir a modal
-function AbrirAdd() {
-  modal.classList.add('active');
+// Modal
+function OpenModal(modalId){
+  const modal = document.getElementById(modalId);
+  if (modal){
+    modal.style.display = "flex";
+    setTimeout(() => {
+      modal.classList.add('active');
+    }, 10); // Delay pequeno para evitar conflito com o clique
+  }
 }
 
 // Função para fechar a modal
-function closeModal() {
-  modal.classList.remove('active');
-  document.getElementById("nome").value = "";
-  document.getElementById("instrutor").value = "";
-  document.getElementById("descricao").value = "";
-  document.getElementById("datainicio").value = "";
-  document.getElementById("datafim").value = "";
-  document.getElementById("images-treinamento").value = "";
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  const inputs = modal.querySelectorAll("input, textarea, select");
+  // const contents = modal.querySelectorAll("*");
+  
+  if (modal){
+    modal.classList.remove('active');
+    modal.style.display = "none";
+    if (modalId != "modal-treinamentoE") {
+      inputs.forEach(input => {
+        input.value = "";
+      });
+    }; 
+  }
 }
 
-btnFechar.addEventListener('click', closeModal);
+// Detect click outside modal content to close
 
-// Fecha a modal ao clicar fora do conteúdo dela
-modal.addEventListener('click', function (event) {
-    if (!modalContent.contains(event.target)) {
-        closeModal();
-    }
+document.addEventListener("click", function (event) {
+  
+  document.querySelectorAll(".modal.active").forEach(modal => {
+      const modalContent = modal.querySelector(".modal-content");
+      if (modalContent && !modalContent.contains(event.target)) {
+          closeModal(modal.id); // pass the ID of the modal to close
+      }
+  });
 });
 
-// Adiciona evento ao botão de abrir a modal
-btnAbrir.addEventListener('click', AbrirAdd);
+
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+      document.querySelectorAll(".modal.active").forEach(modal => {
+          closeModal(modal.id); // close all active modals
+      });
+  }
+});
 
 //Adicionar e Excluir Conteúdos
 function addTreinamento() {
@@ -113,13 +129,6 @@ function addTreinamento() {
   // Fechar o modal após adicionar o treinamento
   closeModal();
 
-  // Limpar os campos do formulário
-  document.getElementById("nome").value = "";
-  document.getElementById("descricao").value = "";
-  document.getElementById("instrutor").value = "";
-  document.getElementById("datainicio").value = "";
-  document.getElementById("datafim").value = "";
-  document.getElementById("images-treinamento").value = "";
 }
 
 document.getElementById("dropcontainer").addEventListener("click", function() {

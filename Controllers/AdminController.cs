@@ -46,7 +46,7 @@ public class AdminController : Controller
         return RedirectToAction("Index");
     }
 
-    public async Task<IActionResult> SSModulosAsync(int id)
+    public async Task<IActionResult> TreinamentosAsync(int id)
     {
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
@@ -62,7 +62,23 @@ public class AdminController : Controller
         return View(treinamentoUsuarios);
     }
 
-    
+    public async Task<IActionResult> ModulosAsync(int id)
+    {
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+        var treinamento = await _treinamentoRepository.GetByIdAsync(id);
+        if (treinamento == null)
+        {
+            return NotFound(); 
+        }
+            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = treinamento, usuarios = usuario};
+        return View(treinamentoUsuarios);
+    }
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

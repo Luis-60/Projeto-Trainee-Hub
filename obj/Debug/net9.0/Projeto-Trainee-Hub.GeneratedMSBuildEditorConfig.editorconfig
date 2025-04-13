@@ -28,24 +28,28 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Modulos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTW9kdWxvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVyZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/SSModulos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vU1NNb2R1bG9zLmNzaHRtbA==
+[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Treinamentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVHJlaW5hbWVudG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Modulos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vTW9kdWxvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vUGVyZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/SSAulas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vU1NBdWxhcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/SSModulos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vU1NNb2R1bG9zLmNzaHRtbA==
+[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Treinamentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vVHJlaW5hbWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Home/Login.cshtml]
