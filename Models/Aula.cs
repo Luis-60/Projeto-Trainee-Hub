@@ -10,7 +10,7 @@ public partial class Aula
     public string? Nome { get; set; }
 
     public string? Descricao { get; set; }
-
+    
     public int IdModulo { get; set; }
 
     public virtual Modulo? IdModuloNavigation { get; set; }

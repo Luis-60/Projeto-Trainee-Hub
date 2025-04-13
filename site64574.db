@@ -66,7 +66,7 @@ INSERT INTO Usuarios (Nome, Email, Matricula, Senha, Idade, Imagem, QtdTreinamen
 CREATE TABLE Treinamentos (
     idTreinamentos INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50),
-    Descricao VARCHAR(500),
+    Descricao VARCHAR(max),
     Imagem VARCHAR(100),
     Instrutor VARCHAR(240),
     DataInicio DATETIME,
@@ -82,7 +82,7 @@ CREATE TABLE Treinamentos (
 CREATE TABLE Modulos (
     idModulos INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(120),
-    Descricao VARCHAR(500),
+    Descricao VARCHAR(max),
     Sequencia INTEGER,
     idTreinamento INT,
     FOREIGN KEY (idTreinamento) REFERENCES Treinamentos(idTreinamentos)
@@ -90,7 +90,7 @@ CREATE TABLE Modulos (
 CREATE TABLE Aula (
     idAula INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(120),
-    Descricao VARCHAR(500),
+    Descricao VARCHAR(max),
     idModulo INT,
     FOREIGN KEY (idModulo) REFERENCES Modulos(idModulos)
 )

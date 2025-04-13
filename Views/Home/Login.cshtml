@@ -25,19 +25,38 @@
         }
 
         <div class="informacoes">
-            <label>Empresa</label>
-            <input asp-for="IdEmpresa" id="Nome" placeholder="Digite o nome da empresa" required />
-            
-            <label>Matrícula</label>
-            <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required />
-            
-            <label>Senha</label>
-            <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required />
+            <div class="empresa">
+                <div class="empresa-label" style="display: flex; align-items: center">
+                <i class="fa fa-building" style="height: 10px; margin-bottom: 7px;"></i>
+                    <label>&nbsp;Empresa</label>
+                </div>
+                <input asp-for="IdEmpresa" id="Nome" placeholder="Digite o nome da empresa" required />
+            </div>
+            <div class="matricula">
+                <div class="matricula-label" style="display: flex; align-items: center">
+                    <i class="fa fa-user" style="height: 10px; margin-bottom: 7px;"></i>
+                    <label>&nbsp;Matrícula</label>
+                </div>
+                <input asp-for="Matricula" id="matricula" placeholder="Digite sua matrícula" required />
+            </div>
+            <div class="senha">
+                <div class="senha-label" style="display: flex; align-items: center;">
+                    <i class="fa fa-lock" style="height: 10px; margin-bottom: 7px;"></i>
+                    <label>&nbsp;Senha</label>
+                </div>
+                <div style="position: relative;">
+                    <input asp-for="Senha" type="password" id="senha" placeholder="Digite sua senha" required style="padding-right: 35px;">
+                
+                    <span><i id="toggler" class="far fa-eye" 
+                            style="position: absolute; top: 35%; right: 80px; transform: translateY(-50%); cursor: pointer;">
+                    </i></span>
+                </div>
+            </div>
         </div>
 
         <div class="lembrar-esqueci">
             <label>
-                <input type="checkbox" Asp-for="LembrarMe"class="lembrar-esqueci"> Lembrar de mim
+                <input type="checkbox" asp-for="LembrarMe"class="lembrar-esqueci"> Lembrar de mim
             </label>
             <a href="#">Esqueceu sua senha?</a>
         </div>

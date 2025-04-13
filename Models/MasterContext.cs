@@ -107,7 +107,7 @@ public partial class MasterContext : DbContext
 
             entity.HasOne(d => d.IdTreinamentoNavigation).WithMany(p => p.Modulos)
                 .HasForeignKey(d => d.IdTreinamento)
-                .HasConstraintName("FK__Modulos__idTrein__004002F9");
+                .HasConstraintName("FK__Modulos__idTrein__1BE81D6E");
         });
 
         modelBuilder.Entity<Setor>(entity =>

@@ -16,12 +16,13 @@ public class AdminController : Controller
     private readonly UsuariosRepository _usuariosRepository;
     private readonly ISessao _sessao;
     private readonly TreinamentoRepository _treinamentoRepository;
-
-    public AdminController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
+    private readonly ModuloRepository _moduloRepository;
+    public AdminController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
     {
         _usuariosRepository = usuariosRepository;
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
+        _moduloRepository = moduloRepository;
     }
     [HttpGet]
     public async Task<IActionResult> PerfilAsync()
@@ -58,8 +59,11 @@ public class AdminController : Controller
         {
             return NotFound(); 
         }
-            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = treinamento, usuarios = usuario};
-        return View(treinamentoUsuarios);
+        
+        var modulosTreinamento = await _moduloRepository.GetByIdTreinamentoAsync(treinamento.IdTreinamentos);
+
+        var treinamentoModulo = new TreinamentoModuloViewModel{treinamentos = treinamento, usuarios = usuario, listaModulos = modulosTreinamento};
+        return View(treinamentoModulo);
     }
 
     public async Task<IActionResult> ModulosAsync(int id)

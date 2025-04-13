@@ -1,14 +1,14 @@
-@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
+@model Projeto_Trainee_Hub.ViewModel.TreinamentoModuloViewModel
 @{
     ViewData["Title"] = "Treinamentos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="texto_modulo">
+<div class="texto_modulo" style="margin-left: 160px;">
     <div class="d-flex align-items-center gap-4">
-        <h1 class="m-0">@Model.treinamentos.Nome</h1>
-        <p class="m-0 fs-1">@Model.treinamentos.Descricao</p>
+        <h1 class="m-0" style="font-size: 64px; margin-top: 40px; line-break: anywhere">@Model.treinamentos.Nome</h1>
+        <p class="m-0" style="font-size: 20px; line-break: anywhere; margin-left: 10px;">@Model.treinamentos.Descricao</p>
     </div>
-    <div class="d-flex justify-content-end align-items-center gap-3 p-3">
+    <div class="btnModulo" style="display: flex; gap: 10px; justify-content: flex-end;">
         <!-- Button to add a new module -->
         <button class="btn btn-success adicionar" onclick="OpenModal('modal-modulo')">Adicionar Módulo</button>
 
@@ -21,14 +21,36 @@
                 @Html.AntiForgeryToken()
                 <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
                 <button type="submit" class="btn btn-danger">
-                    🗑 Delete
+                    🗑 Deletar
                 </button>
             </form>
         </div>
     </div>
 </div>
 <hr>
+<ul class="header">
+    @foreach(var modulo in @Model.listaModulos)
+    {
+        <li class="Modulos">
+            <h2>MÓDULO @modulo.Sequencia - @modulo.Nome</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar" onclick="OpenModal('modal-moduloE')">✏️</button>
+                <form asp-controller="Modulos" asp-action="Deletar" method="post" onsubmit="return confirm('Tem certeza que quer deletar módulo?')">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
+                    <button class="excluir btn btn-danger">🗑</button>
+                </form>
+            </div>
+            <div class="selecionar">
+                <input type="checkbox" id="modulo1">
+                <label for="modulo1">1. LoreIpsum</label>
+            </div>
+        </li>
+    }
+</ul>
 
+<!-- Editar Treinamento-->
 <div class="modal" id="modal-treinamentoE">
     <div class="modal-content">
         <h1 class="titulo-modal">EDITAR TREINAMENTO</h1>
@@ -40,11 +62,11 @@
 
             <div class="input-instrutor">
                 <label>Instrutor:</label><br>
-                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
+                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" style="width:100%" class="instrutor" type="text" id="instrutor" required>
             </div>
 
             <label>Descrição:</label><br>
-            <textarea placeholder="Descreva o treinamento" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+            <textarea placeholder="Descreva o treinamento" style="width:100%" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
             
             <div class="container-data">
                 <div class="container-datainicio">
@@ -86,38 +108,45 @@
     </div>
 </div>
 
-<div class="modal" id="modal-modulo">
-        <div class="modal-content">
-            <div class="icon-x">
-                <i id="close" class='bx bx-x close'>
-                
-                </i>
-            </div>
-            <h1 class="titulo-modal">CRIAR MÓDULO</h1>
 
+<!-- Adicionar Modulo-->
+<div class="modal" id="modal-modulo">
+    <div class="modal-content">
+        <h1 class="titulo-modal">CRIAR MÓDULO</h1>
+        <form asp-action="CriarModulo" asp-controller="Modulos">
             <div class="inputnome">
-                <label for="nome"name="nome">Nome:</label><br>
-                <input placeholder="Insira o nome do módulo" class="input-nome" type="text" id="nome" name="nome">
+                <label>Nome:</label><br>
+                <input type="text" asp-for="@Model.modulos.Nome" class="input-nome"placeholder="Insira o nome do módulo" id="nome">
             </div>      
-            <label for="descricao" name="descricao">Descrição:</label><br>
-            <textarea placeholder="Descreva o módulo" id="descricao" name="descricao"></textarea>
+                <label>Descrição:</label><br>
+                <textarea asp-for="@Model.modulos.Descricao" placeholder="Descreva o módulo" style="width:100%" id="descricao"></textarea>
             <div class="buttons"> 
-                <button class="btnAddTreinamento" onclick="addTreinamento()">CRIAR</button>
+                <button class="btnAddTreinamento">CRIAR</button>
                 <button class="btnClose" onclick="closeModal()">SAIR</button>
             </div>
-        </div>
+            <input type="hidden" id="treinamento" asp-for="@Model.treinamentos.IdTreinamentos" value="@Model.treinamentos.IdTreinamentos">
+            <input type="hidden" id="sequencia" asp-for="@Model.modulos.Sequencia" value="0">
+        </form>
     </div>
-@* <div class="Modulos">
-    <div class="header">
-        <h2>MÓDULO 1 - LOREM IPSUM</h2>
-        <div class="Botoes">
-            <button class="conteudo">📄 CONTEÚDO</button>
-            <button class="editar">✏️</button>
-            <button class="excluir">🗑️</button>
-        </div>
+</div>
+
+<!-- Editar Modulo-->
+<div class="modal" id="modal-moduloE">
+    <div class="modal-content">
+        <h1 class="titulo-modal">EDITAR MÓDULO</h1>
+        <form asp-action="Editar" asp-controller="Modulos">
+            <div class="inputnome">
+                <label>Nome:</label><br>
+                <input type="text" asp-for="@Model.modulos.Nome" class="input-nome"placeholder="Insira o nome do módulo" id="nome">
+            </div>      
+                <label>Descrição:</label><br>
+                <textarea asp-for="@Model.modulos.Descricao" placeholder="Descreva o módulo" style="width:100%" id="descricao"></textarea>
+            <div class="buttons"> 
+                <button class="btnAddTreinamento">CRIAR</button>
+                <button class="btnClose" onclick="closeModal()">SAIR</button>
+            </div>
+            <input type="hidden" id="treinamento" asp-for="@Model.treinamentos.IdTreinamentos" value="@Model.treinamentos.IdTreinamentos">
+            <input type="hidden" id="sequencia" asp-for="@Model.modulos.Sequencia" value="0">
+        </form>
     </div>
-    <div class="selecionar">
-        <input type="checkbox" id="modulo1">
-        <label for="modulo1">1. Lorem Ipsum</label>
-    </div>
-</div> *@
+</div>

@@ -18,6 +18,7 @@ document.querySelectorAll('.progressbar span').forEach(function(span) {
     span.style.width = progressWidth + '%';
 });
 
+
 // Accordion
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.querySelector(".menu");
@@ -85,6 +86,7 @@ function closeModal(modalId) {
   }
 }
 
+
 // Detect click outside modal content to close
 
 document.addEventListener("click", function (event) {
@@ -104,6 +106,21 @@ document.addEventListener("keydown", function (event) {
       document.querySelectorAll(".modal.active").forEach(modal => {
           closeModal(modal.id); // close all active modals
       });
+  }
+});
+
+const toggler = document.getElementById("toggler");
+const senha = document.getElementById("senha");
+
+toggler.addEventListener("click", () => {
+  if (senha.type === "password") {
+    senha.type = "text";
+    toggler.classList.remove("fa-eye");
+    toggler.classList.add("fa-eye-slash");
+  } else {
+    senha.type = "password";
+    toggler.classList.remove("fa-eye-slash");
+    toggler.classList.add("fa-eye");
   }
 });
 
@@ -134,3 +151,5 @@ function addTreinamento() {
 document.getElementById("dropcontainer").addEventListener("click", function() {
   document.getElementById("images-treinamento").click(); // Simula o clique no input
 });
+
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6+xW6+y95pFvrFxnZzbPS/yjBsCsOdvAS3LjsbCNDCU=",
+  "Hash": "lkpM08PcDDyZaugsAd8B7Y/AlkbUqIR2RHM4xNykk4U=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -269,12 +269,12 @@
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz",
+      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "js/site#[.{fingerprint=atu6aibz3f}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=103g16wsmb}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -283,8 +283,8 @@
       "RelatedAsset": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ld898qdaet",
-      "Integrity": "qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg=",
+      "Fingerprint": "moka2kna65",
+      "Integrity": "NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/js/site.js"
@@ -647,12 +647,12 @@
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-y3lqvb6elc.gz",
+      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-8kc9ykwat8.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style#[.{fingerprint=y3lqvb6elc}]?.css.gz",
+      "RelativePath": "css/style#[.{fingerprint=8kc9ykwat8}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -661,8 +661,8 @@
       "RelatedAsset": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "8dvd7bjsrj",
-      "Integrity": "9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM=",
+      "Fingerprint": "ijjbwqo1wb",
+      "Integrity": "UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css"
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y3lqvb6elc",
-      "Integrity": "oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE=",
+      "Fingerprint": "8kc9ykwat8",
+      "Integrity": "KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style.css"
@@ -1655,6 +1655,27 @@
       "OriginalItemSpec": "wwwroot/images/upload/treinamentos/78c0e18d-b3fc-4c18-a821-bedd58cb6356.png"
     },
     {
+      "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png",
+      "SourceId": "Projeto-Trainee-Hub",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/",
+      "BasePath": "_content/Projeto-Trainee-Hub",
+      "RelativePath": "images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2tdlr5oq2p",
+      "Integrity": "2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png"
+    },
+    {
       "Identity": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/9d0e088b-a19c-40dd-bb89-0291529d0d81.png",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
@@ -1711,8 +1732,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "atu6aibz3f",
-      "Integrity": "fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g=",
+      "Fingerprint": "103g16wsmb",
+      "Integrity": "zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -2980,13 +3001,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/style.css",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-y3lqvb6elc.gz",
+      "Route": "css/style.8kc9ykwat8.css",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-8kc9ykwat8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000195198126"
+          "Quality": "0.000194893783"
         }
       ],
       "ResponseHeaders": [
@@ -2996,19 +3017,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5122"
+          "Value": "5130"
         },
         {
           "Name": "ETag",
-          "Value": "\"9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM=\""
+          "Value": "\"UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3024,18 +3045,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE=\""
+          "Value": "W/\"KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "8kc9ykwat8"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE="
+          "Value": "sha256-KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78="
         }
       ]
     },
     {
-      "Route": "css/style.css",
+      "Route": "css/style.8kc9ykwat8.css",
       "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3045,7 +3074,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23084"
+          "Value": "22617"
         },
         {
           "Name": "Content-Type",
@@ -3053,121 +3082,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE=\""
+          "Value": "\"KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE="
-        }
-      ]
-    },
-    {
-      "Route": "css/style.css.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-y3lqvb6elc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5122"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM="
-        }
-      ]
-    },
-    {
-      "Route": "css/style.y3lqvb6elc.css",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-y3lqvb6elc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000195198126"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5122"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "y3lqvb6elc"
+          "Value": "8kc9ykwat8"
         },
         {
           "Name": "label",
@@ -3175,13 +3104,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE="
+          "Value": "sha256-KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78="
         }
       ]
     },
     {
-      "Route": "css/style.y3lqvb6elc.css",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
+      "Route": "css/style.8kc9ykwat8.css.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-8kc9ykwat8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3190,7 +3119,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23084"
+          "Value": "5130"
         },
         {
           "Name": "Content-Type",
@@ -3198,56 +3127,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE=\""
+          "Value": "\"UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y3lqvb6elc"
-        },
-        {
-          "Name": "label",
-          "Value": "css/style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-oqcGnCY92IXwMjMt745+SDTRiiMazA70uvqGGQKd4vE="
-        }
-      ]
-    },
-    {
-      "Route": "css/style.y3lqvb6elc.css.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-y3lqvb6elc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5122"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 20:49:55 GMT"
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3265,7 +3149,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "y3lqvb6elc"
+          "Value": "8kc9ykwat8"
         },
         {
           "Name": "label",
@@ -3273,7 +3157,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9Hx512idt8vldm2MrGSp9S8FudUzBM13aP8ZQKyYMFM="
+          "Value": "sha256-UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-8kc9ykwat8.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000194893783"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5130"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/css/style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKbf1LEQZH61HCJM3zwG6EGb4MeTUnsmXO2ITxHVG78="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-8kc9ykwat8.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5130"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 21:25:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UkBbRDInQSCht/vIbwS2mRp7mld+KZQzK0wIqfLXRV4="
         }
       ]
     },
@@ -4724,6 +4745,88 @@
       ]
     },
     {
+      "Route": "images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.2tdlr5oq2p.png",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 21:52:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2tdlr5oq2p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo="
+        }
+      ]
+    },
+    {
+      "Route": "images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/9b990692-44e5-45f2-91a0-5c50b12336db.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 21:52:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2pfVdNXRWkWdgcV4dnZp3S1K8HT5ndnQEG3SVZksdJo="
+        }
+      ]
+    },
+    {
       "Route": "images/upload/treinamentos/9d0e088b-a19c-40dd-bb89-0291529d0d81.2tdlr5oq2p.png",
       "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/9d0e088b-a19c-40dd-bb89-0291529d0d81.png",
       "Selectors": [],
@@ -4888,13 +4991,13 @@
       ]
     },
     {
-      "Route": "js/site.atu6aibz3f.js",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz",
+      "Route": "js/site.103g16wsmb.js",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000780640125"
+          "Quality": "0.000683060109"
         }
       ],
       "ResponseHeaders": [
@@ -4904,15 +5007,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1280"
+          "Value": "1463"
         },
         {
           "Name": "ETag",
-          "Value": "\"qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg=\""
+          "Value": "\"NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4932,13 +5035,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g=\""
+          "Value": "W/\"zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "atu6aibz3f"
+          "Value": "103g16wsmb"
         },
         {
           "Name": "label",
@@ -4946,12 +5049,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g="
+          "Value": "sha256-zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE="
         }
       ]
     },
     {
-      "Route": "js/site.atu6aibz3f.js",
+      "Route": "js/site.103g16wsmb.js",
       "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4961,7 +5064,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4183"
+          "Value": "4457"
         },
         {
           "Name": "Content-Type",
@@ -4969,11 +5072,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g=\""
+          "Value": "\"zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4983,7 +5086,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "atu6aibz3f"
+          "Value": "103g16wsmb"
         },
         {
           "Name": "label",
@@ -4991,13 +5094,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g="
+          "Value": "sha256-zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE="
         }
       ]
     },
     {
-      "Route": "js/site.atu6aibz3f.js.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz",
+      "Route": "js/site.103g16wsmb.js.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5006,7 +5109,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1280"
+          "Value": "1463"
         },
         {
           "Name": "Content-Type",
@@ -5014,11 +5117,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg=\""
+          "Value": "\"NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5036,7 +5139,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "atu6aibz3f"
+          "Value": "103g16wsmb"
         },
         {
           "Name": "label",
@@ -5044,18 +5147,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg="
+          "Value": "sha256-NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8="
         }
       ]
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000780640125"
+          "Quality": "0.000683060109"
         }
       ],
       "ResponseHeaders": [
@@ -5065,15 +5168,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1280"
+          "Value": "1463"
         },
         {
           "Name": "ETag",
-          "Value": "\"qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg=\""
+          "Value": "\"NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5093,13 +5196,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g=\""
+          "Value": "W/\"zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g="
+          "Value": "sha256-zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE="
         }
       ]
     },
@@ -5114,7 +5217,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4183"
+          "Value": "4457"
         },
         {
           "Name": "Content-Type",
@@ -5122,11 +5225,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g=\""
+          "Value": "\"zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5136,13 +5239,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fiOca4ZN3WRoiO7807bwQZEWoDAyD4LCc0lbOyWHN3g="
+          "Value": "sha256-zxOYWYBwutnJwbRcLp2YG0UJR3Ra5+XcQcaWyvLSxWE="
         }
       ]
     },
     {
       "Route": "js/site.js.gz",
-      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz",
+      "AssetFile": "/home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5151,7 +5254,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1280"
+          "Value": "1463"
         },
         {
           "Name": "Content-Type",
@@ -5159,11 +5262,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg=\""
+          "Value": "\"NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 00:18:03 GMT"
+          "Value": "Sun, 13 Apr 2025 19:38:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5181,7 +5284,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qZI8cLLnjvB4PTh417ygPMmkbDkIpzRgDbRfv9yfLlg="
+          "Value": "sha256-NokSITEHV+AHG1tUDwStVZkwZ3jdH82AyVA46Wbb0Q8="
         }
       ]
     },

@@ -71,7 +71,7 @@
 }
 .input-nome {
     min-height: 15px;
-    width: 95%;
+    width: 100%;
     margin-bottom: 20px;
     resize: none;
     outline: none;
@@ -242,7 +242,7 @@ body {
     font-family: "Mukta Vaani", sans-serif;
   }
   .texto_modulo {
-    width: 95%;
+    width: 79.2%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -255,7 +255,7 @@ body {
   }
   
   .Modulos {
-    width: 90%;
+    width: 79.2%;
     background-color: whitesmoke;
     border: 1px solid grey;
     border-radius: 10px;
@@ -263,7 +263,7 @@ body {
     margin-bottom: 20px;
     padding: 20px;
     position: relative;
-    margin-left: auto;
+    margin-left: 160px;
     margin-right: auto;
   }
   
@@ -344,15 +344,18 @@ body {
     grid-column: 1 / 3;
     margin-top: 50px;
     border-top: 1px solid #4D83AA;
+    max-width: 1520px;
 }
 
 .bloco_treinamento {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
-    gap: 45px; /* Espaço entre os itens */
+    gap: 70px; /* Espaço entre os itens */
     padding: 0;
     list-style: none;
+    justify-items: center;
 }
+
 
 .bloco_treinamento-andamento:last-child,
 .bloco_treinamento:last-child{
@@ -401,7 +404,7 @@ label {
     color: #0A2D46;
 }
 .topo h1{
-    width: 1300px;
+    width: 1398px;
 }
 
 .topo{
@@ -704,6 +707,7 @@ a:hover {
     font-size: 28px;
     font-family: "Inter", bold;
     color: #0A2D46;
+    line-break: anywhere;
 }
 
 /*PROGRESS BAR TREINAMENTO EM ANDAMENTO*/
@@ -942,7 +946,7 @@ a:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .tela-de-login h2 {
-    padding-top: 70px;
+    padding-top: 60px;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -952,14 +956,21 @@ a:hover {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 7px;
-    margin-left: 85px;
     position:relative;
     width: 50vh;
     text-align: left;
 }
 
+.matricula-label,
+.empresa-label,
+.senha-label{
+    margin-left: 75px;
+}
+
+
+
 .tela-de-login input {
-    width: 60%;
+    width: 70%;
     height: 30px;
     border: 1px solid #f2f2f2;
     border-radius: 5px;
@@ -984,7 +995,7 @@ a:hover {
 .lembrar-esqueci label {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 .lembrar-esqueci input {
@@ -1000,7 +1011,7 @@ a:hover {
 }
 
 .tela-de-login button {
-    width: 60%;
+    width: 70%;
     background-color: #2c5376;
     color: white;
     border: none;
@@ -1036,35 +1047,6 @@ a:hover {
     margin-left: 25px;
 }
 
-.lembrar-esqueci label {
-    display: flex;
-    align-items: center;
-    text-wrap: nowrap;
-    width: 123px;
-}
-.lembrar-esqueci input {
-    margin: 5px;
-    scale: 0.7;
-}
-
-.lembrar-esqueci a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-}
-
-.tela-de-login button {
-    width: 60%;
-    background-color: #2c5376;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
 .solicitar-acesso {
     font-size: 12px;

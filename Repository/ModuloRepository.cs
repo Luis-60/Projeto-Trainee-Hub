@@ -17,7 +17,14 @@ namespace Projeto_Trainee_Hub.Repository
             _context = context;
         }
 
-        public async Task<Modulo?> GetByIdCriadorAsync(int id)
+        public async Task<IEnumerable<Modulo?>> GetByIdTreinamentoAsync(int id)
+        {
+            return await _context.Modulos
+                .Include(m => m.IdTreinamentoNavigation)
+                .Where(m => m.IdTreinamento == id)
+                .ToListAsync();
+        }
+        public async Task<Modulo?> GetByIdAsync(int id)
         {
             return await _context.Modulos
                 .Include(m => m.IdTreinamentoNavigation)

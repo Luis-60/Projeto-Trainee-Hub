@@ -102,7 +102,7 @@ public class HomeController : Controller
             case "3":
                 return RedirectToAction("Dashboard", "Gestor");
             case "4":
-                return RedirectToAction("SSModulos", "Encarregado");
+                return RedirectToAction("Treinamentos", "Encarregado");
             default:
                 return RedirectToAction("Login", "Home");
         };
