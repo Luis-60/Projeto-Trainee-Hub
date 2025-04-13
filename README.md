@@ -18,7 +18,7 @@ O projeto Trainee Hub, tem como principal objetivo auxiliar empresas de médio e
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/pt-br/download/dotnet/9.0)
 - [Git](https://git-scm.com/)
-- [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/) ou [SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/download-sql-server-management-studio-ssms)
 
 ---
 
@@ -110,8 +110,27 @@ Ao criar a imagem, a imagem irá se estabelecer em um determinado IP, que deve s
 docker inspect mssql_server | grep "IPAddress"
 ```
 
-Substitua o IP recebido pelo input dentro da DefaultConnection no arquivo appsettings.json que se encontra no diretório raiz, e dentro do MasterContext.cs, que se encontra no diretório Models.
+Substitua o IP recebido pelo input dentro da ConnectionDocker no arquivo appsettings.json que se encontra no diretório raiz e copie-a para a DefaultConnection acima.
 
+```
+"ConnectionStrings": {
+    "DefaultConnection": "Server=172.18.0.2;Database=master;User Id=sa;Password=YourStrong!Password123;Encrypt=False;TrustServerCertificate=True;" //Insira sua conexão aqui,
+    "ConnectionDocker": "Server=172.18.0.2;Database=master;User Id=sa;Password=YourStrong!Password123;Encrypt=False;TrustServerCertificate=True;"
+  }
+```
+---
+
+## SQL Server Management Studio
+
+Há uma forma de rodar sem precisar de Docker, para isso é necessário ter o SQL Management Studio instalado.
+
+Crie seu servidor no SQL Server Management Studio, e insira as informações dele dentro da DefaultConnection, que está dentro do arquivo appsettings.json.
+```
+"ConnectionStrings": {
+    "DefaultConnection": "Server=AURORA;Database=traineehub;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False;TrustServerCertificate=True;" //Insira sua conexão aqui,
+    "ConnectionDocker": "Server=172.18.0.2;Database=master;User Id=sa;Password=YourStrong!Password123;Encrypt=False;TrustServerCertificate=True;"
+  }
+```
 ---
 
 ## Execução e Deploy
