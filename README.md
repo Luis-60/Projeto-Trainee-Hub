@@ -122,7 +122,7 @@ Substitua o IP recebido pelo input dentro da ConnectionDocker no arquivo appsett
 
 ## SQL Server Management Studio
 
-Há uma forma de rodar sem precisar de Docker, para isso é necessário ter o SQL Management Studio instalado.
+Há uma forma de rodar sem precisar de Docker, para isso é necessário ter o SQL Server Management Studio instalado.
 
 Crie seu servidor no SQL Server Management Studio, e insira as informações dele dentro da DefaultConnection, que está dentro do arquivo appsettings.json.
 ```
