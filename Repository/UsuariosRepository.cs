@@ -8,21 +8,17 @@ using Projeto_Trainee_Hub.Models;
 namespace Projeto_Trainee_Hub.Repository
 {
 
-    public class UsuariosRepository 
+    public class UsuariosRepository : BaseRepository<Usuarios>
     {
         private readonly MasterContext _context;
 
-        public UsuariosRepository(MasterContext context)
+        public UsuariosRepository(MasterContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task<List<Usuarios>> GetAllAsync()
-        {
-            return await _context.Usuarios.ToListAsync();
-        }
 
-        public async Task<Usuarios?> ObterPorMatriculaAsync(string matricula)
+        public async Task<Usuarios?> GetByMatriculaAsync(string matricula)
         {
             return await _context.Usuarios
             .Include(u => u.IdSetorNavigation)
@@ -30,13 +26,7 @@ namespace Projeto_Trainee_Hub.Repository
             .FirstOrDefaultAsync(u => u.Matricula == matricula);
         }
 
-        public async Task<int> ObterIdPorMatriculaAsync(string matricula)
-        {
-            var usuario = await _context.Usuarios
-            .FirstOrDefaultAsync(u => u.Matricula == matricula);
-            return usuario.IdUsuarios;
-        }
-        public async Task<Usuarios?> ObterPorIdAsync(int id)
+        public async Task<Usuarios?> GetByIdAsync(int id)
         {
             return await _context.Usuarios
             .Include(u => u.IdSetorNavigation)
@@ -44,7 +34,7 @@ namespace Projeto_Trainee_Hub.Repository
             .Include(u => u.IdEmpresaNavigation)
             .FirstOrDefaultAsync(u => u.IdUsuarios == id);
         }
-        public async Task<string> ObterMatriculaPorIdAsync(int id)
+        public async Task<string> GetMatriculaByIdAsync(int id)
         {
             var usuario = await _context.Usuarios
             .FirstOrDefaultAsync(u => u.IdUsuarios == id);
@@ -52,40 +42,13 @@ namespace Projeto_Trainee_Hub.Repository
         }
 
         
-        public Usuarios? ValidarUsuario(string matricula, string senha)
+        public Usuarios? ValidateUser(string matricula, string senha)
         {
             return _context.Usuarios
                 .FirstOrDefault(u => u.Matricula == matricula && u.Senha == senha);
         }
 
-        public async Task<IEnumerable<Usuarios>> FindAsync(Expression<Func<Usuarios, bool>> predicate)
-        {
-            return await _context.Usuarios.Where(predicate).ToListAsync();
-        }
-
-        public async Task AddAsync(Usuarios entity)
-        {
-            await _context.Usuarios.AddAsync(entity);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(Usuarios entity)
-        {
-            _context.Usuarios.Update(entity);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-            var entity = await _context.Usuarios.FindAsync(id);
-            if (entity != null)
-            {
-                _context.Usuarios.Remove(entity);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        public Usuarios? ObterUsuarioLogado(HttpContext httpContext)
+        public Usuarios? GetUserLoggedIn(HttpContext httpContext)
         {
             throw new NotImplementedException();
         }

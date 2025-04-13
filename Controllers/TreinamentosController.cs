@@ -18,20 +18,19 @@ using Microsoft.EntityFrameworkCore;
 public class TreinamentosController : Controller
 {
     
-    private readonly UsuariosRepository _usuariosRepository;
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly MasterContext _context;
     private readonly ISessao _sessao;
     private readonly string _baseUploadFolder = "wwwroot/images/upload/treinamentos";
 
-    public TreinamentosController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context)
+    public TreinamentosController(TreinamentoRepository treinamentoRepository,
+     ISessao sessao, MasterContext context)
     {
         if (!Directory.Exists(_baseUploadFolder))
         {
             Directory.CreateDirectory(_baseUploadFolder);
         }
         _treinamentoRepository = treinamentoRepository;
-        _usuariosRepository = usuariosRepository;
         _sessao = sessao;
         _context = context;
     }
@@ -44,7 +43,7 @@ public class TreinamentosController : Controller
             return NotFound();
         }
 
-        var treinamento = await _treinamentoRepository.ObterPorIdAsync(IdTreinamentos);
+        var treinamento = await _treinamentoRepository.GetByIdAsync(IdTreinamentos);
         if (treinamento == null)
         {
             return NotFound();
@@ -74,7 +73,7 @@ public class TreinamentosController : Controller
             return NotFound();
         }
 
-        var treinamento = await _treinamentoRepository.ObterPorIdSemRastreamentoAsync(treinamentoId);
+        var treinamento = await _treinamentoRepository.GetByIdNoTrackingAsync(treinamentoId);
         if (treinamento == null)
         {
             return NotFound();
@@ -106,7 +105,7 @@ public class TreinamentosController : Controller
 
             // ✅ Salva as alterações
             await _treinamentoRepository.UpdateAsync(treinamentoUsuarios.treinamentos);
-            _treinamentoRepository.Salvar();
+            _treinamentoRepository.Save();
         }
         catch (DbUpdateConcurrencyException)
         {
@@ -144,38 +143,16 @@ public class TreinamentosController : Controller
     
         treinamentoUsuarios.treinamentos.Imagem = fileName;
         
-        _treinamentoRepository.Adicionar(treinamentoUsuarios.treinamentos); // Salva no banco
-        _treinamentoRepository.Salvar(); // Confirma a inserção
+        await _treinamentoRepository.AddAsync(treinamentoUsuarios.treinamentos); // Salva no banco
+        _treinamentoRepository.Save(); // Confirma a inserção
         var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
         return RedirectToAction("SSModulos","Admin", new {id});
     }
 
-    public async Task<IActionResult> Detalhes(int id)
-    {
-        var treinamento = await _treinamentoRepository.ObterPorIdAsync(id);
-        
-        if (treinamento == null)
-        {
-            return NotFound();
-        }
-
-        // Obtém o usuário relacionado ao treinamento
-        var usuario = treinamento.IdCriadorNavigation;
-
-        // Cria o ViewModel
-        var viewModel = new TreinamentoUsuariosViewModel
-        {
-            treinamentos = treinamento,
-            usuarios = usuario ?? new Usuarios() // Caso o usuário não exista, cria uma instância vazia
-        };
-
-        return View(viewModel); // Passa o ViewModel para a View
-    }
-
     private bool TreinamentoExists(int id)
-        {
+    {
             return _context.Treinamentos.Any(e => e.IdTreinamentos == id);
-        }
+     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

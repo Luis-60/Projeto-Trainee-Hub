@@ -7,11 +7,9 @@ namespace Projeto_Trainee_Hub.Controllers;
 [Authorize(Roles = "4")]
 public class EncarregadoController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
 
-    public EncarregadoController(ILogger<HomeController> logger)
+    public EncarregadoController()
     {
-        _logger = logger;
     }
     public IActionResult Perfil()
     {

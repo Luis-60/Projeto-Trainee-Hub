@@ -14,12 +14,10 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class UsuarioController : Controller
 {
     
-    private readonly ILogger<UsuarioController> _logger;
     private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
-    public UsuarioController(ILogger<UsuarioController> logger, UsuariosRepository usuariosRepository, ISessao sessao)
+    public UsuarioController(UsuariosRepository usuariosRepository, ISessao sessao)
     {
-        _logger = logger;
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
     }
@@ -60,7 +58,7 @@ public class UsuarioController : Controller
         var idUsuario = usuario.IdUsuarios;
         if (idUsuario != null)
         {
-            var usuarios = await _usuariosRepository.ObterPorIdAsync(idUsuario);
+            var usuarios = await _usuariosRepository.GetByIdAsync(idUsuario);
         return View(usuarios);
         }
         

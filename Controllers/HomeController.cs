@@ -12,12 +12,10 @@ namespace Projeto_Trainee_Hub.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
     private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
-    public HomeController(ILogger<HomeController> logger, UsuariosRepository usuariosRepository, ISessao sessao)
+    public HomeController(UsuariosRepository usuariosRepository, ISessao sessao)
     {
-        _logger = logger;
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
     }
@@ -45,7 +43,7 @@ public class HomeController : Controller
             return RedirectToAction("Login", "Home");
         }
 
-        var usuario = await _usuariosRepository.ObterPorMatriculaAsync(matricula);
+        var usuario = await _usuariosRepository.GetByMatriculaAsync(matricula);
 
         if (usuario == null)
         {
@@ -64,7 +62,7 @@ public class HomeController : Controller
     public async Task<IActionResult> Login(Usuarios usuario)
     {
         
-        var usuarioExistente = _usuariosRepository.ValidarUsuario(usuario.Matricula, usuario.Senha);
+        var usuarioExistente = _usuariosRepository.ValidateUser(usuario.Matricula, usuario.Senha);
         
         if (usuarioExistente == null)
         {
@@ -95,7 +93,7 @@ public class HomeController : Controller
             authProperties
         
         );
-        switch (_sessao.BuscarSessaoUsuarioRole())
+        switch (role)
         {
             case "1":
                 return RedirectToAction("Index", "Usuario");
@@ -116,9 +114,9 @@ public class HomeController : Controller
         // Clear the session
         _sessao.RemoverSessaoUsuario();
         // Sign out the user
-        HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         // Clear the authentication cookie
-        HttpContext.SignOutAsync();
+        await HttpContext.SignOutAsync();
         // Clear the session cookie
         return RedirectToAction("Login", "Home");
     }

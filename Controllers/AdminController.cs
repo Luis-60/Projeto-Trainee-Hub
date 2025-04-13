@@ -13,14 +13,12 @@ using Projeto_Trainee_Hub.Helper;
 [Authorize(Roles = "2")]
 public class AdminController : Controller
 {
-    private readonly ILogger<AdminController> _logger;
     private readonly UsuariosRepository _usuariosRepository;
     private readonly ISessao _sessao;
     private readonly TreinamentoRepository _treinamentoRepository;
 
-    public AdminController(ILogger<AdminController> logger, UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
+    public AdminController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
     {
-        _logger = logger;
         _usuariosRepository = usuariosRepository;
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
@@ -38,8 +36,8 @@ public class AdminController : Controller
         var idUsuario = usuario.IdUsuarios;
         if (idUsuario != null)
         {
-            var usuarios = await _usuariosRepository.ObterPorIdAsync(idUsuario);
-            var usuarioTreinamentos = await _treinamentoRepository.ObterPorIdCriadorAsync(idUsuario);
+            var usuarios = await _usuariosRepository.GetByIdAsync(idUsuario);
+            var usuarioTreinamentos = await _treinamentoRepository.GetByIdCriadorAsync(idUsuario);
             var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarios, listaTreinamentos = usuarioTreinamentos};
 
         return View(treinamentoUsuarios);
@@ -55,7 +53,7 @@ public class AdminController : Controller
         {
             return RedirectToAction("Login", "Home");
         }
-        var treinamento = await _treinamentoRepository.ObterPorIdAsync(id);
+        var treinamento = await _treinamentoRepository.GetByIdAsync(id);
         if (treinamento == null)
         {
             return NotFound(); 
@@ -63,6 +61,8 @@ public class AdminController : Controller
             var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = treinamento, usuarios = usuario};
         return View(treinamentoUsuarios);
     }
+
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
