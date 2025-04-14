@@ -28,23 +28,25 @@
     </div>
 </div>
 <hr>
-<ul class="header">
+<ul class="bloco_modulos">
     @foreach(var modulo in @Model.listaModulos)
     {
-        <li class="Modulos">
-            <h2>MÓDULO @modulo.Sequencia - @modulo.Nome</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar" onclick="OpenModal('modal-moduloE')">✏️</button>
-                <form asp-controller="Modulos" asp-action="Deletar" method="post" onsubmit="return confirm('Tem certeza que quer deletar módulo?')">
-                    @Html.AntiForgeryToken()
-                    <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
-                    <button class="excluir btn btn-danger">🗑</button>
-                </form>
-            </div>
-            <div class="selecionar">
-                <input type="checkbox" id="modulo1">
-                <label for="modulo1">1. LoreIpsum</label>
+        <li class="header">
+            <div class="Modulos">
+                <h2>MÓDULO @modulo.Sequencia - @modulo.Nome</h2>
+                <div class="Botoes">
+                    <button class="conteudo">📄 CONTEÚDO</button>
+                    <button class="editar" onclick="OpenModal('modal-moduloE')">✏️</button>
+                    <form asp-controller="Modulos" asp-action="Deletar" method="post" onsubmit="return confirm('Tem certeza que quer deletar módulo?')">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="IdTreinamentos" value="@Model.treinamentos.IdTreinamentos" />
+                        <button class="excluir btn btn-danger">🗑</button>
+                    </form>
+                </div>
+                <div class="selecionar">
+                    <input type="checkbox" id="modulo1">
+                    <label for="modulo1">1. LoreIpsum</label>
+                </div>
             </div>
         </li>
     }
