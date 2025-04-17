@@ -1,2 +1,0 @@
-View do Usuario atualizada para poder enviar imagem
-Controladora Atualizada para processar a imagem
