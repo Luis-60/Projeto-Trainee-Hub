@@ -39,7 +39,7 @@
     <div class="container-treinamento">
         <div class="topo">
             <h1>TREINAMENTOS</h1>
-            <button class="btnAbrirAdd" type="button" onclick="AbrirAdd()">
+            <button class="btnAbrirAdd" type="button" onclick="OpenModal('modal-treinamento')">
                 Adicionar
             </button>
         </div>
@@ -47,8 +47,8 @@
         <ul class="bloco_treinamento">
         @foreach(var treinamento in @Model.listaTreinamentos) 
         {
-            <li class="list-andamento">
-                <a href="#">
+            <li class="list-andamento" style="width: 38rem;">
+                <a asp-controller="Admin" asp-action="Treinamentos" asp-route-id="@treinamento.IdTreinamentos">
                     <div class="moldura">
                         <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                     </div>
@@ -63,8 +63,8 @@
 </div>
     
 
-<div class="modal">
-    <div class="modal-treinamento">
+<div class="modal" id="modal-treinamento">
+    <div class="modal-content">
         <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
         <form asp-controller="Treinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
             <div class="inputnome">
@@ -74,11 +74,11 @@
 
             <div class="input-instrutor">
                 <label>Instrutor:</label><br>
-                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
+                <input asp-for="@Model.treinamentos.Instrutor" style="width:100%"  placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
             </div>
 
             <label>Descrição:</label><br>
-            <textarea placeholder="Descreva o treinamento" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+            <textarea placeholder="Descreva o treinamento" style="width:100%"  id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
             
             <div class="container-data">
                 <div class="container-datainicio">
@@ -101,14 +101,13 @@
             <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
             <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
             <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios?.IdEmpresa">
-            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
+            <input type="hidden" id="idCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
 
             <div class="buttons"> 
                 <button class="btnAddTreinamento" type="submit">CRIAR</button>
                 <button class="btnClose" onclick="closeModal()">SAIR</button>
             </div>   
-        </form>
-                       
+        </form>   
     </div>
 </div>
 

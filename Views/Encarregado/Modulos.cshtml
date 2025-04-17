@@ -1,0 +1,124 @@
+@model Projeto_Trainee_Hub.ViewModel.AulaModuloDocViewModel
+@{
+    ViewData["Title"] = "Modulos";
+}
+<div class="texto_modulo">
+        <h1>@Model.modulos.Nome</h1>
+        <div class="paragrafo_modulo">
+            <p>@Model.modulos.Descricao</p>
+        </div>
+    </div>
+
+    <hr>
+    <div class="botao">
+        <button class="adicionar">ADICIONAR</button>
+    </div>
+
+<div class="modal">
+    <div class="modal-aula">
+        <div class="icon-x">
+            <i id="close" class='bx bx-x close'></i>
+        </div>
+            <h1 class="titulo-modal">CRIAR AULA</h1>
+            <form asp-controller="Aulas" asp-action="Criar" method="post" enctype="multipart/form-data">
+                <div class="inputnome">
+                    <label>Nome:</label><br>
+                    <input asp-for="@Model.aulas.Nome" placeholder="Insira o nome da aula" class="input-nome" type="text" id="nome" name="nome">
+                </div> 
+       
+            <label>Descrição:</label><br>
+            <textarea asp-for="@Model.aulas.Descricao" placeholder="Descreva a aula" id="descricao" name="descricao"></textarea>
+
+            <label>Adicionar envio:</label>
+            <div class="upload-container" id="upload-area">
+                <p>Adicionar arquivos</p>
+                
+                <input asp-for="@Model.documentos.Nome" type="file" id="file-input" hidden multiple>
+                <button onclick="document.getElementById('file-input').click()">Escolher arquivo</button>
+                <ul class="file-list" id="file-list"></ul>
+                <script src="upload.js"></script>
+            </div>    
+
+            @*Input Hidden*@
+            <input type="hidden" asp-for="@Model.documentos.IdAula" value="@Model.aulas.IdAula" />
+            <div class="buttons"> 
+                <button class="btnAddAula" onclick="addTreinamento()">CRIAR</button>
+                <button class="btnClose" onclick="closeModal()">SAIR</button>
+            </form>
+        </div>                
+    </div>
+</div>
+
+
+    @* <div class="Modulos">
+        <div class="header">
+            <h2>Aula 1 - LOREM IPSUM</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar">✏️</button>
+                <button class="excluir">🗑️</button>
+            </div>
+        </div>
+        <div class="selecionar">
+            <input type="checkbox" id="modulo1">
+            <label for="modulo1">1. Lorem Ipsum</label>
+        </div>
+    </div>
+
+    <div class="Modulos">
+        <div class="header">
+            <h2>Aula 2 - LOREM IPSUM</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar">✏️</button>
+                <button class="excluir">🗑️</button>
+            </div>
+        </div>
+        <div class="selecionar">
+            <input type="checkbox" id="modulo2">
+            <label for="modulo2">1. Lorem Ipsum</label>
+        </div>
+    </div>
+
+    <div class="Modulos">
+        <div class="header">
+            <h2>Aula 3 - LOREM IPSUM</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar">✏️</button>
+                <button class="excluir">🗑️</button>
+            </div>
+        </div>
+        <div class="selecionar">
+            <input type="checkbox" id="modulo3">
+            <label for="modulo3">1. Lorem Ipsum</label>
+        </div>
+    </div>
+    <div class="Modulos">
+        <div class="header">
+            <h2>Aula 4 - LOREM IPSUM</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar">✏️</button>
+                <button class="excluir">🗑️</button>
+            </div>
+        </div>
+        <div class="selecionar">
+            <input type="checkbox" id="modulo3">
+            <label for="modulo3">1. Lorem Ipsum</label>
+        </div>
+    </div>
+    <div class="Modulos">
+        <div class="header">
+            <h2>Aula 5 - LOREM IPSUM</h2>
+            <div class="Botoes">
+                <button class="conteudo">📄 CONTEÚDO</button>
+                <button class="editar">✏️</button>
+                <button class="excluir">🗑️</button>
+            </div>
+        </div>
+        <div class="selecionar">
+            <input type="checkbox" id="modulo3">
+            <label for="modulo3">1. Lorem Ipsum</label>
+        </div>
+    </div> *@

@@ -5,12 +5,16 @@
 <div class="container-body">
     <div class="container-photo">
         <div class="user-photo">
-            <img src="~/images/IconePerfil(2).png">
-            <button class="EditarPerfil" type="button">Editar Perfil</button>
+            <img src="@(string.IsNullOrEmpty(Model.Imagem) ? "~/images/IconePerfil(2).png" : Model.Imagem)" id="profileImage" alt="Imagem de Perfil">
+            <button class="EditarPerfil" type="button" onclick="openPopup()">Alterar Perfil</button>
         </div>
     </div>
     <div class="container-info">
         <div class="user-info">
+            <div class="id">
+                <h3>Id</h3>
+                <label>@Model.IdUsuarios</label>
+            </div>
             <div class="nome">
                 <h3>Nome</h3>
                 <label>@Model.Nome</label>
@@ -33,6 +37,81 @@
             </div>
         </div>
     </div>
+
+    <!-- Janela Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Alterar Informações do Perfil</h2>
+            <form method="post" enctype="multipart/form-data" action="/Usuario/AtualizarPerfil">
+                <input type="hidden" name="idUsuarios" value="@Model.IdUsuarios">
+                <div class="form-group">
+                    <label for="imagem">Imagem de Perfil:</label>
+                    <input type="file" id="imagem" name="imagemPerfil" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn">Salvar Imagem</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
     <div class="container-treinamento">
         <h1>TREINAMENTOS</h1>
         <ul class="bloco_treinamento">
@@ -123,3 +202,14 @@
         </ul>
     </div>
 </div>
+
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
