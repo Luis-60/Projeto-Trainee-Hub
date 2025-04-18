@@ -94,6 +94,9 @@
 </footer>
 
 <script src="~/js/site.js" asp-append-version="true"></script >
-
+@if (IsSectionDefined("Scripts"))
+{
+    @RenderSection("Scripts", required: false)
+}
 
 </html>
