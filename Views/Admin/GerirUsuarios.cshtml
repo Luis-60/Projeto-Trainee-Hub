@@ -1,0 +1,58 @@
+﻿@model Usuarios
+
+@{
+    ViewData["Title"] = "Gerir Usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
+
+
+<div>
+    <h1>Usuários</h1>
+
+
+    <table id="tabela" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Matrícula</th>
+                <th>Senha</th>
+                <th>Idade</th>
+                <th>Setor</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div>
+
+    <a asp-action="CriarUsuarios" asp-controller="Admin" class="CriarUsuario">Criar Usuario</a>
+
+</div>
+
+
+<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tabela').DataTable({
+            ajax: {
+                url: '/Admin/GetUsuarios',
+                dataSrc: 'data'
+            },
+            columns: [
+                { data: 'nome' },
+                { data: 'email' },
+                { data: 'matricula' },
+                { data: 'senha' },
+                { data: 'idade' },
+                { data: 'setor' },
+                { data: 'tipo' }
+            ],
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json"
+            }
+        });
+    });
+</script>

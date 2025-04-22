@@ -1,3 +1,4 @@
+using Projeto_Trainee_Hub.Models;
 using System.Linq.Expressions;
 
 
@@ -10,7 +11,8 @@ namespace Projeto_Trainee_Hub.Interfaces
         Task<T> UpdateAsync(T entity);
         Task<List<T>> GetAllAsync();
         Task DeleteAsync(int id);
-        
+   
+
     }
     
 }

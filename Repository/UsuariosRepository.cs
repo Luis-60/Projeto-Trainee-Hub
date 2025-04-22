@@ -52,5 +52,16 @@ namespace Projeto_Trainee_Hub.Repository
         {
             throw new NotImplementedException();
         }
+
+        public List<Setor> GetTodosSetores()
+        {
+            return _context.Setors.ToList();
+        }
+
+        public List<Tipo> GetTodosTipos()
+        {
+            return _context.Tipos.ToList();
+        }
+
     }
 }
