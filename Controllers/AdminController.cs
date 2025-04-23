@@ -97,11 +97,7 @@ public class AdminController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    public IActionResult GerirUsuarios() 
-    {
-        return View();
     
-    }
 
     public IActionResult CriarUsuarios()
     {
@@ -117,29 +113,28 @@ public class AdminController : Controller
         return View(viewModel);
     }
 
-
-    [HttpGet]
-    public async Task<IActionResult> GetUsuarios()
+   
+    public IActionResult GerirUsuarios()
     {
-        var usuarios = await _context.Usuarios
+        var usuarios = _context.Usuarios
             .Include(u => u.IdSetorNavigation)
             .Include(u => u.IdTipoNavigation)
-            .Include(u => u.IdEmpresaNavigation)
-            .Select(u => new {
-                u.IdUsuarios,
-                u.Nome,
-                u.Email,
-                u.Matricula,
-                u.Senha,
-                u.Idade,
+            .Select(u => new UsuarioSetorTipoViewModel
+            {
+                UsuarioId = u.IdUsuarios,
+                Nome = u.Nome,
+                Email = u.Email,
+                Matricula = u.Matricula,
+                Senha = u.Senha,
+                Idade = u.Idade,
                 Setor = u.IdSetorNavigation != null ? u.IdSetorNavigation.Nome : "",
-                Tipo = u.IdTipoNavigation != null ? u.IdTipoNavigation.Nome : "",
-                Empresa = u.IdEmpresaNavigation != null ? u.IdEmpresaNavigation.Nome : ""
+                Tipo = u.IdTipoNavigation != null ? u.IdTipoNavigation.Nome : ""
             })
-            .ToListAsync();
+            .ToList();
 
-        return Json(new { data = usuarios });
+        return View(usuarios);
     }
+
 
     [HttpPost]
     public IActionResult CriarUsuarios(UsuarioSetorTipoViewModel model)
@@ -155,14 +150,14 @@ public class AdminController : Controller
             
         }
 
-        // Pega o usuário logado da sessão
+        
         var usuarioLogado = _sessao.BuscarSessaoUsuario();
         if (usuarioLogado == null)
         {
             return RedirectToAction("Login", "Home");
         }
 
-        // Cria novo objeto de Usuarios com os dados da ViewModel
+        
         var novoUsuario = new Usuarios
         {
             Nome = model.Nome,
@@ -172,11 +167,95 @@ public class AdminController : Controller
             Idade = model.Idade,
             IdSetor = model.IdSetor,
             IdTipo = model.IdTipo,
-            IdEmpresa = usuarioLogado.IdEmpresa // pega da sessão, não do input!
+            IdEmpresa = usuarioLogado.IdEmpresa 
         };
 
         _usuariosRepository.AddAsync(novoUsuario);
 
+        return RedirectToAction("GerirUsuarios", "Admin");
+    }
+    public List<SelectListItem> ObterSetores(int? idSetorSelecionado)
+    {
+        return _context.Setors
+            .Select(s => new SelectListItem
+            {
+                Value = s.IdSetor.ToString(),
+                Text = s.Nome,
+                Selected = s.IdSetor == idSetorSelecionado
+            }).ToList();
+    }
+    public List<SelectListItem> ObterTipos(int? idSetorSelecionado)
+    {
+        return _context.Tipos
+            .Select(t => new SelectListItem
+            {
+                Value = t.IdTipo.ToString(),
+                Text = t.Nome,
+                Selected = t.IdTipo == idSetorSelecionado
+            }).ToList();
+    }
+
+    [HttpGet]
+    public IActionResult AcoesUsuarios(int id)
+    {
+        
+        var usuario = _usuariosRepository.ObterUsuarioPorId(id);
+
+        
+        var viewModel = new UsuarioSetorTipoViewModel
+        {
+            UsuarioId = usuario.IdUsuarios,
+            Nome = usuario.Nome,
+            Email = usuario.Email,
+            Matricula = usuario.Matricula,
+            Senha = usuario.Senha,
+            Idade = usuario.Idade,
+            IdSetor = usuario.IdSetor,
+            IdTipo = usuario.IdTipo,
+            Setores = ObterSetores(id),
+            Tipos = ObterTipos(id)
+        };
+
+        return View(viewModel);
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> EditarUsuario(UsuarioSetorTipoViewModel viewModel)
+    {
+
+
+        var usuarioExistente = _context.Usuarios
+            .Include(u => u.IdSetorNavigation)
+            .Include(u => u.IdTipoNavigation)
+            .FirstOrDefault(u => u.IdUsuarios == viewModel.UsuarioId);
+
+            usuarioExistente.Nome = viewModel.Nome;
+            usuarioExistente.Email = viewModel.Email;
+            usuarioExistente.Matricula = viewModel.Matricula;
+            usuarioExistente.Senha = viewModel.Senha;
+            usuarioExistente.Idade = viewModel.Idade;
+            usuarioExistente.Imagem = usuarioExistente.Imagem;
+            usuarioExistente.QtdTreinamentos = usuarioExistente.QtdTreinamentos;
+            usuarioExistente.IdSetor = viewModel.IdSetor;
+            usuarioExistente.IdTipo = viewModel.IdTipo;
+            usuarioExistente.IdEmpresa = usuarioExistente.IdEmpresa;
+
+               
+            await _usuariosRepository.UpdateAsync(usuarioExistente);
+
+            return RedirectToAction("GerirUsuarios", "Admin"); 
+            
+        
+
+
+
+
+    }
+    [HttpPost]
+    public async Task<IActionResult> ExcluirUsuario(int id)
+    {
+        await _usuariosRepository.DeleteAsync(id);
         return RedirectToAction("GerirUsuarios", "Admin");
     }
 

@@ -1,4 +1,4 @@
-﻿@model Usuarios
+﻿@model IEnumerable<Projeto_Trainee_Hub.ViewModel.UsuarioSetorTipoViewModel>
 
 @{
     ViewData["Title"] = "Gerir Usuários";
@@ -22,11 +22,37 @@
                 <th>Idade</th>
                 <th>Setor</th>
                 <th>Tipo</th>
+                <th>Editar</th>
+                <th>Apagar</th>
             </tr>
         </thead>
+        <tbody>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Email</td>
+                    <td>@usuario.Matricula</td>
+                    <td>@usuario.Senha</td>
+                    <td>@usuario.Idade</td>
+                    <td>@usuario.Setor</td>
+                    <td>@usuario.Tipo</td>
+                    <td>
+                        <form action="/Admin/AcoesUsuarios/@usuario.UsuarioId" method="get" style="display: inline;">
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="ExcluirUsuario" method="post" style="display: inline;">
+                            <input type="hidden" name="id" value="@usuario.UsuarioId" />
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
-</div>
-<div>
 
     <a asp-action="CriarUsuarios" asp-controller="Admin" class="CriarUsuario">Criar Usuario</a>
 
@@ -35,21 +61,8 @@
 
 <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
 <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
         $('#tabela').DataTable({
-            ajax: {
-                url: '/Admin/GetUsuarios',
-                dataSrc: 'data'
-            },
-            columns: [
-                { data: 'nome' },
-                { data: 'email' },
-                { data: 'matricula' },
-                { data: 'senha' },
-                { data: 'idade' },
-                { data: 'setor' },
-                { data: 'tipo' }
-            ],
             language: {
                 url: "https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json"
             }
