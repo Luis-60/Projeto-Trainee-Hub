@@ -107,12 +107,17 @@ public class AdminController : Controller
         return View(viewModel);
     }
 
-   
     public IActionResult GerirUsuarios()
     {
+        var usuarioLogado = _sessao.BuscarSessaoUsuario();
+
+
+        int idEmpresa = (int)usuarioLogado.IdEmpresa;
+
         var usuarios = _context.Usuarios
             .Include(u => u.IdSetorNavigation)
             .Include(u => u.IdTipoNavigation)
+            .Where(u => u.IdEmpresa == idEmpresa) // << Filtro aqui
             .Select(u => new UsuarioSetorTipoViewModel
             {
                 UsuarioId = u.IdUsuarios,

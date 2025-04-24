@@ -398,6 +398,28 @@ body {
     background-color: #0A2D46;
 }
 
+.GerirUsuarios {
+    position: relative;
+    background-color: #547A95;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Inter', bold;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 450px;
+}
+
+    .GerirUsuarios:hover {
+        background-color: #0A2D46;
+    }
+
+
 label {
     font-family: 'Inter', bold;
     font-size: 18px;
