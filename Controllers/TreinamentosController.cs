@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.ViewModel;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
 using Projeto_Trainee_Hub.Helper;
 using Microsoft.EntityFrameworkCore;
 

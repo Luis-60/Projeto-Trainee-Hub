@@ -1,0 +1,67 @@
+@model Projeto_Trainee_Hub.ViewModel.UsuarioSetorTipoViewModel
+
+@{
+    ViewData["Title"] = "AcoesUsuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar Usuário</h2>
+
+<form asp-action="EditarUsuario" method="post">
+    <input type="hidden" asp-for="UsuarioId" />
+    
+
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Matricula"></label>
+        <input asp-for="Matricula" class="form-control" />
+        <span asp-validation-for="Matricula" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Senha"></label>
+        <input asp-for="Senha" class="form-control" />
+        <span asp-validation-for="Senha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Idade"></label>
+        <input asp-for="Idade" class="form-control" />
+        <span asp-validation-for="Idade" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdSetor">Setor</label>
+        <select asp-for="IdSetor" asp-items="Model.Setores" class="form-control">
+            <option value="">-- Selecione o Setor --</option>
+        </select>
+        <span asp-validation-for="IdSetor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdTipo">Tipo</label>
+        <select asp-for="IdTipo" asp-items="Model.Tipos" class="form-control">
+            <option value="">-- Selecione o Tipo --</option>
+        </select>
+        <span asp-validation-for="IdTipo" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+
+    <a href="@Url.Action("GerirUsuarios", "Admin")" class="btn btn-secondary">Cancelar</a>
+    <p>
+
+
+    </p>
+</form>

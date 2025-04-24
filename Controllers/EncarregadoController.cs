@@ -12,7 +12,7 @@ public class EncarregadoController : Controller
 {
     private readonly MasterContext _context;
 
-    public EncarregadoController(MasterContext context)  // agora o nome está correto!
+    public EncarregadoController(MasterContext context)  
     {
         _context = context;
     }
@@ -44,8 +44,8 @@ public class EncarregadoController : Controller
         {
             modulos = modulo,
             listaAulas = aulasDoModulo,
-            aulas = new Aula(), // Para o formulário do modal
-            documentos = new Documento() // Para o formulário do modal
+            aulas = new Aula(), // Para o formulï¿½rio do modal
+            documentos = new Documento() // Para o formulï¿½rio do modal
         };
 
         return View(viewModel);

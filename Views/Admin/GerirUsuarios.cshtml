@@ -1,0 +1,71 @@
+@model IEnumerable<Projeto_Trainee_Hub.ViewModel.UsuarioSetorTipoViewModel>
+
+@{
+    ViewData["Title"] = "Gerir Usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
+
+
+<div>
+    <h1>Usuários</h1>
+
+
+    <table id="tabela" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Matrícula</th>
+                <th>Senha</th>
+                <th>Idade</th>
+                <th>Setor</th>
+                <th>Tipo</th>
+                <th>Editar</th>
+                <th>Apagar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Email</td>
+                    <td>@usuario.Matricula</td>
+                    <td>@usuario.Senha</td>
+                    <td>@usuario.Idade</td>
+                    <td>@usuario.Setor</td>
+                    <td>@usuario.Tipo</td>
+                    <td>
+                        <form action="/Admin/AcoesUsuarios/@usuario.UsuarioId" method="get" style="display: inline;">
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="ExcluirUsuario" method="post" style="display: inline;">
+                            <input type="hidden" name="id" value="@usuario.UsuarioId" />
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="CriarUsuarios" asp-controller="Admin" class="CriarUsuario">Criar Usuario</a>
+
+</div>
+
+
+<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+<script>
+        $(document).ready(function () {
+        $('#tabela').DataTable({
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json"
+            }
+        });
+    });
+</script>

@@ -373,8 +373,6 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.RazorAssemblyInfo.cs
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.sourcelink.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/scopedcss/bundle/Projeto-Trainee-Hub.styles.css
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/v9u2alsoj7-wof7unmvz1.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/y17a237t3b-k7u95rnv1q.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/bx4532srpu-61n19gt1b8.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/8lsj9gtyzq-bqjiyaj88i.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/z6eyx35l8b-c2jlpeoesf.gz
@@ -450,14 +448,9 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.pdb
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/7dm5xu31t4-kmzi7wq2xf.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/tb1rjm01s0-zwvvjei8qr.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fumfw8n010-9cvdypcmfz.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-atu6aibz3f.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Newtonsoft.Json.dll
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/bin/Debug/net9.0/Newtonsoft.Json.dll
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-jhhohna5nu.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/5epz938z5t-rs0ot184as.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/1mybjvci4h-43u1u2rbff.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-n57e7xyvst.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-n57e7xyvst.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz

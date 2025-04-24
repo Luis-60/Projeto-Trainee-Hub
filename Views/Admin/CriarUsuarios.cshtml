@@ -1,0 +1,66 @@
+@model Projeto_Trainee_Hub.ViewModel.UsuarioSetorTipoViewModel
+
+@{
+    ViewData["Title"] = "Criar Novo Usuário";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header text-white rounded-top-4">
+            <h4 class="mb-0">👤 Criar Novo Usuário</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="CriarUsuarios" asp-controller="Admin" method="post">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Nome" class="form-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label"></label>
+                        <input asp-for="Email" class="form-control" type="email" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Matricula" class="form-label"></label>
+                        <input asp-for="Matricula" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Senha" class="form-label"></label>
+                        <input asp-for="Senha" class="form-control" type="password" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Idade" class="form-label"></label>
+                        <input asp-for="Idade" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="IdSetor" class="form-label">Setor</label>
+                        <select asp-for="IdSetor" class="form-select" asp-items="Model.Setores">
+                            <option value="">Selecione um setor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="IdTipo" class="form-label">Tipo</label>
+                        <select asp-for="IdTipo" class="form-select" asp-items="Model.Tipos">
+                            <option value="">Selecione um tipo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a asp-action="Perfil" asp-controller="Admin" class="btn btn-secondary me-2">Voltar</a>
+                    <button type="submit" class="btn btn-success">Criar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

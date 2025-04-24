@@ -17,77 +17,89 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projeto_Trainee_Hub
 build_property.RootNamespace = Projeto_Trainee_Hub
-build_property.ProjectDir = /home/luis/Documentos/Dev/Projeto-Trainee-Hub/
+build_property.ProjectDir = /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/luis/Documentos/Dev/Projeto-Trainee-Hub
+build_property.MSBuildProjectDirectory = /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Modulos.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/AcoesUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWNvZXNVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/CriarUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ3JpYXJVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/GerirUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vR2VyaXJVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/Modulos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTW9kdWxvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Perfil.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVyZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Admin/Treinamentos.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Admin/Treinamentos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVHJlaW5hbWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Modulos.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Encarregado/Modulos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vTW9kdWxvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Perfil.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Encarregado/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vUGVyZmlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Encarregado/Treinamentos.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Encarregado/Treinamentos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5jYXJyZWdhZG8vVHJlaW5hbWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Home/Login.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Home/Privacy.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Shared/Error.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Shared/_Layout.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Usuario/Aula.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Usuario/Aula.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9BdWxhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Usuario/Index.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/Usuario/Perfil.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/Usuario/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9QZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/_ViewImports.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/luis/Documentos/Dev/Projeto-Trainee-Hub/Views/_ViewStart.cshtml]
+[/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Projeto_Trainee_Hub.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Projeto_Trainee_Hub.Repository
 {
@@ -52,5 +53,24 @@ namespace Projeto_Trainee_Hub.Repository
         {
             throw new NotImplementedException();
         }
+
+        public List<Setor> GetTodosSetores()
+        {
+            return _context.Setors.ToList();
+        }
+
+        public List<Tipo> GetTodosTipos()
+        {
+            return _context.Tipos.ToList();
+        }
+        public Usuarios ObterUsuarioPorId(int id)
+        {
+            // Busca o usu�rio pelo ID no banco de dados
+            var usuario = _context.Usuarios
+                .FirstOrDefault(u => u.IdUsuarios == id);
+            return usuario;
+        }
+
+        
     }
 }
