@@ -7,6 +7,7 @@ using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
 using Projeto_Trainee_Hub.ViewModel;
 using Projeto_Trainee_Hub.Helper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Projeto_Trainee_Hub.Controllers;
 
@@ -45,7 +46,7 @@ public class ModulosController : Controller
 
         var idTreinamento = modulo.IdTreinamento;
 
-        return RedirectToAction("Treinamentos", "Admin", new {idTreinamento});
+        return RedirectToAction("Perfil", "Admin", new {idTreinamento});
     }
 
     // Editar Modulo
@@ -72,11 +73,20 @@ public class ModulosController : Controller
             return NotFound();
         }
 
-        await _moduloRepository.UpdateAsync(modulo);
-        _moduloRepository.Save();
+        var modulos = _context.Modulos
+        .Include(m => m.IdTreinamentoNavigation) // navegação relacionada
+        .FirstOrDefault(m => m.IdModulos == moduloId);
+
+        modulos.IdModulos = modulos.IdModulos;
+        modulos.Nome = treinamentoModulo.modulos.Nome;
+        modulos.Descricao = treinamentoModulo.modulos.Descricao;
+
+
+        await _moduloRepository.UpdateAsync(modulos);
+        //_moduloRepository.Save();
         
         var idTreinamento = modulo.IdTreinamento;
-        return RedirectToAction("Treinamentos", "Admin", new {idTreinamento});
+        return RedirectToAction("Perfil", "Admin", new {idTreinamento});
     }
     // Criar Modulo
     [HttpPost]
@@ -98,6 +108,6 @@ public class ModulosController : Controller
         _moduloRepository.Save();
 
         var id = treinamentoModulo.modulos.IdModulos;
-        return RedirectToAction("Modulos", "Admin", new {id});
+        return RedirectToAction("Perfil", "Admin", new {id});
     }
 }

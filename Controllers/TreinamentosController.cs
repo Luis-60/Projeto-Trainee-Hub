@@ -59,7 +59,7 @@ public class TreinamentosController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Editar(TreinamentoUsuariosViewModel treinamentoUsuarios)
-    {
+     {
         var treinamentoId = treinamentoUsuarios.treinamentos.IdTreinamentos;
         var usuario = _sessao.BuscarSessaoUsuario();
         

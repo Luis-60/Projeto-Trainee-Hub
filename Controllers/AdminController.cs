@@ -72,6 +72,7 @@ public class AdminController : Controller
     }
 
     public async Task<IActionResult> ModulosAsync(int id)
+    
     {
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
