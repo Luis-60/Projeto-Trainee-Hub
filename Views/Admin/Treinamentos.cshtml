@@ -74,7 +74,7 @@
 </div>
 
 <!-- Modal EDITAR Módulo -->
-<div class="modal" id="modal-moduloE">
+<div class="modal" id="modal-moduloM">
     <div class="modal-content">
         <h1 class="titulo-modal">EDITAR MÓDULO</h1>
         <form asp-action="Editar" asp-controller="Modulos" method="post">
@@ -97,6 +97,56 @@
     </div>
 </div>
 
+<!-- Editar Treinamento-->
+<div class="modal" id="modal-treinamentoE">
+    <div class="modal-content">
+        <h1 class="titulo-modal">EDITAR TREINAMENTO</h1>
+        <form asp-controller="Treinamentos" asp-action="Editar" method="post" enctype="multipart/form-data">
+            <div class="inputnome">
+                <label>Nome:</label><br>
+                <input asp-for="@Model.treinamentos.Nome" placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" required>
+            </div>      
+            <div class="input-instrutor">
+                <label>Instrutor:</label><br>
+                <input asp-for="@Model.treinamentos.Instrutor" placeholder="Insira o nome do instrutor" style="width:100%" class="instrutor" type="text" id="instrutor" required>
+            </div>
+            <label>Descrição:</label><br>
+            <textarea placeholder="Descreva o treinamento" style="width:100%" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+            <div class="container-data">
+                <div class="container-datainicio">
+                    <label>Data de Início:</label><br>
+                    <input type="date" id="datainicio" asp-for="@Model.treinamentos.DataInicio" required>
+                </div>
+                <div class="container-datafim">
+                    <label>Data de Fim:</label><br>
+                    <input type="date" id="datafim" asp-for="@Model.treinamentos.DataFim" required>
+                </div>
+            </div>
+           <label id="imagem">Imagem Ilustrativa:</label><br>
+            <label asp-for="@Model.File" class="drop-container" id="dropcontainer"> 
+                <span class="drop-title">Insira o Arquivo aqui</span>
+                ou
+                <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*">
+            </label>
+            @if (!string.IsNullOrEmpty(Model.treinamentos.Imagem))
+            {
+                <div class="mt-2 text-muted">
+                    📁 Arquivo atual: <strong>@Model.treinamentos.Imagem</strong>
+                </div>
+            }
+            <input type="hidden" id="treinamento" asp-for="@Model.treinamentos.IdTreinamentos" value="@Model.treinamentos.IdTreinamentos">
+            <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0"> 
+            <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios?.IdEmpresa">
+            <input type="hidden" id="IdCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
+            <div class="buttons"> 
+                <button class="btnAddTreinamento" type="submit">EDITAR</button>
+                <button class="btnClose" onclick="closeModal()">SAIR</button>
+            </div>   
+        </form>         
+    </div>
+</div>
+ 
 <script>
     function preencherModalEditar(id, nome, descricao, sequencia) {
         document.getElementById('modulo-id').value = id;
@@ -104,6 +154,6 @@
         document.getElementById('descricao-editar').value = descricao;
         document.getElementById('sequencia-editar').value = sequencia;
 
-        OpenModal('modal-moduloE');
+        OpenModal('modal-moduloM');
     }
 </script>

@@ -12,10 +12,11 @@ public class TreinamentosController : Controller
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly MasterContext _context;
     private readonly ISessao _sessao;
+    private readonly ModuloRepository _moduloRepository;
     private readonly string _baseUploadFolder = "wwwroot/images/upload/treinamentos";
 
     public TreinamentosController(TreinamentoRepository treinamentoRepository,
-     ISessao sessao, MasterContext context)
+     ISessao sessao, MasterContext context, ModuloRepository moduloRepository)
     {
         if (!Directory.Exists(_baseUploadFolder))
         {
@@ -23,6 +24,7 @@ public class TreinamentosController : Controller
         }
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
+        _moduloRepository = moduloRepository;
         _context = context;
     }
     [HttpPost]
@@ -38,6 +40,13 @@ public class TreinamentosController : Controller
         if (treinamento == null)
         {
             return NotFound();
+        }
+        // Verifica se existem módulos associados ao treinamento
+        var modulos = await _moduloRepository.GetByIdTreinamentoAsync(IdTreinamentos);
+        if (modulos.Any(m => m.Aulas.Any())) // Se algum módulo tiver aulas
+        {
+            TempData["Erro"] = "Não é possível deletar o treinamento, pois existem módulos com aulas.";
+            return Redirect(Request.Headers["Referer"].ToString());
         }
 
         _context.Treinamentos.Remove(treinamento);

@@ -72,7 +72,7 @@ public class AdminController : Controller
         var idsModulos = modulosTreinamento.Select(m => m.IdModulos).ToList();
 
         // Buscar todas as aulas desses módulos
-        var aulasModulos = await _aulaRepository.GetByIdModuloAsync(idsModulos);
+        var aulasModulos = await _aulaRepository.GetByIdModuloListAsync(idsModulos);
 
         var treinamentoModulo = new TreinamentoModuloViewModel
         {

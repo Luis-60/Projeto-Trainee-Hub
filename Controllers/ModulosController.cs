@@ -14,16 +14,18 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class ModulosController : Controller
 {
     private readonly ISessao _sessao;
+    private readonly AulaRepository _aulaRepository;
     private readonly ModuloRepository _moduloRepository;
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly MasterContext _context;
     public ModulosController(ISessao sessao, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository,
-     MasterContext context)
+     MasterContext context, AulaRepository aulaRepository)
     {
         _sessao = sessao;
         _moduloRepository = moduloRepository;
         _context = context;
         _treinamentoRepository = treinamentoRepository;
+        _aulaRepository = aulaRepository;
     }
 
     // Deletar Modulo
@@ -36,11 +38,17 @@ public class ModulosController : Controller
             return NotFound();
         }
 
-        var modulo = await _moduloRepository.GetByIdAsync(idModulo);
-        if (modulo == null)
+        var aula = await _aulaRepository.GetByIdModuloAsync(idModulo);
+        if (aula == null)
         {
             return NotFound();
         }
+        if (aula.Any(a => a.Documentos.Any())) // Se algum módulo tiver aulas
+        {
+            TempData["Erro"] = "Não é possível deletar o treinamento, pois existem módulos com aulas.";
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+        var modulo = await _moduloRepository.GetByIdAsync(idModulo);
         _context.Modulos.Remove(modulo);
         await _context.SaveChangesAsync();
         return Redirect(Request.Headers["Referer"].ToString());
