@@ -18,15 +18,17 @@ public class AdminController : Controller
     private readonly ISessao _sessao;
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly ModuloRepository _moduloRepository;
+    private readonly AulaRepository _aulaRepository;  
 
     private readonly MasterContext _context;
-    public AdminController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context)
+    public AdminController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
     {
         _usuariosRepository = usuariosRepository;
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
         _moduloRepository = moduloRepository;
         _context = context;
+        _aulaRepository = aulaRepository;
     }
     [HttpGet]
     public async Task<IActionResult> PerfilAsync()
@@ -66,9 +68,22 @@ public class AdminController : Controller
         
         var modulosTreinamento = await _moduloRepository.GetByIdTreinamentoAsync(treinamento.IdTreinamentos);
 
-        var treinamentoModulo = new TreinamentoModuloViewModel{treinamentos = treinamento, usuarios = usuario, listaModulos = modulosTreinamento};
+        // Obtem todos os módulos e extrai os IDs
+        var idsModulos = modulosTreinamento.Select(m => m.IdModulos).ToList();
+
+        // Buscar todas as aulas desses módulos
+        var aulasModulos = await _aulaRepository.GetByIdModuloAsync(idsModulos);
+
+        var treinamentoModulo = new TreinamentoModuloViewModel
+        {
+        treinamentos = treinamento,
+        usuarios = usuario,
+        listaModulos = modulosTreinamento,
+        listaAulas = aulasModulos
+        };
         return View(treinamentoModulo);
     }
+    
         public IActionResult Modulos(int id)
     {
         var modulo = _context.Modulos.FirstOrDefault(m => m.IdModulos == id);

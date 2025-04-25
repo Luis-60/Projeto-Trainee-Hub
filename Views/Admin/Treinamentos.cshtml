@@ -38,10 +38,15 @@
                         <button class="excluir btn btn-danger">🗑</button>
                     </form>
                 </div>
-                <div class="selecionar">
-                    <input type="checkbox" id="modulo1">
-                    <label for="modulo1">1. LoreIpsum</label>
-                </div>
+                
+                @foreach (var aula in Model.listaAulas.Where(a => a.IdModulo == modulo.IdModulos))
+                {
+                    <div class="selecionar">
+                        <input type="checkbox" id="modulo1">
+                        <label for="modulo1">@aula.Nome</label>
+                    </div>
+                }
+
             </div>
         </li>
     }

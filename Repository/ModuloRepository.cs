@@ -21,6 +21,7 @@ namespace Projeto_Trainee_Hub.Repository
         {
             return await _context.Modulos
                 .Include(m => m.IdTreinamentoNavigation)
+                .Include(m => m.Aulas)
                 .Where(m => m.IdTreinamento == id)
                 .ToListAsync();
         }
@@ -30,5 +31,6 @@ namespace Projeto_Trainee_Hub.Repository
                 .Include(m => m.IdTreinamentoNavigation)
                 .FirstOrDefaultAsync(m => m.IdModulos == id);
         }
+        
     }
 }

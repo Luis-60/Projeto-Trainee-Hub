@@ -33,6 +33,7 @@ builder.Services.AddScoped<UsuariosRepository>();
 
 builder.Services.AddScoped<TreinamentoRepository>();
 builder.Services.AddScoped<ModuloRepository>();
+builder.Services.AddScoped<AulaRepository>();
 
 builder.Services.AddDbContext<MasterContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

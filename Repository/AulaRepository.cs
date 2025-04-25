@@ -19,5 +19,11 @@ namespace Projeto_Trainee_Hub.Repository
                 .Include(m => m.IdModuloNavigation)
                 .FirstOrDefaultAsync(m => m.IdAula == id);
         }
+        public async Task<IEnumerable<Aula?>> GetByIdModuloAsync(List<int> idsModulos)
+        {
+            return await _context.Aulas
+            .Where(a => idsModulos.Contains(a.IdModulo))
+            .ToListAsync();
+        }
     }
 }
