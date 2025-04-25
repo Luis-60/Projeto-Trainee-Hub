@@ -136,7 +136,7 @@ public class AdminController : Controller
 
 
     [HttpPost]
-    public IActionResult CriarUsuarios(UsuarioSetorTipoViewModel model)
+    public async Task<IActionResult> CriarUsuarios(UsuarioSetorTipoViewModel model)
     {
         if (!ModelState.IsValid)
         {
@@ -169,7 +169,7 @@ public class AdminController : Controller
             IdEmpresa = usuarioLogado.IdEmpresa 
         };
 
-        _usuariosRepository.AddAsync(novoUsuario);
+       await _usuariosRepository.AddAsync(novoUsuario);
 
         return RedirectToAction("GerirUsuarios", "Admin");
     }
