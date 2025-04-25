@@ -11,5 +11,6 @@ public class TreinamentoModuloViewModel
     public Usuarios usuarios{ get; set;}
     public IFormFile File { get; set; }
     public IEnumerable<Modulo> listaModulos { get; set; }
+    public IEnumerable<Aula> listaAulas { get; set; }
 
 }

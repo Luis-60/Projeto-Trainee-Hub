@@ -11,11 +11,17 @@ namespace Projeto_Trainee_Hub.Controllers
     {
         private readonly MasterContext _context;
         private readonly IWebHostEnvironment _environment;
+        private readonly string _uploadFolder;
 
         public AulasController(MasterContext context, IWebHostEnvironment environment)
         {
             _context = context;
             _environment = environment;
+            _uploadFolder = Path.Combine(_environment.WebRootPath, "uploads");
+            if (!Directory.Exists(_uploadFolder))
+            {
+                Directory.CreateDirectory(_uploadFolder);
+            }
         }
 
         [HttpPost]
@@ -43,7 +49,7 @@ namespace Projeto_Trainee_Hub.Controllers
                 {
                     if (file.Length > 0)
                     {
-                        var caminho = Path.Combine(_environment.WebRootPath, "Uploads", file.FileName);
+                        var caminho = Path.Combine(_uploadFolder, file.FileName);
                         using (var stream = new FileStream(caminho, FileMode.Create))
                         {
                             await file.CopyToAsync(stream);
@@ -59,21 +65,12 @@ namespace Projeto_Trainee_Hub.Controllers
                     }
                 }
                 await _context.SaveChangesAsync();
-        
-        }
+            }
 
-            // Retornar para a página de origem (a que abriu o modal)
             if (Request.Headers.ContainsKey("Referer"))
                 return Redirect(Request.Headers["Referer"].ToString());
 
-            // Fallback
-        
-
-            // Se der erro, volta pra mesma página
-            if (Request.Headers.ContainsKey("Referer"))
-                return Redirect(Request.Headers["Referer"].ToString());
-            else
-                return RedirectToAction("Modulos", "AulasController");
+            return RedirectToAction("Modulos", "AulasController");
         }
 
         [HttpPost]
@@ -90,11 +87,10 @@ namespace Projeto_Trainee_Hub.Controllers
                 aulaBanco.Descricao = aula.Descricao;
                 aulaBanco.IdModulo = aula.IdModulo;
 
-                // Apaga os documentos antigos
                 var docsAntigos = _context.Documentos.Where(d => d.IdAula == aula.IdAula).ToList();
                 foreach (var doc in docsAntigos)
                 {
-                    var caminhoFisico = Path.Combine(_environment.WebRootPath, "DocumentosAula", Path.GetFileName(doc.Nome));
+                    var caminhoFisico = Path.Combine(_uploadFolder, Path.GetFileName(doc.Nome));
                     if (System.IO.File.Exists(caminhoFisico))
                         System.IO.File.Delete(caminhoFisico);
 
@@ -103,7 +99,6 @@ namespace Projeto_Trainee_Hub.Controllers
 
                 _context.SaveChanges();
 
-                // Salva os novos documentos
                 if (files != null && files.Any())
                 {
                     foreach (var file in files)
@@ -111,12 +106,7 @@ namespace Projeto_Trainee_Hub.Controllers
                         if (file.Length > 0)
                         {
                             var nomeArquivo = Path.GetFileName(file.FileName);
-                            var path = Path.Combine(_environment.WebRootPath, "DocumentosAula");
-
-                            if (!Directory.Exists(path))
-                                Directory.CreateDirectory(path);
-
-                            var filePath = Path.Combine(path, nomeArquivo);
+                            var filePath = Path.Combine(_uploadFolder, nomeArquivo);
 
                             using (var stream = new FileStream(filePath, FileMode.Create))
                             {
@@ -126,7 +116,6 @@ namespace Projeto_Trainee_Hub.Controllers
                             var documento = new Documento
                             {
                                 Nome = nomeArquivo,
-                                
                                 IdAula = aulaBanco.IdAula
                             };
 
@@ -156,12 +145,11 @@ namespace Projeto_Trainee_Hub.Controllers
             var aula = await _context.Aulas.FindAsync(id);
             if (aula != null)
             {
-                // Exclui documentos da aula
                 var documentos = _context.Documentos.Where(d => d.IdAula == aula.IdAula).ToList();
 
                 foreach (var doc in documentos)
                 {
-                    var caminhoFisico = Path.Combine(_environment.WebRootPath, "Documentos", doc.Nome);
+                    var caminhoFisico = Path.Combine(_uploadFolder, doc.Nome);
                     if (System.IO.File.Exists(caminhoFisico))
                         System.IO.File.Delete(caminhoFisico);
 
@@ -179,5 +167,3 @@ namespace Projeto_Trainee_Hub.Controllers
         }
     }
 }
-
-

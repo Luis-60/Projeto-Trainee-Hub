@@ -43,10 +43,8 @@ public class ModulosController : Controller
         }
         _context.Modulos.Remove(modulo);
         await _context.SaveChangesAsync();
+        return Redirect(Request.Headers["Referer"].ToString());
 
-        var idTreinamento = modulo.IdTreinamento;
-
-        return RedirectToAction("Perfil", "Admin", new {idTreinamento});
     }
 
     // Editar Modulo
@@ -74,7 +72,7 @@ public class ModulosController : Controller
         }
 
         var modulos = _context.Modulos
-        .Include(m => m.IdTreinamentoNavigation) // navegação relacionada
+        .Include(m => m.IdTreinamentoNavigation) // navegaï¿½ï¿½o relacionada
         .FirstOrDefault(m => m.IdModulos == moduloId);
 
         modulos.IdModulos = modulos.IdModulos;
@@ -86,7 +84,8 @@ public class ModulosController : Controller
         //_moduloRepository.Save();
         
         var idTreinamento = modulo.IdTreinamento;
-        return RedirectToAction("Perfil", "Admin", new {idTreinamento});
+        return Redirect(Request.Headers["Referer"].ToString());
+
     }
     // Criar Modulo
     [HttpPost]
@@ -108,6 +107,6 @@ public class ModulosController : Controller
         _moduloRepository.Save();
 
         var id = treinamentoModulo.modulos.IdModulos;
-        return RedirectToAction("Perfil", "Admin", new {id});
+        return RedirectToAction("Modulos", "Admin", new {id});
     }
 }

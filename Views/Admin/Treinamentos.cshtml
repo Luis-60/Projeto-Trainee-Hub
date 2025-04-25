@@ -30,7 +30,7 @@
             <div class="Modulos">
                 <h2>MÓDULO @modulo.Sequencia - @modulo.Nome</h2>
                 <div class="Botoes">
-                    <button class="conteudo">📄 CONTEÚDO</button>
+                    <a asp-action="Modulos" asp-controller="Admin" asp-route-id="@modulo.IdModulos" aspclass="conteudo">📄 CONTEÚDO</a>
                     <button type="button" class="editar" onclick="preencherModalEditar('@modulo.IdModulos', '@modulo.Nome', '@modulo.Descricao', '@modulo.Sequencia')">✏️</button>
                     <form asp-controller="Modulos" asp-action="Deletar" method="post" onsubmit="return confirm('Tem certeza que quer deletar módulo?')">
                         @Html.AntiForgeryToken()

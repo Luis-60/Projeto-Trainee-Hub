@@ -1,20 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Projeto_Trainee_Hub.Models;
 namespace Projeto_Trainee_Hub.Controllers;
 using Projeto_Trainee_Hub.Repository;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Trainee_Hub.ViewModel;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore;
 using Projeto_Trainee_Hub.Helper;
-using Microsoft.EntityFrameworkCore;
 
 public class TreinamentosController : Controller
 {

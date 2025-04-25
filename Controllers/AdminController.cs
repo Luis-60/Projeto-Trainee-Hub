@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
-using AspNetCoreGeneratedDocument;
 using Microsoft.EntityFrameworkCore;
 using Projeto_Trainee_Hub.ViewModel;
 using Projeto_Trainee_Hub.Helper;
@@ -70,24 +69,29 @@ public class AdminController : Controller
         var treinamentoModulo = new TreinamentoModuloViewModel{treinamentos = treinamento, usuarios = usuario, listaModulos = modulosTreinamento};
         return View(treinamentoModulo);
     }
-
-    public async Task<IActionResult> ModulosAsync(int id)
-    
+        public IActionResult Modulos(int id)
     {
-        var usuario = _sessao.BuscarSessaoUsuario();
-        if (usuario == null)
-        {
-            return RedirectToAction("Login", "Home");
-        }
-        var treinamento = await _treinamentoRepository.GetByIdAsync(id);
-        if (treinamento == null)
-        {
-            return NotFound(); 
-        }
-            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = treinamento, usuarios = usuario};
-        return View(treinamentoUsuarios);
-    }
+        var modulo = _context.Modulos.FirstOrDefault(m => m.IdModulos == id);
 
+        if (modulo == null)
+        {
+            return NotFound();
+        }
+
+        var aulasDoModulo = _context.Aulas
+                                    .Where(a => a.IdModulo == id)
+                                    .ToList();
+
+        var viewModel = new AulaModuloDocViewModel
+        {
+            modulos = modulo,
+            listaAulas = aulasDoModulo,
+            aulas = new Aula(), // Para o formul�rio do modal
+            documentos = new Documento() // Para o formul�rio do modal
+        };
+
+        return View(viewModel);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

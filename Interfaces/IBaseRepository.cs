@@ -9,8 +9,7 @@ namespace Projeto_Trainee_Hub.Interfaces
         Task<T> AddAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task<List<T>> GetAllAsync();
-        Task DeleteAsync(int id);
-        
+        Task DeleteAsync(int id);   
     }
     
 }

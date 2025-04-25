@@ -1,124 +1,131 @@
 @model Projeto_Trainee_Hub.ViewModel.AulaModuloDocViewModel
+
 @{
-    ViewData["Title"] = "Modulos";
+    ViewData["Title"] = "Módulo";
 }
+
 <div class="texto_modulo">
-        <h1>@Model.modulos.Nome</h1>
-        <div class="paragrafo_modulo">
-            <p>@Model.modulos.Descricao</p>
-        </div>
-    </div>
-
-    <hr>
-    <div class="botao">
-        <button class="adicionar">ADICIONAR</button>
-    </div>
-
-<div class="modal">
-    <div class="modal-content">
-        <div class="icon-x">
-            <i id="close" class='bx bx-x close'></i>
-        </div>
-            <h1 class="titulo-modal">CRIAR AULA</h1>
-            <form asp-controller="Aulas" asp-action="Criar" method="post" enctype="multipart/form-data">
-                <div class="inputnome">
-                    <label>Nome:</label><br>
-                    <input asp-for="@Model.aulas.Nome" placeholder="Insira o nome da aula" class="input-nome" type="text" id="nome" name="nome">
-                </div> 
-       
-            <label>Descrição:</label><br>
-            <textarea asp-for="@Model.aulas.Descricao" placeholder="Descreva a aula" id="descricao" name="descricao"></textarea>
-
-            <label>Adicionar envio:</label>
-            <div class="upload-container" id="upload-area">
-                <p>Adicionar arquivos</p>
-                
-                <input asp-for="@Model.documentos.Nome" type="file" id="file-input" hidden multiple>
-                <button onclick="document.getElementById('file-input').click()">Escolher arquivo</button>
-                <ul class="file-list" id="file-list"></ul>
-                <script src="upload.js"></script>
-            </div>    
-
-            @*Input Hidden*@
-            <input type="hidden" asp-for="@Model.documentos.IdAula" value="@Model.aulas.IdAula" />
-            <div class="buttons"> 
-                <button class="btnAddAula" onclick="addTreinamento()">CRIAR</button>
-                <button class="btnClose" onclick="closeModal()">SAIR</button>
-            </form>
-        </div>                
+    <h1>@Model.modulos?.Nome</h1>
+    <div class="paragrafo_modulo">
+        <p>@Model.modulos?.Descricao</p>
     </div>
 </div>
 
+<hr>
 
-    @* <div class="Modulos">
-        <div class="header">
-            <h2>Aula 1 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
-        </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo1">
-            <label for="modulo1">1. Lorem Ipsum</label>
-        </div>
-    </div>
+<div class="botao">
+    <button class="adicionar" data-toggle="modal" data-target="#modalAula" onclick="abrirModalCriar()">ADICIONAR</button>
+</div>
 
-    <div class="Modulos">
-        <div class="header">
-            <h2>Aula 2 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
-        </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo2">
-            <label for="modulo2">1. Lorem Ipsum</label>
-        </div>
-    </div>
+@if (Model.listaAulas != null && Model.listaAulas.Any())
+{
+    <ul class="list-group mt-3">
+        @foreach (var aula in Model.listaAulas)
+        {
+            <li class="list-group-item">
+                <strong>@aula.Nome</strong> - @aula.Descricao
 
-    <div class="Modulos">
-        <div class="header">
-            <h2>Aula 3 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
-        </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo3">
-            <label for="modulo3">1. Lorem Ipsum</label>
+                @if (aula.Documentos != null && aula.Documentos.Any())
+                {
+                    <div class="mt-2">
+                        <span><strong>Documentos:</strong></span>
+                        <ul>
+                            @foreach (var doc in aula.Documentos)
+                            {
+                                <li>
+                                    <a href="/Uploads/@doc.Nome" target="_blank">@doc.Nome</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+
+                <div class="mt-2">
+                    <form asp-controller="Aulas" asp-action="Excluir" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@aula.IdAula" />
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+
+                    <button class="btn btn-warning"
+                            data-toggle="modal"
+                            data-target="#modalAula"
+                            onclick="abrirModalEditar(@aula.IdAula, '@aula.Nome', '@aula.Descricao', @aula.IdModulo)">
+                        Editar
+                    </button>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nenhuma aula cadastrada ainda.</p>
+}
+
+<!-- Modal -->
+<div class="modal fade" id="modalAula" tabindex="-1" role="dialog" aria-labelledby="modalAulaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="formAula" asp-controller="Aulas" asp-action="Criar" method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalAulaLabel">Criar Aula</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="hidden" name="IdAula" id="inputIdAula" />
+                    <input type="hidden" name="IdModulo" id="inputIdModulo" value="@Model.modulos.IdModulos" />
+
+                    <div class="form-group">
+                        <label for="Nome">Nome da Aula:</label>
+                        <input name="Nome" id="inputNome" class="form-control" placeholder="Insira o nome da aula" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Descricao">Descrição da Aula:</label>
+                        <textarea name="Descricao" id="inputDescricao" class="form-control" placeholder="Descreva a aula" required></textarea>
+                    </div>
+
+                    <div class="form-group" id="divArquivo">
+                        <label for="files">Arquivos:</label>
+                        <input type="file" name="files" class="form-control-file" multiple />
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="botaoSalvar">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="Modulos">
-        <div class="header">
-            <h2>Aula 4 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
-        </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo3">
-            <label for="modulo3">1. Lorem Ipsum</label>
-        </div>
-    </div>
-    <div class="Modulos">
-        <div class="header">
-            <h2>Aula 5 - LOREM IPSUM</h2>
-            <div class="Botoes">
-                <button class="conteudo">📄 CONTEÚDO</button>
-                <button class="editar">✏️</button>
-                <button class="excluir">🗑️</button>
-            </div>
-        </div>
-        <div class="selecionar">
-            <input type="checkbox" id="modulo3">
-            <label for="modulo3">1. Lorem Ipsum</label>
-        </div>
-    </div> *@
+</div>
+
+@section Scripts {
+    <script>
+        function abrirModalCriar() {
+            document.getElementById('modalAulaLabel').innerText = "Criar Aula";
+            document.getElementById('formAula').action = "/Aulas/Criar";
+            document.getElementById('inputIdAula').value = "";
+            document.getElementById('inputNome').value = "";
+            document.getElementById('inputDescricao').value = "";
+            document.getElementById('inputIdModulo').value = "@Model.modulos.IdModulos";
+            document.getElementById('divArquivo').style.display = 'block';
+        }
+
+        function abrirModalEditar(id, nome, descricao, idModulo) {
+            document.getElementById('modalAulaLabel').innerText = "Editar Aula";
+            document.getElementById('formAula').action = "/Aulas/Editar";
+            document.getElementById('inputIdAula').value = id;
+            document.getElementById('inputNome').value = nome;
+            document.getElementById('inputDescricao').value = descricao;
+            document.getElementById('inputIdModulo').value = idModulo;
+            document.getElementById('divArquivo').style.display = 'block';
+        }
+    </script>
+}
+
+
+

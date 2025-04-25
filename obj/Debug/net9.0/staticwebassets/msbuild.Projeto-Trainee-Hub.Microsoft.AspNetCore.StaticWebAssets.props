@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n57e7xyvst</Fingerprint>
-      <Integrity>RXlpxn2j02Gk9QLysDsrPGR70sDOT5O6HVuoX50yO2s=</Integrity>
+      <Fingerprint>d7gid7qzgf</Fingerprint>
+      <Integrity>d9SkfWBzj/Hw1wbCfvRQbvZzqiZt+BcDe735P31UXNk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</OriginalItemSpec>
@@ -485,6 +485,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\d60e9ea7-a5dd-41a9-811b-92f3e00391ad.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\da6837f1-57e5-44e1-b537-721382cfc927.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Projeto-Trainee-Hub</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Projeto-Trainee-Hub</BasePath>
+      <RelativePath>images/upload/treinamentos/da6837f1-57e5-44e1-b537-721382cfc927.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cgf2e6jwwr</Fingerprint>
+      <Integrity>RG+FmMhOd+qID4GkH/N8hnfe/JSoC0simh8mRRkkWAY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\da6837f1-57e5-44e1-b537-721382cfc927.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\upload\treinamentos\e3461cc1-0d1a-4b67-b4e4-6764ee5453e8.png'))">
       <SourceType>Package</SourceType>
