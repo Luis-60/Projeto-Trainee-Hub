@@ -1,4 +1,3 @@
-
 services:
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -7,26 +6,34 @@ services:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=YourStrong!Password123
     ports:
-      - "1433:1433"  # Porta de comunicação do SQL Server
+      - "1433:1433"
     networks:
       - sqlnet
     volumes:
-      - mssql_data:/var/opt/mssql  # Persistir dados
+      - mssql_data:/var/opt/mssql
+    command: >
+      bash -c "apt-get update && 
+               apt-get install -y curl && 
+               curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && 
+               curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list && 
+               apt-get update && 
+               ACCEPT_EULA=Y apt-get install -y mssql-tools && 
+               /opt/mssql/bin/sqlservr"  # Executar o SQL Server após a instalação do sqlcmd
 
   dotnet_app:
     image: mcr.microsoft.com/dotnet/sdk:9.0
     container_name: dotnet_app
     working_dir: /app
     volumes:
-      - ./app:/app  # Diretório local da aplicação .NET
+      - ./app:/app
     command: >
       bash -c "dotnet build && dotnet run"
     depends_on:
-      - mssql  # Garantir que o SQL Server esteja ativo primeiro
+      - mssql
     networks:
       - sqlnet
     ports:
-      - "5000:5000"  # Porta da aplicação .NET
+      - "5000:5000"
     environment:
       - ConnectionStrings__DefaultConnection=Server=mssql;Database=master;User Id=sa;Password=YourStrong!Password123;
 
