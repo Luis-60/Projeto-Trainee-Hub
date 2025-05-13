@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c44qZxkGSzYB7KXxmD5oJkvMlZcOt6IIli/OMdFAaUM=",
+  "Hash": "63eqXvAK7630LXuqTQMimQGjwlUkqOl9Ta4bFurhHls=",
   "Source": "Projeto-Trainee-Hub",
   "BasePath": "_content/Projeto-Trainee-Hub",
   "Mode": "Default",
@@ -668,12 +668,12 @@
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz",
+      "Identity": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz",
       "SourceId": "Projeto-Trainee-Hub",
       "SourceType": "Discovered",
       "ContentRoot": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Projeto-Trainee-Hub",
-      "RelativePath": "css/style#[.{fingerprint=xthdk3ioda}]?.css.gz",
+      "RelativePath": "css/style#[.{fingerprint=zr09cav9rp}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -682,8 +682,8 @@
       "RelatedAsset": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "bsp5nzmjix",
-      "Integrity": "NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs=",
+      "Fingerprint": "a7k0o4oi13",
+      "Integrity": "uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style.css"
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xthdk3ioda",
-      "Integrity": "e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA=",
+      "Fingerprint": "zr09cav9rp",
+      "Integrity": "0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style.css"
@@ -3296,12 +3296,12 @@
   "Endpoints": [
     {
       "Route": "css/style.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000189645363"
+          "Quality": "0.000190585096"
         }
       ],
       "ResponseHeaders": [
@@ -3311,15 +3311,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5272"
+          "Value": "5246"
         },
         {
           "Name": "ETag",
-          "Value": "\"NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs=\""
+          "Value": "\"uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3339,13 +3339,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA=\""
+          "Value": "W/\"0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA="
+          "Value": "sha256-0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00="
         }
       ]
     },
@@ -3360,7 +3360,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23264"
+          "Value": "22962"
         },
         {
           "Name": "Content-Type",
@@ -3368,11 +3368,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA=\""
+          "Value": "\"0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3382,13 +3382,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA="
+          "Value": "sha256-0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00="
         }
       ]
     },
     {
       "Route": "css/style.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3397,7 +3397,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5272"
+          "Value": "5246"
         },
         {
           "Name": "Content-Type",
@@ -3405,11 +3405,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs=\""
+          "Value": "\"uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3427,18 +3427,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs="
+          "Value": "sha256-uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c="
         }
       ]
     },
     {
-      "Route": "css/style.xthdk3ioda.css",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz",
+      "Route": "css/style.zr09cav9rp.css",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000189645363"
+          "Quality": "0.000190585096"
         }
       ],
       "ResponseHeaders": [
@@ -3448,15 +3448,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5272"
+          "Value": "5246"
         },
         {
           "Name": "ETag",
-          "Value": "\"NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs=\""
+          "Value": "\"uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3476,13 +3476,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA=\""
+          "Value": "W/\"0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xthdk3ioda"
+          "Value": "zr09cav9rp"
         },
         {
           "Name": "label",
@@ -3490,12 +3490,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA="
+          "Value": "sha256-0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00="
         }
       ]
     },
     {
-      "Route": "css/style.xthdk3ioda.css",
+      "Route": "css/style.zr09cav9rp.css",
       "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/css/style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3505,7 +3505,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23264"
+          "Value": "22962"
         },
         {
           "Name": "Content-Type",
@@ -3513,11 +3513,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA=\""
+          "Value": "\"0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3527,7 +3527,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xthdk3ioda"
+          "Value": "zr09cav9rp"
         },
         {
           "Name": "label",
@@ -3535,13 +3535,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-e8Sr7/z2XZmFBaG3wHSBD6IWTDgeBhpU9D+qL910mzA="
+          "Value": "sha256-0W+5qhMyph+TMbzDmZ0sloH1yKc7ulT3OaMei87bk00="
         }
       ]
     },
     {
-      "Route": "css/style.xthdk3ioda.css.gz",
-      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz",
+      "Route": "css/style.zr09cav9rp.css.gz",
+      "AssetFile": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3550,7 +3550,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5272"
+          "Value": "5246"
         },
         {
           "Name": "Content-Type",
@@ -3558,11 +3558,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs=\""
+          "Value": "\"uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 19:04:16 GMT"
+          "Value": "Tue, 13 May 2025 19:27:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3580,7 +3580,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xthdk3ioda"
+          "Value": "zr09cav9rp"
         },
         {
           "Name": "label",
@@ -3588,7 +3588,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NetJ/LWMZRCUEXYcREev72JTLHSczxSqxXGArTy0/Rs="
+          "Value": "sha256-uvE2MSPEcauz6+DMwFw5gtnu7NsZS3nVBkxFjTbxh6c="
         }
       ]
     },

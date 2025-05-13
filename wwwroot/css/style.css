@@ -72,7 +72,6 @@ a:hover {
 .cabecalho{
     display: flex;
     align-items: center;
-    height: 80px;
 }
   
 .headerbar{
@@ -741,6 +740,7 @@ input[type="date"] {
 .list-andamento img{
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
     width: 95%;
     height: 100%;
     object-fit: cover;
@@ -748,8 +748,9 @@ input[type="date"] {
 }
 
 .moldura{
-    width:400px;
+    width: clamp(32rem, 4vw, 40rem);
     height: 130px;
+    border-radius: 12px;
     
 }
 .list-andamento a{
@@ -1188,5 +1189,14 @@ input[type="date"] {
 @media screen and (max-width:1118px) {
     .logo__traineehub{
         display: none;
+    }
+    .container-body{
+        display: grid; /* Define o layout como Grid */
+        grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
+        grid-template-rows: auto auto;
+        gap: 20px; /* Espaço entre as colunas */
+        margin-left: 2rem; /* Ajuste conforme necessário */
+        margin-top: 70px; /* Ajuste conforme necessário */
+        margin-right: 2rem;
     }
 }
