@@ -1,3 +1,63 @@
+/*=========REUSABLE CSS CLASSES=========*/
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+/*=============== BASE ===============*/
+textarea {
+    min-height: 140px;
+    width: 95%;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+
+    font-family: 'Inter', serif;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E9E9E9;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+label {
+    font-family: 'Inter', bold;
+    font-size: 18px;
+    color: #0A2D46;
+}
+h1 {
+    font-style: bold;
+    font-size:xx-large;
+    margin-left: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+  
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    color: #a2c4db;
+}
+ 
 /* Fundo escuro da modal */
 .modal {
     width: 100vw;
@@ -96,20 +156,6 @@
     font-weight: 400;
     background: #f3f3f3;
 }
-textarea {
-    min-height: 140px;
-    width: 95%;
-    resize: none;
-    outline: none;
-    border: 1px solid #ececec;
-    border-radius: 6px;
-    font-size: 14px;
-
-    font-family: 'Inter', serif;
-    padding: 10px 10px 10px 14px;
-    font-weight: 400;
-    background: #f3f3f3;
-}
 
 .buttons {
     display: flex;
@@ -130,16 +176,6 @@ textarea {
     padding: 6px 12px;
     transition: all 0.3s ease;
     font-size: 14px;
-}
-
-
-
-label {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Inter', bold;
-    color: #25445a;
-    display: block;
 }
 
 .btnAddTreinamento{
@@ -235,12 +271,7 @@ input[type="date"] {
     gap: 5px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #E9E9E9;
-    font-family: "Mukta Vaani", sans-serif;
-  }
+
   .texto_modulo {
     width: 79.2%;
     position: relative;
@@ -310,12 +341,6 @@ body {
   
   .Modulos .selecionar input[type="checkbox"] {
     margin-right: 10px;
-  }
-
-  h1 {
-    font-style: bold;
-    font-size:xx-large;
-    margin-left: 20px;
   }
     
   .user-photo img{
@@ -415,16 +440,11 @@ body {
     width: 450px;
 }
 
-    .GerirUsuarios:hover {
-        background-color: #0A2D46;
-    }
-
-
-label {
-    font-family: 'Inter', bold;
-    font-size: 18px;
-    color: #0A2D46;
+.GerirUsuarios:hover {
+    background-color: #0A2D46;
 }
+
+
 .topo h1{
     width: 1398px;
 }
@@ -458,25 +478,7 @@ label {
     background-color: #0A2D46;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-  
-  
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-  
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
+ 
   /*CABEÇALHO*/
 .cabecalho{
     display: flex;
@@ -599,9 +601,7 @@ ul {
     font-weight: bold;
 }
   
-a:hover {
-    color: #a2c4db;
-}
+
 /*CARROSSEL*/
 
 .conteudo #myCarousel {
@@ -961,9 +961,6 @@ a:hover {
     width: 450px;
     height: 520px;
     border-radius: 20px;
-    position: relative;
-    left: 60%;
-    top:  5%;
     z-index: 20;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -988,8 +985,6 @@ a:hover {
 .senha-label{
     margin-left: 75px;
 }
-
-
 
 .tela-de-login input {
     width: 70%;
@@ -1202,5 +1197,17 @@ a:hover {
     }
     .andamento-title{
         width: 600px;
+    }
+}
+.container_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media screen and (max-width:1118px) {
+    .logo__traineehub{
+        display: none;
     }
 }
