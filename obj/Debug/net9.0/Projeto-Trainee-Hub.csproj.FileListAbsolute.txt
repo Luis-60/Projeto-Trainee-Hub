@@ -317,7 +317,6 @@
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz
 /home/luis/Documentos/Dev/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-n57e7xyvst.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/6e4i0ze0ip-103g16wsmb.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-d7gid7qzgf.gz
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Projeto-Trainee-Hub.deps.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Projeto-Trainee-Hub.runtimeconfig.json
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/bin/Debug/net9.0/Azure.Core.dll
@@ -454,3 +453,5 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-.10ED0647.Up2Date
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-xthdk3ioda.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/0xxcr3z3s9-twa76cdvah.gz
