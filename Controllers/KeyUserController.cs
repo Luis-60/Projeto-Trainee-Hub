@@ -12,7 +12,7 @@ using Projeto_Trainee_Hub.Helper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 [Authorize(Roles = "2")]
-public class AdminController : Controller
+public class KeyUserController : Controller
 {
     private readonly UsuariosRepository _usuariosRepository;
     private readonly ISessao _sessao;
@@ -21,7 +21,7 @@ public class AdminController : Controller
     private readonly AulaRepository _aulaRepository;  
 
     private readonly MasterContext _context;
-    public AdminController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
+    public KeyUserController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
     {
         _usuariosRepository = usuariosRepository;
         _treinamentoRepository = treinamentoRepository;
@@ -191,7 +191,7 @@ public class AdminController : Controller
 
        await _usuariosRepository.AddAsync(novoUsuario);
 
-        return RedirectToAction("GerirUsuarios", "Admin");
+        return RedirectToAction("GerirUsuarios", "KeyUser");
     }
     public List<SelectListItem> ObterSetores(int? idSetorSelecionado)
     {
@@ -263,13 +263,13 @@ public class AdminController : Controller
                
             await _usuariosRepository.UpdateAsync(usuarioExistente);
 
-            return RedirectToAction("GerirUsuarios", "Admin"); 
+            return RedirectToAction("GerirUsuarios", "KeyUser"); 
             
     }
     [HttpPost]
     public async Task<IActionResult> ExcluirUsuario(int id)
     {
         await _usuariosRepository.DeleteAsync(id);
-        return RedirectToAction("GerirUsuarios", "Admin");
+        return RedirectToAction("GerirUsuarios", "KeyUser");
     }
 }

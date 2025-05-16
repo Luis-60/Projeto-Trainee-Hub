@@ -11,7 +11,7 @@
             <h4 class="mb-0">👤 Criar Novo Usuário</h4>
         </div>
         <div class="card-body">
-            <form asp-action="CriarUsuarios" asp-controller="Admin" method="post">
+            <form asp-action="CriarUsuarios" asp-controller="KeyUser" method="post">
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label asp-for="Nome" class="form-label"></label>
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end">
-                    <a asp-action="Perfil" asp-controller="Admin" class="btn btn-secondary me-2">Voltar</a>
+                    <a asp-action="Perfil" asp-controller="KeyUser" class="btn btn-secondary me-2">Voltar</a>
                     <button type="submit" class="btn btn-success">Criar Usuário</button>
                 </div>
             </form>

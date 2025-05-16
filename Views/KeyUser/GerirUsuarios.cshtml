@@ -38,7 +38,7 @@
                     <td>@usuario.Setor</td>
                     <td>@usuario.Tipo</td>
                     <td>
-                        <form action="/Admin/AcoesUsuarios/@usuario.UsuarioId" method="get" style="display: inline;">
+                        <form action="/KeyUser/AcoesUsuarios/@usuario.UsuarioId" method="get" style="display: inline;">
                             <button type="submit" class="btn btn-primary">Editar</button>
                         </form>
                     </td>
@@ -54,7 +54,7 @@
         </tbody>
     </table>
 
-    <a asp-action="CriarUsuarios" asp-controller="Admin" class="CriarUsuario">Criar Usuario</a>
+    <a asp-action="CriarUsuarios" asp-controller="KeyUser" class="CriarUsuario">Criar Usuario</a>
 
 </div>
 

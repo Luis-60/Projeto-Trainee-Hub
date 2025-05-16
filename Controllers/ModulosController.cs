@@ -115,6 +115,6 @@ public class ModulosController : Controller
         _moduloRepository.Save();
 
         var id = treinamentoModulo.modulos.IdModulos;
-        return RedirectToAction("Modulos", "Admin", new {id});
+        return RedirectToAction("Modulos", "KeyUser", new {id});
     }
 }
