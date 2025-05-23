@@ -1,0 +1,45 @@
+﻿@model Projeto_Trainee_Hub.ViewModel.EmpresaUsuarioSetorTipoViewModel
+
+@{
+    ViewData["Title"] = "Editar Empresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar Empresa</h2>
+
+<form asp-action="EditarEmpresa" method="post">
+    <input type="hidden" asp-for="IdEmpresa" />
+
+    <div class="form-group">
+        <label asp-for="NomeEmpresa"></label>
+        <input asp-for="NomeEmpresa" class="form-control" />
+        <span asp-validation-for="NomeEmpresa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descricao"></label>
+        <textarea asp-for="Descricao" class="form-control"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmailEmpresa"></label>
+        <input asp-for="EmailEmpresa" class="form-control" />
+        <span asp-validation-for="EmailEmpresa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefone"></label>
+        <input asp-for="Telefone" class="form-control" />
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Codigo"></label>
+        <input asp-for="Codigo" class="form-control" />
+        <span asp-validation-for="Codigo" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <a href="@Url.Action("Administracao", "Admin")" class="btn btn-secondary">Cancelar</a>
+</form>
