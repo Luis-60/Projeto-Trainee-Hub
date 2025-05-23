@@ -56,6 +56,19 @@
                     <div class="card-content">
                         <div class="card-title">@treinamento.Nome</div> <!-- Usando os dados de treinamento -->
                         <div class="card-date">DATA ÍNICIO: @treinamento.DataInicio</div> <!-- Usando os dados de treinamento -->
+                            @{
+                                int progresso = 0;
+
+                                if (Model.ProgressoPorTreinamento != null && Model.ProgressoPorTreinamento.ContainsKey(treinamento.IdTreinamentos))
+                                {
+                                    progresso = Model.ProgressoPorTreinamento[treinamento.IdTreinamentos];
+                                }
+                            }
+                            <div class="progress-bar bg-success" role="progressbar" style="width: @progresso%" aria-valuenow="@progresso" aria-valuemin="0" aria-valuemax="100">
+                                @progresso%
+                            </div>
+
+
                     </div>
                 </a>
             </li>

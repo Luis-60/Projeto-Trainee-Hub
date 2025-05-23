@@ -29,6 +29,8 @@ public partial class MasterContext : DbContext
 
     public virtual DbSet<UsuariosTreinamento> UsuariosTreinamentos { get; set; }
 
+    public virtual DbSet<ProgressoAula> ProgressoAulas { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Aula>(entity =>
@@ -229,6 +231,31 @@ public partial class MasterContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Usuarios___idUsu__414EAC47");
         });
+
+        modelBuilder.Entity<ProgressoAula>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ProgressoAula");
+
+            entity.ToTable("ProgressoAulas");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+            entity.Property(e => e.IdAula).HasColumnName("idAula");
+            entity.Property(e => e.DataConclusao).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Aula)
+                .WithMany()
+                .HasForeignKey(d => d.IdAula)
+                .HasConstraintName("FK__ProgressoAula__idAula")
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.Usuario)
+                .WithMany()
+                .HasForeignKey(d => d.IdUsuario)
+                .HasConstraintName("FK__ProgressoAula__idUsuario")
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
 
         OnModelCreatingPartial(modelBuilder);
     }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Projeto_Trainee_Hub.Helper;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.ViewModel;
 using System.IO;
@@ -12,11 +13,14 @@ namespace Projeto_Trainee_Hub.Controllers
         private readonly MasterContext _context;
         private readonly IWebHostEnvironment _environment;
         private readonly string _uploadFolder;
+        private readonly ISessao _sessao;
 
-        public AulasController(MasterContext context, IWebHostEnvironment environment)
+
+        public AulasController(MasterContext context, IWebHostEnvironment environment, ISessao sessao)
         {
             _context = context;
             _environment = environment;
+            _sessao = sessao;
             _uploadFolder = Path.Combine(_environment.WebRootPath, "uploads");
             if (!Directory.Exists(_uploadFolder))
             {
@@ -25,7 +29,7 @@ namespace Projeto_Trainee_Hub.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Criar(string Nome, string Descricao, int IdModulo, List<IFormFile> files)
+        public async Task<IActionResult> Criar(string Nome, string Descricao, int IdModulo, string VideoUrl, List<IFormFile> files)
         {
             if (string.IsNullOrWhiteSpace(Nome) || IdModulo == 0)
             {
@@ -37,7 +41,8 @@ namespace Projeto_Trainee_Hub.Controllers
             {
                 Nome = Nome,
                 Descricao = Descricao,
-                IdModulo = IdModulo
+                IdModulo = IdModulo,
+                VideoUrl = VideoUrl
             };
 
             _context.Aulas.Add(aula);
@@ -86,6 +91,8 @@ namespace Projeto_Trainee_Hub.Controllers
                 aulaBanco.Nome = aula.Nome;
                 aulaBanco.Descricao = aula.Descricao;
                 aulaBanco.IdModulo = aula.IdModulo;
+                aulaBanco.VideoUrl = aula.VideoUrl;
+
 
                 var docsAntigos = _context.Documentos.Where(d => d.IdAula == aula.IdAula).ToList();
                 foreach (var doc in docsAntigos)
@@ -165,5 +172,39 @@ namespace Projeto_Trainee_Hub.Controllers
             else
                 return RedirectToAction("Modulos", "AulasController");
         }
+        [HttpPost]
+        public IActionResult ConcluirAula(int idAula)
+        {
+            // Recuperar o usuário logado da sessão
+            var usuario = _sessao.BuscarSessaoUsuario(); // ou outro método que você esteja usando
+            if (usuario == null)
+            {
+                return Unauthorized();
+            }
+
+            int idUsuario = usuario.IdUsuarios;
+
+            var jaConcluida = _context.ProgressoAulas
+                .Any(p => p.IdAula == idAula && p.IdUsuario == idUsuario);
+
+            if (!jaConcluida)
+            {
+                var progresso = new ProgressoAula
+                {
+                    IdAula = idAula,
+                    IdUsuario = idUsuario,
+                    DataConclusao = DateTime.Now
+                };
+
+                _context.ProgressoAulas.Add(progresso);
+                _context.SaveChanges();
+            }
+
+            if (Request.Headers.ContainsKey("Referer"))
+                return Redirect(Request.Headers["Referer"].ToString());
+
+            return RedirectToAction("Modulos", "Aulas");
+        }
+
     }
 }

@@ -40,6 +40,17 @@
                     </div>
                 }
 
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="@aula.VideoUrl.Replace("watch?v=", "embed/")" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <form asp-controller="Aulas" asp-action="ConcluirAula" method="post">
+                    <input type="hidden" name="idAula" value="@aula.IdAula" />
+                    <button type="submit" class="btn btn-success mt-3">Concluir Aula</button>
+                </form>
+
+
+
                 <div class="mt-2">
                     <form asp-controller="Aulas" asp-action="Excluir" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="@aula.IdAula" />
@@ -49,7 +60,7 @@
                     <button class="btn btn-warning"
                             data-toggle="modal"
                             data-target="#modalAula"
-                            onclick="abrirModalEditar(@aula.IdAula, '@aula.Nome', '@aula.Descricao', @aula.IdModulo)">
+                            onclick="abrirModalEditar(@aula.IdAula, '@aula.Nome', '@aula.Descricao', @aula.IdModulo, '@aula.VideoUrl')">
                         Editar
                     </button>
                 </div>
@@ -88,6 +99,11 @@ else
                         <textarea name="Descricao" id="inputDescricao" class="form-control" placeholder="Descreva a aula" required></textarea>
                     </div>
 
+                    <div class="form-group">
+                        <label for="VideoUrl">Link do Vídeo (YouTube, Vimeo...):</label>
+                        <input type="url" name="VideoUrl" id="inputVideoUrl" class="form-control" required />
+                    </div>
+
                     <div class="form-group" id="divArquivo">
                         <label for="files">Arquivos:</label>
                         <input type="file" name="files" class="form-control-file" multiple />
@@ -112,6 +128,7 @@ else
             document.getElementById('inputNome').value = "";
             document.getElementById('inputDescricao').value = "";
             document.getElementById('inputIdModulo').value = "@Model.modulos.IdModulos";
+            document.getElementById('inputVideoUrl').value = "";
             document.getElementById('divArquivo').style.display = 'block';
         }
 
@@ -122,6 +139,7 @@ else
             document.getElementById('inputNome').value = nome;
             document.getElementById('inputDescricao').value = descricao;
             document.getElementById('inputIdModulo').value = idModulo;
+            document.getElementById('inputVideoUrl').value = videoUrl || "";
             document.getElementById('divArquivo').style.display = 'block';
         }
     </script>
