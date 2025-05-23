@@ -98,7 +98,7 @@ public class HomeController : Controller
             case "1":
                 return RedirectToAction("Index", "Usuario");
             case "2":
-                return RedirectToAction("Perfil", "Admin");
+                return RedirectToAction("Perfil", "KeyUser");
             case "3":
                 return RedirectToAction("Dashboard", "Gestor");
             case "4":

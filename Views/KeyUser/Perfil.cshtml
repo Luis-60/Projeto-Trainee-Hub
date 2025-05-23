@@ -10,7 +10,7 @@
         <div class="user-photo">
             <img src="~/images/IconePerfil(2).png">
             <button class="EditarPerfil" type="button">Editar Perfil</button>
-            <a asp-action="GerirUsuarios" asp-controller="Admin" class="GerirUsuarios" type="button">Gerir Usuários</a>
+            <a asp-action="GerirUsuarios" asp-controller="KeyUser" class="GerirUsuarios" type="button">Gerir Usuários</a>
         </div>
     </div>
     <div class="container-info">
@@ -48,8 +48,8 @@
         <ul class="bloco_treinamento">
         @foreach(var treinamento in @Model.listaTreinamentos) 
         {
-            <li class="list-andamento" style="width: clamp(30rem, 4vw, 38rem;">
-                <a asp-controller="Admin" asp-action="Treinamentos" asp-route-id="@treinamento.IdTreinamentos">
+            <li class="list-andamento" style="width: 38rem;">
+                <a asp-controller="KeyUser" asp-action="Treinamentos" asp-route-id="@treinamento.IdTreinamentos">
                     <div class="moldura">
                         <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                     </div>

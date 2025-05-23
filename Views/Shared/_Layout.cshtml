@@ -27,7 +27,7 @@
                 <ul>
                     @if (User.IsInRole("2"))
                     {
-                        <a asp-area="" asp-controller="Admin" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)"><li>Menu</li></a>
+                        <a asp-area="" asp-controller="KeyUser" asp-action="Index" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)"><li>Menu</li></a>
                     }
                     else
                     {
@@ -59,7 +59,7 @@
                 <div class="icone-perfil">
                     @if (User.IsInRole("2"))
                     {
-                        <a asp-area="" asp-controller="Admin" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a asp-area="" asp-controller="KeyUser" asp-action="Perfil" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                             <img src="~/images/IconePerfil.png">
                         </a>
                     }
