@@ -1,3 +1,153 @@
+/*=========REUSABLE CSS CLASSES=========*/
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
+.container-body{
+    display: grid; /* Define o layout como Grid */
+    grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
+    grid-template-rows: auto auto;
+    gap: 20px; /* Espaço entre as colunas */
+    margin-left: 10rem; /* Ajuste conforme necessário */
+    margin-top: 70px; /* Ajuste conforme necessário */
+    margin-right: 10rem;
+}
+/*=============== BASE ===============*/
+textarea {
+    min-height: 140px;
+    width: 95%;
+    resize: none;
+    outline: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    font-size: 14px;
+
+    font-family: 'Inter', serif;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E9E9E9;
+    font-family: "Mukta Vaani", sans-serif;
+}
+
+label {
+    font-family: 'Inter', bold;
+    font-size: 18px;
+    color: #0A2D46;
+}
+h1 {
+    font-style: bold;
+    font-size:xx-large;
+    margin-left: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+  
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    color: #a2c4db;
+}
+
+/*====HEADERBAR====*/
+.cabecalho{
+    display: flex;
+    align-items: center;
+}
+  
+.headerbar{
+    width: 100%;
+    height: 6rem;
+    padding: 0px 10px;
+    background-color: #4D83AA;
+}
+  
+.headerbar img{
+    height: 5rem;
+}
+
+.headerbar-conteudo{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+/*MENU*/
+.menu {
+    display: flex;
+    justify-content: flex-start; /* Mantém o menu alinhado à esquerda */
+    width: 100px; /* Defina um tamanho fixo para evitar distorções */
+}
+/*MENU*/
+.off-screen-menu{
+    background-color: rgb(34, 37, 39);
+    height: 100vh;
+    width: 100%;
+    max-width: 220px;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3 ease;
+}
+
+.off-screen-menu.active{
+    left: 0;
+    z-index: 10;
+}
+
+.menu{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 11;
+    margin-top: 0.30rem
+}
+
+.menu span{
+    height: 5px;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease
+}
+
+.menu span:nth-child(1){top: 25%}
+.menu span:nth-child(3){top: 75%}
+
+.menu.active span:nth-child(1){top: 50%;transform: translate(-50%, -50%) rotate(45deg)}
+.menu.active span:nth-child(2){opacity: 0;}
+.menu.active span:nth-child(3){top: 50%;transform: translate(-50%, -50%) rotate(-45deg)}
+
 /* Fundo escuro da modal */
 .modal {
     width: 100vw;
@@ -96,20 +246,6 @@
     font-weight: 400;
     background: #f3f3f3;
 }
-textarea {
-    min-height: 140px;
-    width: 95%;
-    resize: none;
-    outline: none;
-    border: 1px solid #ececec;
-    border-radius: 6px;
-    font-size: 14px;
-
-    font-family: 'Inter', serif;
-    padding: 10px 10px 10px 14px;
-    font-weight: 400;
-    background: #f3f3f3;
-}
 
 .buttons {
     display: flex;
@@ -130,16 +266,6 @@ textarea {
     padding: 6px 12px;
     transition: all 0.3s ease;
     font-size: 14px;
-}
-
-
-
-label {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Inter', bold;
-    color: #25445a;
-    display: block;
 }
 
 .btnAddTreinamento{
@@ -235,12 +361,7 @@ input[type="date"] {
     gap: 5px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #E9E9E9;
-    font-family: "Mukta Vaani", sans-serif;
-  }
+
   .texto_modulo {
     width: 79.2%;
     position: relative;
@@ -311,27 +432,13 @@ body {
   .Modulos .selecionar input[type="checkbox"] {
     margin-right: 10px;
   }
-
-  h1 {
-    font-style: bold;
-    font-size:xx-large;
-    margin-left: 20px;
-  }
     
   .user-photo img{
     max-width: 70%;
     max-height: 70%;
 }
 
-.container-body{
-    display: grid; /* Define o layout como Grid */
-    grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
-    grid-template-rows: auto auto;
-    gap: 20px; /* Espaço entre as colunas */
-    margin-left: 160px; /* Ajuste conforme necessário */
-    margin-top: 70px; /* Ajuste conforme necessário */
-    margin-right: 160px;
-}
+
 
 .container-photo{
     grid-column: 1 / 2;
@@ -415,16 +522,11 @@ body {
     width: 450px;
 }
 
-    .GerirUsuarios:hover {
-        background-color: #0A2D46;
-    }
-
-
-label {
-    font-family: 'Inter', bold;
-    font-size: 18px;
-    color: #0A2D46;
+.GerirUsuarios:hover {
+    background-color: #0A2D46;
 }
+
+
 .topo h1{
     width: 1398px;
 }
@@ -458,47 +560,9 @@ label {
     background-color: #0A2D46;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-  
-  
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-  
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
-  /*CABEÇALHO*/
-.cabecalho{
-    display: flex;
-    height: 80px;
-}
-  
-.headerbar{
-    width: 100%;
-    height: 70px;
-    padding: 0px 10px;
-    background-color: #4D83AA;
-}
-  
-.headerbar img{
-    margin-top: 5px;
-    height: 50px;
-}
-.menu {
-    display: flex;
-    justify-content: flex-start; /* Mantém o menu alinhado à esquerda */
-    width: 100px; /* Defina um tamanho fixo para evitar distorções */
-}
+ 
+
+
   
 .logos {
     position: absolute;
@@ -506,12 +570,6 @@ ul {
     transform: translateX(-50%); /* Centraliza no meio da tela */
     display: flex;
     align-items: center;
-}
-  
-.perfil {
-    display: flex;
-    justify-content: flex-end; /* Mantém o perfil alinhado à direita */
-    width: 100px; /* Mantém um tamanho fixo semelhante ao menu */
 }
   
 .logo-empresa{
@@ -538,14 +596,6 @@ ul {
     background-color: #F1F1F1; /* Cor do retângulo */
 }
   
-.headerbar-conteudo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    width: 1205px;
-    margin-left: 150px;
-}
   
   /*OVERLAY*/
 .overlay {
@@ -599,9 +649,7 @@ ul {
     font-weight: bold;
 }
   
-a:hover {
-    color: #a2c4db;
-}
+
 /*CARROSSEL*/
 
 .conteudo #myCarousel {
@@ -670,6 +718,7 @@ a:hover {
     grid-template-rows: auto;
     display: grid;
     width: 900px;
+    max-width: fit-content;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
 }
@@ -677,9 +726,10 @@ a:hover {
 .bloco_treinamento-andamento{
     margin-left: 15px;
     display: grid;
+    width: 165%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 80px;
     
 }
 .list-andamento{
@@ -687,20 +737,25 @@ a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     width: 95%;
     max-height: 300px;
+    border-radius: 12px;
  
 }
 .list-andamento img{
     position: relative;
     overflow: hidden;
-    width: 95%;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s ease-in-out;
 }
 
 .moldura{
-    width:400px;
+    width: 100%;
+    max-width: 100%;
     height: 130px;
+    border-radius: 12px;
     
 }
 .list-andamento a{
@@ -883,76 +938,6 @@ a:hover {
     margin-left: 15px;
 }
 
-/*MENU*/
-.off-screen-menu{
-    background-color: rgb(34, 37, 39);
-    height: 100vh;
-    width: 100%;
-    max-width: 220px;
-    position: fixed;
-    top: 0;
-    left: -220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3 ease;
-}
-
-.off-screen-menu.active{
-    left: 0;
-    z-index: 10;
-}
-
-.menu{
-    height: 50px;
-    width: 50px;
-    position: relative;
-    z-index: 11;
-    margin-top: 5px;
-}
-
-.menu span{
-    height: 5px;
-    width: 100%;
-    background-color: #D9D9D9;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease
-}
-
-.menu span:nth-child(1){
-    top: 25%
-}
-
-.menu span:nth-child(3){
-    top: 75%
-}
-
-.menu.active span:nth-child(1){
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg)
-}
-
-.menu.active span:nth-child(2){
-    opacity: 0;
-}
-
-.menu.active span:nth-child(3){
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg)
-}
-
-.menu h3{
-    left: 50px;
-    bottom: 9px;
-    position: relative;
-}
 
 
 .tela-de-login {
@@ -961,9 +946,6 @@ a:hover {
     width: 450px;
     height: 520px;
     border-radius: 20px;
-    position: relative;
-    left: 60%;
-    top:  5%;
     z-index: 20;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -988,8 +970,6 @@ a:hover {
 .senha-label{
     margin-left: 75px;
 }
-
-
 
 .tela-de-login input {
     width: 70%;
@@ -1202,5 +1182,79 @@ a:hover {
     }
     .andamento-title{
         width: 600px;
+    }
+}
+.container_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media screen and (max-width:1118px) {
+    .container-andamento{
+        display: flex;
+        max-width: fit-content;
+        overflow: auto;
+        align-items: center;
+        margin-left: 30px;
+    }
+    .container-pendentes{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        position: block;
+        align-self: center;
+        justify-content: center;
+    }
+    .container-futuro{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        position: block;
+        align-self: center;
+        justify-content: center;
+    }
+    .bloco_treinamento-andamento{
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+        gap: 20px;
+    }
+    .bloco_treinamento-pendentes{
+        display: flex;
+        gap: 20px;
+    }
+    .bloco_treinamento-futuro{
+        display: flex;
+        gap: 20px;
+    }
+    .list-futuro{
+        border-bottom: none !important;
+    }
+    .list-pendentes{
+        border-bottom: none !important;
+    }
+    .logo__traineehub{
+        display: none;
+    }
+    .container-historico{
+        max-width: 95vw;
+        max-height: 70vw;
+    }
+    .container-pendentes{
+        display: flex;
+        align-items: center;
+    }
+    .container-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin: 40px 10px 10px 10px;
+    }
+    .list-andamento img{
+        width:100%;
+        max-width: 100%;
     }
 }

@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets/images/image 2.png"
     },
     {
+      "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/logo-traineehub.svg",
+      "PackagePath": "staticwebassets/images/logo-traineehub.svg"
+    },
+    {
       "Id": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/wwwroot/images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png",
       "PackagePath": "staticwebassets/images/upload/treinamentos/0ba807d4-9992-4a45-8faf-82506899c67c.png"
     },
