@@ -718,6 +718,7 @@ input[type="date"] {
     grid-template-rows: auto;
     display: grid;
     width: 900px;
+    max-width: fit-content;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
 }
@@ -725,9 +726,10 @@ input[type="date"] {
 .bloco_treinamento-andamento{
     margin-left: 15px;
     display: grid;
+    width: 165%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 50px;
+    gap: 80px;
     
 }
 .list-andamento{
@@ -742,14 +744,16 @@ input[type="date"] {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    width: 95%;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s ease-in-out;
 }
 
 .moldura{
-    width: clamp(32rem, 4vw, 40rem);
+    width: 100%;
+    max-width: 100%;
     height: 130px;
     border-radius: 12px;
     
@@ -1251,5 +1255,6 @@ input[type="date"] {
     }
     .list-andamento img{
         width:100%;
+        max-width: 100%;
     }
 }
