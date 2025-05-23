@@ -727,7 +727,7 @@ input[type="date"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 50px;
     
 }
 .list-andamento{
@@ -735,6 +735,7 @@ input[type="date"] {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     width: 95%;
     max-height: 300px;
+    border-radius: 12px;
  
 }
 .list-andamento img{
@@ -1187,16 +1188,68 @@ input[type="date"] {
 }
 
 @media screen and (max-width:1118px) {
+    .container-andamento{
+        display: flex;
+        max-width: fit-content;
+        overflow: auto;
+        align-items: center;
+        margin-left: 30px;
+    }
+    .container-pendentes{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        position: block;
+        align-self: center;
+        justify-content: center;
+    }
+    .container-futuro{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        position: block;
+        align-self: center;
+        justify-content: center;
+    }
+    .bloco_treinamento-andamento{
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+        gap: 20px;
+    }
+    .bloco_treinamento-pendentes{
+        display: flex;
+        gap: 20px;
+    }
+    .bloco_treinamento-futuro{
+        display: flex;
+        gap: 20px;
+    }
+    .list-futuro{
+        border-bottom: none !important;
+    }
+    .list-pendentes{
+        border-bottom: none !important;
+    }
     .logo__traineehub{
         display: none;
     }
-    .container-body{
-        display: grid; /* Define o layout como Grid */
-        grid-template-columns: 1fr 1fr; /* Duas colunas com tamanho igual */
-        grid-template-rows: auto auto;
-        gap: 20px; /* Espaço entre as colunas */
-        margin-left: 2rem; /* Ajuste conforme necessário */
-        margin-top: 70px; /* Ajuste conforme necessário */
-        margin-right: 2rem;
+    .container-historico{
+        max-width: 95vw;
+        max-height: 70vw;
+    }
+    .container-pendentes{
+        display: flex;
+        align-items: center;
+    }
+    .container-main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin: 40px 10px 10px 10px;
+    }
+    .list-andamento img{
+        width:100%;
     }
 }
