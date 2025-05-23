@@ -454,4 +454,4 @@
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/Projeto-Trainee-Hub.genruntimeconfig.cache
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/ref/Projeto-Trainee-Hub.dll
 /home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/0xxcr3z3s9-twa76cdvah.gz
-/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-zr09cav9rp.gz
+/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/Debug/net9.0/compressed/fb86fvz18w-4wh1b8zz6g.gz
