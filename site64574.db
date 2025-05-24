@@ -126,3 +126,12 @@ INSERT INTO Usuarios (Nome, Email, Matricula, Senha, Idade, Imagem, QtdTreinamen
 ('Ana Lima', 'ana.lima@email.com', 'MAT44556', 'SenhaSegura4', 25, 'ana.jpg', 2, 4, 1, 2),
 ('Pedro Santos', 'pedro.santos@email.com', 'MAT77889', 'SenhaSegura5', 40, 'pedro.jpg', 10, 5, 4, 3),
 ('Adm', 'adm.adm@email.com', 'MAT310305', 'SenhaSegura6', '20','adm.jpg', 9, 11, 5, 6);
+
+CREATE TABLE ProgressoAulas (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    IdUsuario INT NOT NULL,
+    IdAula INT NOT NULL,
+    DataConclusao DATETIME NOT NULL,
+    FOREIGN KEY (IdAula) REFERENCES Aula(idAula),
+	FOREIGN KEY (IdUsuario) REFERENCES Usuarios(idUsuarios)
+);
