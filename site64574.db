@@ -1,4 +1,4 @@
-CREATE TABLE Setor (
+	CREATE TABLE Setor (
     idSetor INT IDENTITY(1,1) PRIMARY KEY,
     Nome VARCHAR(50)
 )
@@ -87,6 +87,7 @@ CREATE TABLE Aula (
     Nome VARCHAR(120),
     Descricao VARCHAR(max),
     idModulo INT,
+    VideoUrl NVARCHAR (MAX),
     FOREIGN KEY (idModulo) REFERENCES Modulos(idModulos)
 )
 CREATE TABLE Documento (
