@@ -37,20 +37,45 @@ public class KeyUserController : Controller
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
         {
-            return View();
+            return RedirectToAction("Login", "Home");
         }
-        
-        var idUsuario = usuario.IdUsuarios;
-        if (idUsuario != null)
-        {
-            var usuarios = await _usuariosRepository.GetByIdAsync(idUsuario);
-            var usuarioTreinamentos = await _treinamentoRepository.GetByIdCriadorAsync(idUsuario);
-            var treinamentoUsuarios = new TreinamentoUsuariosViewModel{treinamentos = new Treinamento(), usuarios = usuarios, listaTreinamentos = usuarioTreinamentos};
 
-        return View(treinamentoUsuarios);
+        var idUsuario = usuario.IdUsuarios;
+        var usuarios = await _usuariosRepository.GetByIdAsync(idUsuario);
+        var usuarioTreinamentos = await _treinamentoRepository.GetByIdCriadorAsync(idUsuario);
+
+        var progressoPorTreinamento = new Dictionary<int, int>();
+
+        foreach (var treinamento in usuarioTreinamentos) 
+        {
+
+            var modulos = _context.Modulos
+                    .Where(m => m.IdTreinamento == treinamento.IdTreinamentos)
+                    .Select(m => m.IdModulos)
+                    .ToList();
+
+            var aulasIds = _context.Aulas
+                .Where(a => modulos.Contains(a.IdModulo))
+                .Select(a => a.IdAula)
+                .ToList();
+
+            var totalAulas = aulasIds.Count;
+            var concluidas = _context.ProgressoAulas
+                .Count(p => aulasIds.Contains(p.IdAula) && p.IdUsuario == idUsuario);
+
+            int progresso = (totalAulas == 0) ? 0 : (int)Math.Round((double)concluidas * 100 / totalAulas);
+            progressoPorTreinamento[treinamento.IdTreinamentos] = progresso;
         }
-        
-        return RedirectToAction("Index");
+
+        var treinamentoUsuarios = new TreinamentoUsuariosViewModel
+        {
+            treinamentos = new Treinamento(),
+            usuarios = usuarios,
+            listaTreinamentos = usuarioTreinamentos,
+            ProgressoPorTreinamento = progressoPorTreinamento
+        };
+        return View(treinamentoUsuarios);
+
     }
 
     public async Task<IActionResult> TreinamentosAsync(int id)

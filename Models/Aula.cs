@@ -15,5 +15,6 @@ public partial class Aula
 
     public virtual Modulo? IdModuloNavigation { get; set; }
     public virtual ICollection<Documento> Documentos { get; set; } = new List<Documento>();
+    public string? VideoUrl { get; set; }
 
 }
