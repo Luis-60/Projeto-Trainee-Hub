@@ -453,26 +453,19 @@ input[type="date"] {
     border-top: 1px solid #4D83AA;
     max-width: 1520px;
 }
-
-.bloco_treinamento {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
-    gap: 20rem; /* Espaço entre os itens */
-    padding: 0;
-    list-style: none;
-    justify-items: center;
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
 }
 
-
-.bloco_treinamento-andamento:last-child,
-.bloco_treinamento:last-child{
-    margin-bottom: 40px;
+.item img{
+    min-height: 42rem;
+    max-height: 42rem;
+    min-width: 80rem;
+    max-width: 80rem;
 }
-.list-andamento {
-    width: 95%;
-    max-height: 300px;
-}
-
 .container-treinamento h1{
     color: #4D83AA;
     font-family: 'Inter', bold;
@@ -813,11 +806,6 @@ input[type="date"] {
     margin-left: 5px;
 }
 
-.active:after {
-    content: "\2796"; /* Unicode (-) */
-}
-
-
 .video-info{
     width: 80rem;
     display: grid;
@@ -838,60 +826,7 @@ input[type="date"] {
 }
 
 /*Menu Responsive*/
-@media (min-width: 1600px) {
-    .body{
-        font-size: 1.2rem;
-    }
-    .container-main {
-        font-size: 1.1rem;
-        padding: 4vw;
-    }
-    .headerbar-conteudo {
-        width: 1520px;
-    }
-    .container-futuro{
-        max-width:400px;
-    }
-    .container-pendentes{
-        max-width: 400px;
-    }
-    .row{
-        max-width: 400px;
-    }
-    .moldura-pendentes{
-        max-width:400px;
-    }
-    .list-futuro{
-        max-width: 400px;
-    }
-    .moldura-futuro{
-        max-width:400px;
-    }
-    .moldura-futuro img{
-        width: 400px;
-    }
-    .list-futuro,
-    .list-pendentes {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: start;     /* Align items to the left */
-        border-bottom: 1px solid #7B7B7B;
-        margin-bottom: 10px;
-    }
-    .moldura-futuro img,
-    .moldura-pendentes img{
-        width: 400px;
-        height: 200px;
-        margin-bottom: 40px;
-    }
-    .list-futuro .card-title,
-    .list-pendentes .card-title{
-        margin-top: 50px;
-    }
-    .andamento-title{
-        width: 600px;
-    }
-}
+
 .container_login{
     display: flex;
     justify-content: center;
