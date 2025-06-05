@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Projeto_Trainee_Hub.ViewModel.EmpresaUsuarioSetorTipoViewModel>
+
+@{
+    ViewData["Title"] = "Administracao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+
+    <h1>Empresas</h1>
+
+    <table id="tabela" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Empresa</th>
+                <th>Descrição</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Código</th>
+                <th>Alterar</th>
+                <th>Apagar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var empresa in Model)
+            {
+                <tr>
+                    <td>@empresa.NomeEmpresa</td>
+                    <td>@empresa.Descricao</td>
+                    <td>@empresa.EmailEmpresa</td>
+                    <td>@empresa.Telefone</td>
+                    <td>@empresa.Codigo</td>
+                    <td>
+                        <form action="/Admin/AcoesEmpresas/@empresa.IdEmpresa" method="get" style="display: inline;">
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="ExcluirEmpresa" method="post" style="display: inline;">
+                            <input type="hidden" name="id" value="@empresa.IdEmpresa" />
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="CriarEmpresa" asp-controller="Admin" class="CriarEmpresa">Criar Empresa</a>
+
+
+</div>
+<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+<script>
+        $(document).ready(function () {
+        $('#tabela').DataTable({
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/2.2.2/i18n/pt-BR.json"
+            }
+        });
+    });
+</script>

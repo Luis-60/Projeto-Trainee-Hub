@@ -29,6 +29,7 @@ namespace Projeto_Trainee_Hub.Repository
         }
 
         public async Task <IEnumerable<Treinamento?>> GetByIdCriadorAsync(int id)
+        
         {
             return await _context.Treinamentos
                 .Include(t => t.IdCriadorNavigation)

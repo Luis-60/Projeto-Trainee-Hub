@@ -52,7 +52,7 @@ public class TreinamentosController : Controller
         _context.Treinamentos.Remove(treinamento);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Perfil", "Admin");
+        return RedirectToAction("Perfil", "KeyUser");
     }
 
     [HttpPost]
@@ -116,7 +116,7 @@ public class TreinamentosController : Controller
             throw; // Pode lançar novamente ou tratar de outra forma se quiser
         }
         var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
-        return RedirectToAction("Treinamentos","Admin", new {id});
+        return RedirectToAction("Treinamentos","KeyUser", new {id});
     
     }
 
@@ -145,7 +145,7 @@ public class TreinamentosController : Controller
         await _treinamentoRepository.AddAsync(treinamentoUsuarios.treinamentos); // Salva no banco
         _treinamentoRepository.Save(); // Confirma a inserção
         var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
-        return RedirectToAction("Treinamentos","Admin", new {id});
+        return RedirectToAction("Treinamentos","KeyUser", new {id});
     }
 
     private bool TreinamentoExists(int id)
