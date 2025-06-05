@@ -4,9 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="wwwroot/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <div class="container__profile flex">
+
+    <div class="profile__area border border-r-4 h-1svh">
+        <div class="profile__avatar">
+            <img src="" alt="">
+        </div>
+        <div class="profile__data">
+            <div class="title flex gap-6">
+                <i class="ri-database-2-line"></i>
+                <h2>DADOS</h2>
+            </div>
+            <div class="profile__name">
+                <div class="title">
+                    <i class="ri-user-line"></i>
+                    <h2>Nome</h2>
+                </div>
+                <span>José da Silva</span>    
+            </div>
+            <div class="profile__setor">
+                <div class="title">
+                    <i class="ri-building-line"></i>
+                    <h2>Setor</h2>
+                </div>
+                <span>Finanças</span>    
+            </div>
+
+            <div class="profile__treinos">
+                <div class="title">
+                    <i class="ri-check-double-line"></i>
+                    <h2>T. CONCLUÍDOS</h2>
+                </div>
+                <span>0</span>
+            </div>
+            <div class="profile__matricula">
+                <div class="title">
+                    <i class="ri-id-card-fill"></i>
+                    <h2>MATRÍCULA</h2>
+                </div>
+                <span>MAT00000</span>
+            </div>
+        </div>
+        <div class="profile__contact">
+            <div class="title">
+                <i class="ri-contacts-book-line"></i>
+                <h2>CONTATOS</h2>
+            </div>
+            <div class="profile__email">
+                <div class="title">
+                    <i class="ri-mail-line"></i>
+                    <h2>E-MAIL</h2>
+                </div>
+                <span>example@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
     <div class="item__card max-w-3xs p-5 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
         <div class="image__card max-w-3xs max-h-3xs mb-3">
             <img class="rounded-xl" src="/wwwroot/images/OIP.jpeg" alt="">
@@ -22,6 +80,7 @@
             <span>00/00/0000</span>
         </div>
     </div>   
+</div>
 
 </body>
 </html>
