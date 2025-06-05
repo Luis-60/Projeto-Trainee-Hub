@@ -11,19 +11,17 @@
 
 </head>
 <body>
-<div class="container-body">
-
-    <div class="container__profile grid-cols-6">
-
-        <div class="profile__area flex flex-col border- border-cyan-500 gap-10 justify-center align-middle">
-            <div class="profile__avatar max-w-3xs">
-                <img src="/wwwroot/images/IconePerfil(2).png" alt="">
+<div class="container-body flex bg-stone-150 p-10 rounded-xl">
+    <div class="container__profile w-[30%]">
+        <div class="profile__area bg-stone-50 flex flex-col rounded-xl p-6 shadow-xl shadow-grey-900 gap-10 ">
+            <div class="profile__avatar w-full p-[2vw] justify-center">
+                <img class="mx-auto border-2 border-slate-100 rounded-full "src="/wwwroot/images/IconePerfil(2).png" alt="">
             </div>
-            <div class="profile__data flex flex-col gap-10">
+            <div class="profile__data flex flex-col gap-6">
                 <div class="title flex items-center gap-4">
                     <i class="ri-database-2-line text-3xl text-cyan-800"></i>
-                    <h2 class="font-extrabold text-2xl whitespace-nowrap">DADOS</h2>
-                    <div class="flex-grow border-t border-gray-300"></div>
+                    <h2 class="font-extrabold text-2xl text-cyan-900">DADOS</h2>
+                    <div class="flex-grow border-t border-cyan-900"></div>
                 </div>
 
                 <div class="profile__name">
@@ -44,47 +42,55 @@
                 <div class="profile__treinos">
                     <div class="title gap-4 font-semibold text-2xl">
                         <i class="ri-check-double-line"></i>
-                        <h2>T. CONCLUÍDOS</h2>
+                        <h2>Treinamentos Concluídos</h2>
                     </div>
                     <span>0</span>
                 </div>
                 <div class="profile__matricula">
                     <div class="title gap-4 font-semibold text-2xl">
-                        <i class="ri-id-card-fill"></i>
-                        <h2>MATRÍCULA</h2>
+                        <i class="ri-file-info-line"></i>
+                        <h2>Matrícula</h2>
                     </div>
                     <span>MAT00000</span>
                 </div>
             </div>
-            <div class="profile__contact">
+            <div class="profile__contact flex flex-col gap-6">
                 <div class="title flex gap-4 font-extrabold text-2xl">
-                    <i class="ri-contacts-book-line"></i>
-                    <h2>CONTATOS</h2>
+                    <i class="ri-contacts-book-line text-3xl text-cyan-800"></i>
+                    <h2 class="font-extrabold text-2xl whitespace-nowrap text-cyan-900">CONTATOS</h2>
+                    <div class="flex-grow border-t border-cyan-900"></div>
                 </div>
                 <div class="profile__email">
-                    <div class="title">
+                    <div class="title flex gap-4 font-semibold text-2xl">
                         <i class="ri-mail-line"></i>
-                        <h2>E-MAIL</h2>
+                        <h2>E-mail</h2>
                     </div>
                     <span>example@gmail.com</span>
                 </div>
             </div>
         </div>
     </div>   
-    <div class="treinamentos__area">
-        <div class="item__card max-w-3xs p-4 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
-            <div class="image__card max-w-3xs max-h-3xs mb-3">
-                <img class="rounded-xl" src="/wwwroot/images/OIP.jpeg" alt="">
-            </div>
-            <div class="title__card text-bold text-3xl">
-                Titulo do Card
-            </div>
-            <div class="info__card mb-3 text-cyan-950 max-w-3xs line-clamp-3 hover:">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
-            </div>
-            <div class="date__card">
-                <i class="ri-time-line"></i>
-                <span>00/00/0000</span>
+    <div class="treinamentos__area shadow-xl shadow-grey-900 bg-stone-50 rounded-xl w-[70%] p-6">
+        <div class="title flex items-center gap-4 text-5xl mt-5 text-cyan-900">
+            <i class="ri-book-open-line"></i>
+            <h1 class="font-bold text-4xl">TREINAMENTOS</h1>
+        </div>
+        <hr class="flex-grow border border-cyan-900">
+        <div class="block__cards flex gap-5 mt-5">
+            <div class="item__card max-w-3xs p-4 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
+                <div class="image__card max-w-3xs max-h-3xs mb-3">
+                    <img class="rounded-xl" src="/wwwroot/images/OIP.jpeg" alt="">
+                </div>
+                <div class="title__card text-bold text-3xl">
+                    Titulo do Card
+                </div>
+                <div class="info__card mb-3 text-cyan-950 max-w-3xs line-clamp-3 hover:">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
+                </div>
+                <div class="date__card">
+                    <i class="ri-time-line"></i>
+                    <span>00/00/0000</span>
+                </div>
             </div>
         </div>
     </div>
