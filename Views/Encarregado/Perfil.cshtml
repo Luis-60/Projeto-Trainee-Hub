@@ -1,169 +1,126 @@
 @{
     ViewData["Title"] = "Perfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model Usuarios
+@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
+
 <div class="container-body">
     <div class="container-photo">
         <div class="user-photo">
             <img src="~/images/IconePerfil(2).png">
             <button class="EditarPerfil" type="button">Editar Perfil</button>
+            <a asp-action="GerirUsuarios" asp-controller="Encarregado" class="GerirUsuarios" type="button">Gerir Usuários</a>
         </div>
     </div>
     <div class="container-info">
         <div class="user-info">
             <div class="nome">
                 <h3>Nome</h3>
-                <label>@Model.Nome</label>
+                <label>@Model.usuarios.Nome</label>
             </div>
             <div class="email">
                 <h3>Email</h3>
-                <label>@Model.Email</label>
+                <label>@Model.usuarios.Email</label>
             </div>
             <div class="matricula">
                 <h3>Matrícula</h3>
-                <label>@Model.Matricula</label>
+                <label>@Model.usuarios.Matricula</label>
             </div>
             <div class="setor">
                 <h3>Setor</h3>
-                <label>@Model.?IdSetorNavigation.Nome</label>
+                <label>@Model.usuarios?.IdSetorNavigation?.Nome</label>
             </div>
             <div class="treinamentos-concluidos">
                 <h3>Treinamentos Concluídos</h3>
-                <label>@Model.QtdTreinamentos</label>
+                <label>@Model.usuarios?.QtdTreinamentos</label>
             </div>
         </div>
     </div>
     <div class="container-treinamento">
         <div class="topo">
             <h1>TREINAMENTOS</h1>
-            <button class="btnAbrirAdd" type="button" onclick="AbrirAdd()">
+            <button class="btnAbrirAdd" type="button" onclick="OpenModal('modal-treinamento')">
                 Adicionar
             </button>
         </div>
-        
+
         <ul class="bloco_treinamento">
-            @* <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="100"></span>
+            @foreach (var treinamento in @Model.listaTreinamentos)
+            {
+                <li class="list-andamento" style="width: 38rem;">
+                    <a asp-controller="Encarregado" asp-action="Treinamentos" asp-route-id="@treinamento.IdTreinamentos">
+                        <div class="moldura">
+                            <img src="~/images/upload/treinamentos/@treinamento.Imagem">
                         </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="10"></span>
+                        <div class="card-content">
+                            <div class="card-title">@treinamento.Nome</div> <!-- Usando os dados de treinamento -->
+                            <div class="card-date">DATA ÍNICIO: @treinamento.DataInicio</div> <!-- Usando os dados de treinamento -->
+                            @{
+                                int progresso = 0;
+
+                                if (Model.ProgressoPorTreinamento != null && Model.ProgressoPorTreinamento.ContainsKey(treinamento.IdTreinamentos))
+                                {
+                                    progresso = Model.ProgressoPorTreinamento[treinamento.IdTreinamentos];
+                                }
+                            }
+                            <div class="progress-bar bg-success" role="progressbar" style="width: @progresso%" aria-valuenow="@progresso" aria-valuemin="0" aria-valuemax="100">
+                                @progresso%
+                            </div>
+
+
                         </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="100"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="list-andamento">
-                <a href="#">
-                    <div class="moldura">
-                        <img src="~/images/image 2.png">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-title">TREINAMENTO DE RN11</div>
-                        <div class="card-date">DATA ÍNICIO: 10/03/25</div>
-                        <div class="progressbar">
-                            <span data-width="50"></span>
-                        </div>
-                    </div>
-                </a>
-            </li> *@
+                    </a>
+                </li>
+            }
         </ul>
     </div>
-    <div class="modal">
+
+
+    <div class="modal" id="modal-treinamento">
         <div class="modal-content">
             <h1 class="titulo-modal">CRIAR TREINAMENTO</h1>
-            <form asp-controller="Teinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
+            <form asp-controller="Treinamentos" asp-action="CriarTreinamento" method="post" enctype="multipart/form-data">
                 <div class="inputnome">
-                    <label for="nome"name="nome">Nome:</label><br>
-                    <input placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" name="nome" required>
-                </div>      
+                    <label>Nome:</label><br>
+                    <input asp-for="@Model.treinamentos.Nome" placeholder="Insira o nome do treinamento" class="input-nome" type="text" id="nome" required>
+                </div>
+
                 <div class="input-instrutor">
-                    <label for="instrutor" name="instrutor">Instrutor:</label><br>
-                    <input placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" name="instrutor" required>
-                </div>        
-                <label for="descricao" name="descricao">Descrição:</label><br>
-                <textarea placeholder="Descreva o treinamento" id="descricao" name="descricao"></textarea required>
+                    <label>Instrutor:</label><br>
+                    <input asp-for="@Model.treinamentos.Instrutor" style="width:100%" placeholder="Insira o nome do instrutor" class="instrutor" type="text" id="instrutor" required>
+                </div>
+
+                <label>Descrição:</label><br>
+                <textarea placeholder="Descreva o treinamento" style="width:100%" id="descricao" asp-for="@Model.treinamentos.Descricao" required></textarea>
+
                 <div class="container-data">
                     <div class="container-datainicio">
-                        <label for="datainicio" name="datainicio">Data de Início:</label><br>
-                        <input type="date" id="datainicio" name="datainicio" required>
+                        <label>Data de Início:</label><br>
+                        <input type="date" id="datainicio" asp-for="@Model.treinamentos.DataInicio" required>
                     </div>
                     <div class="container-datafim">
-                        <label for="datafim" name="datafim">Data de Fim:</label><br>
-                        <input type="date" id="datafim" name="datafim" required>
+                        <label>Data de Fim:</label><br>
+                        <input type="date" id="datafim" asp-for="@Model.treinamentos.DataFim" required>
                     </div>
                 </div>
-                <label for="imagem" id="imagem" name="imagem">Imagem Ilustrativa:</label><br>
-                <label for="images" class="drop-container" id="dropcontainer">
+
+                <label id="imagem">Imagem Ilustrativa:</label><br>
+                <label asp-for="@Model.File" class="drop-container" id="dropcontainer">
                     <span class="drop-title">Insira o Arquivo aqui</span>
                     ou
-                    <input type="file" id="images-treinamento" accept="image/*" required>
+                    <input asp-for="@Model.File" type="file" id="images-treinamento" accept="image/*" required>
                 </label>
-                <div class="buttons"> 
-                    <button class="btnAddTreinamento" type="submit" onclick="addTreinamento()">CRIAR</button>
+
+                <input type="hidden" id="duracao" asp-for="@Model.treinamentos.Duracao" value="0">
+                <input type="hidden" id="entidades" asp-for="@Model.treinamentos.Entidades" value="@Model.usuarios?.IdEmpresa">
+                <input type="hidden" id="idEmpresa" asp-for="@Model.treinamentos.IdEmpresa" value="@Model.usuarios?.IdEmpresa">
+                <input type="hidden" id="idCriador" asp-for="@Model.treinamentos.IdCriador" value="@Model.usuarios?.IdUsuarios">
+
+                <div class="buttons">
+                    <button class="btnAddTreinamento" type="submit">CRIAR</button>
                     <button class="btnClose" onclick="closeModal()">SAIR</button>
-                </div>   
+                </div>
             </form>
-                           
         </div>
     </div>
-</div>
+

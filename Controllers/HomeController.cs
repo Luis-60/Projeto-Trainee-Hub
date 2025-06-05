@@ -151,7 +151,7 @@ public class HomeController : Controller
             case "3":
                 return RedirectToAction("Dashboard", "Gestor");
             case "4":
-                return RedirectToAction("Treinamentos", "Encarregado");
+                return RedirectToAction("Perfil", "Encarregado");
             case "5":
                 return RedirectToAction("Administracao", "Admin"); // 🟢 ALTERADO - nova role para Admin
             default:
