@@ -1,6 +1,6 @@
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2025-latest
     container_name: mssql_server
     environment:
       - ACCEPT_EULA=Y
@@ -11,14 +11,6 @@ services:
       - sqlnet
     volumes:
       - mssql_data:/var/opt/mssql
-    command: >
-      bash -c "apt-get update && 
-               apt-get install -y curl && 
-               curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && 
-               curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list && 
-               apt-get update && 
-               ACCEPT_EULA=Y apt-get install -y mssql-tools && 
-               /opt/mssql/bin/sqlservr"  # Executar o SQL Server após a instalação do sqlcmd
 
   dotnet_app:
     image: mcr.microsoft.com/dotnet/sdk:9.0
