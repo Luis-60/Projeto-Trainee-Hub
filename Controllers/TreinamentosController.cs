@@ -52,7 +52,24 @@ public class TreinamentosController : Controller
         _context.Treinamentos.Remove(treinamento);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Perfil", "KeyUser");
+        var role = _sessao.BuscarSessaoUsuarioRole();
+
+
+        if (role == "2")
+        {
+            return RedirectToAction("Perfil", "KeyUser");
+        }
+        if (role == "3")
+        {
+            return RedirectToAction("Dashboard", "Gestor");
+        }
+        if (role == "4")
+        {
+            return RedirectToAction("Perfil", "Encarregado");
+        }
+
+        // Se não for nenhum dos casos acima, redireciona para o login
+        return RedirectToAction("Login", "Home");
     }
 
     [HttpPost]
@@ -145,7 +162,24 @@ public class TreinamentosController : Controller
         await _treinamentoRepository.AddAsync(treinamentoUsuarios.treinamentos); // Salva no banco
         _treinamentoRepository.Save(); // Confirma a inserção
         var id = treinamentoUsuarios.treinamentos.IdTreinamentos;
-        return RedirectToAction("Treinamentos","KeyUser", new {id});
+        var role = _sessao.BuscarSessaoUsuarioRole();
+
+        if (role == "2")
+        {
+            return RedirectToAction("Treinamentos", "KeyUser", new { id });
+        }
+        if (role == "3")
+        {
+            return RedirectToAction("Treinamentos", "Gestor", new { id });
+        }
+        if (role == "4")
+        {
+            return RedirectToAction("Treinamentos", "Encarregado", new { id });
+        }
+
+        // Se não for nenhum dos casos acima, redireciona para o login
+        return RedirectToAction("Login", "Home");
+
     }
 
     private bool TreinamentoExists(int id)
