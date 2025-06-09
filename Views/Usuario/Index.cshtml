@@ -1,4 +1,4 @@
-﻿@model Usuarios
+﻿@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
 @using System.Security.Claims;
 @using Projeto_Trainee_Hub.Controllers;
 @{
@@ -25,7 +25,7 @@
                 <!-- Wrapper for slides -->
                 
                 <div class="carousel-inner">
-
+                    @foreach (var treinamento in @Model.listaTreinamentos){
                     <div class="item active">
                         <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                             <img class="w-fit" src="~/images/OIP.jpeg">
@@ -34,25 +34,7 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="item">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
-                            <div class="carousel-caption">
-                                <h3>Treinamento de RN-11</h3>
-                            </div>
-                            <img class="w-fit"src="~/images/image 1.png">
-                        </a>
-                    </div>
-                    
-                    <div class="item">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula">
-                            <img class="w-fit" src="~/images/image 2.png">
-                            <div class="carousel-caption">
-                                <h3>Treinamento de Código de Conduta e Ética</h3>
-                            </div>
-                        </a> 
-                    </div>
-                </div>
+                    }
 
                 <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">

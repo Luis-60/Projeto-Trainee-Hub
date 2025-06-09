@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {}
+    "/home/nti-user/ProjetoTraineeHub/Projeto-Trainee-Hub.csproj": {}
   },
   "projects": {
-    "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj": {
+    "/home/nti-user/ProjetoTraineeHub/Projeto-Trainee-Hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+        "projectUniqueName": "/home/nti-user/ProjetoTraineeHub/Projeto-Trainee-Hub.csproj",
         "projectName": "Projeto-Trainee-Hub",
-        "projectPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/Projeto-Trainee-Hub.csproj",
+        "projectPath": "/home/nti-user/ProjetoTraineeHub/Projeto-Trainee-Hub.csproj",
         "packagesPath": "/home/nti-user/.nuget/packages/",
-        "outputPath": "/home/nti-user/Documentos/Projetos/Projeto-Trainee-Hub/obj/",
+        "outputPath": "/home/nti-user/ProjetoTraineeHub/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nti-user/.nuget/NuGet/NuGet.Config"

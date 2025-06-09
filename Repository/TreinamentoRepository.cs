@@ -28,8 +28,16 @@ namespace Projeto_Trainee_Hub.Repository
                 .FirstOrDefaultAsync(t => t.IdTreinamentos == id);
         }
 
-        public async Task <IEnumerable<Treinamento?>> GetByIdCriadorAsync(int id)
-        
+        public async Task<IEnumerable<Treinamento?>> GetTreinamentosEmpresa(int id)
+        {
+            return await _context.Treinamentos
+                .Include(t => t.IdCriadorNavigation.IdEmpresaNavigation)
+                .Where(t => t.IdEmpresa == id)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Treinamento?>> GetByIdCriadorAsync(int id)
+
         {
             return await _context.Treinamentos
                 .Include(t => t.IdCriadorNavigation)
@@ -37,6 +45,11 @@ namespace Projeto_Trainee_Hub.Repository
                 .Include(t => t.IdCriadorNavigation.IdSetorNavigation)
                 .Where(t => t.IdCriador == id)
                 .ToListAsync();
+        }
+
+        internal object GetTreinamentosEmpresa(Empresa? idEmpresa)
+        {
+            throw new NotImplementedException();
         }
     }
 }

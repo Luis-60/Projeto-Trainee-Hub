@@ -20,6 +20,7 @@ public class UsuarioController : Controller
     {
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
+
     }
 
     public async Task<IActionResult> IndexAsync()
