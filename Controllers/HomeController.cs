@@ -17,18 +17,46 @@ public class HomeController : Controller
 {
     private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
+    private readonly TreinamentoRepository _treinamentoRepository;
     private readonly MasterContext _context;
 
-    public HomeController(UsuariosRepository usuariosRepository, ISessao sessao, MasterContext context)
+    public HomeController(UsuariosRepository usuariosRepository, ISessao sessao, MasterContext context, TreinamentoRepository treinamentoRepository)
     {
+        _treinamentoRepository = treinamentoRepository;
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
         _context = context;
+
     }
 
-    public IActionResult Index()
-    {
-        return View();
+    public async Task<IActionResult> Index()
+    {   
+        var matricula = HttpContext.Session.GetString("UsuarioMatricula");
+
+        if (string.IsNullOrEmpty(matricula))
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
+        var usuario = await _usuariosRepository.GetByMatriculaAsync(matricula);
+
+        var progressoPorTreinamento = new Dictionary<int, int>();
+        var idEmpresa = usuario.IdEmpresaNavigation;
+        var treinamentosEmpresa = await _treinamentoRepository.GetTreinamentosEmpresa(idEmpresa.IdEmpresa);
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+        var treinamentoUsuarios = new TreinamentoUsuariosViewModel
+        {
+            treinamentos = new Treinamento(),
+            usuarios = usuario,
+            listaTreinamentos = treinamentosEmpresa,
+            ProgressoPorTreinamento = progressoPorTreinamento
+        };
+        return View(treinamentoUsuarios);
+
+
     }
 
     public IActionResult Privacy()

@@ -70,7 +70,7 @@ namespace Projeto_Trainee_Hub.Repository
                 .FirstOrDefault(u => u.IdUsuarios == id);
             return usuario;
         }
-
+        
         
     }
 }

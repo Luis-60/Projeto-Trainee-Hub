@@ -1,4 +1,4 @@
-﻿@model Usuarios
+﻿@model Projeto_Trainee_Hub.ViewModel.TreinamentoUsuariosViewModel
 @using System.Security.Claims;
 @using Projeto_Trainee_Hub.Controllers;
 @{
@@ -25,34 +25,24 @@
                 <!-- Wrapper for slides -->
                 
                 <div class="carousel-inner">
-
                     <div class="item active">
                         <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
                             <img class="w-fit" src="~/images/OIP.jpeg">
                             <div class="carousel-caption">
-                                <h3>Treinamento de Compliance</h3>
+                                <h3>Seu histórico de treinamentos aqui!</h3>
                             </div>
                         </a>
                     </div>
-
+                    @foreach (var treinamento in @Model.listaTreinamentos){
                     <div class="item">
                         <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                            <img class="w-fit" src="~/images/upload/treinamentos/@treinamento.Imagem">
                             <div class="carousel-caption">
-                                <h3>Treinamento de RN-11</h3>
+                                <h3>@treinamento.Nome</h3>
                             </div>
-                            <img class="w-fit"src="~/images/image 1.png">
                         </a>
                     </div>
-                    
-                    <div class="item">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula">
-                            <img class="w-fit" src="~/images/image 2.png">
-                            <div class="carousel-caption">
-                                <h3>Treinamento de Código de Conduta e Ética</h3>
-                            </div>
-                        </a> 
-                    </div>
-                </div>
+                    }
 
                 <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -74,37 +64,26 @@
                     <h2 class="text-6xl text-neutral-600">Em Andamento</h2>
                 </div>
                 <div class="block__content gap-10 flex flex-wrap">
+                    @foreach(var treinamento in @Model.listaTreinamentos){
+
                     <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
                         <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/OIP.jpeg" alt="">
+                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
                         </div>
                         <div class="title__card text-bold text-4xl py-6">
-                            Titulo do Card
+                            @treinamento.Nome
                         </div>
                         <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
+                            <span>@treinamento.Descricao</span>
                         </div>
                         <div class="date__card">
                             <i class="ri-time-line"></i>
-                            <span>00/00/0000</span>
+                            <span>@treinamento.DataInicio</span>
                         </div>
                     </div>   
-                    <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
-                        <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/OIP.jpeg" alt="">
-                        </div>
-                        <div class="title__card text-bold text-4xl py-6">
-                            Titulo do Card
-                        </div>
-                        <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
-                        </div>
-                        <div class="date__card">
-                            <i class="ri-time-line"></i>
-                            <span>00/00/0000</span>
-                        </div>
-                    </div>   
-               </div>
+                    }   
+                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -117,40 +96,29 @@
                     <h2 class="text-6xl text-neutral-600">Pendentes</h2>
                 </div>
                 <div class="block__content">
+                    @foreach(var treinamento in @Model.listaTreinamentos){
+
                     <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
                         <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/OIP.jpeg" alt="">
+                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
                         </div>
                         <div class="title__card text-bold text-4xl py-6">
-                            Titulo do Card
+                            @treinamento.Nome
                         </div>
                         <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
+                            <span>@treinamento.Descricao</span>
                         </div>
                         <div class="date__card">
                             <i class="ri-time-line"></i>
-                            <span>00/00/0000</span>
+                            <span>@treinamento.DataInicio</span>
                         </div>
                     </div>   
-                    <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl ">
-                        <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/OIP.jpeg" alt="">
-                        </div>
-                        <div class="title__card text-bold text-4xl py-6">
-                            Titulo do Card
-                        </div>
-                        <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
-                        </div>
-                        <div class="date__card">
-                            <i class="ri-time-line"></i>
-                            <span>00/00/0000</span>
-                        </div>
-                    </div> 
+                    }
                 </div>
             </div>
         </div>
     
+
         <!--TREINAMENTOS FUTUROS-->
         <div class="container__futuro mb-20">
             <div class="row__futuro">
@@ -159,23 +127,25 @@
                     <h2 class="text-6xl text-neutral-600">Futuros</h2>
                 </div>
                 <div class="block__content">
+                    @foreach(var treinamento in @Model.listaTreinamentos){
                     <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
                         <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/OIP.jpeg" alt="">
+                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
                         </div>
                         <div class="title__card text-bold text-4xl py-6">
-                            Titulo do Card
+                            @treinamento.Nome
                         </div>
                         <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, earum. Tempore, sunt perferendis architecto rem adipisci deserunt neque quas praesentium quos ea odio labore temporibus consequuntur eveniet tenetur cupiditate molestias!</span>
+                            <span>@treinamento.Descricao</span>
                         </div>
                         <div class="date__card">
                             <i class="ri-time-line"></i>
-                            <span>00/00/0000</span>
+                            <span>@treinamento.DataInicio</span>
                         </div>
-                    </div>   
-                    
-                </div>
+                    </div>
+                    }
+                </div>    
             </div>
         </div>
     </div>
+</div>
