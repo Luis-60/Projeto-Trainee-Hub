@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authorization;
 using Projeto_Trainee_Hub.Models;
 using Projeto_Trainee_Hub.Repository;
 using Projeto_Trainee_Hub.Helper;
+using Projeto_Trainee_Hub.ViewModel;
+
 
 namespace Projeto_Trainee_Hub.Controllers;
 
@@ -16,8 +18,10 @@ public class UsuarioController : Controller
     
     private readonly ISessao _sessao;
     private readonly UsuariosRepository _usuariosRepository;
-    public UsuarioController(UsuariosRepository usuariosRepository, ISessao sessao)
+    private readonly TreinamentoRepository _treinamentoRepository;
+    public UsuarioController(UsuariosRepository usuariosRepository, TreinamentoRepository treinamentoRepository, ISessao sessao)
     {
+        _treinamentoRepository = treinamentoRepository;
         _usuariosRepository = usuariosRepository;
         _sessao = sessao;
 
@@ -26,12 +30,23 @@ public class UsuarioController : Controller
     public async Task<IActionResult> IndexAsync()
     {   
         var usuario = _sessao.BuscarSessaoUsuario();
-        if (usuario == null)
-        {
+
+        int EmpresaId = (int)usuario.IdEmpresa;
+
+        var progressoPorTreinamento = new Dictionary<int, int>();
+        var idEmpresa = usuario.IdEmpresaNavigation;
+        var treinamentosEmpresa = await _treinamentoRepository.GetTreinamentosEmpresa(EmpresaId);
+        if (usuario == null)        {
             return RedirectToAction("Login", "Home");
         }
-
-        return View(usuario);
+        var treinamentoUsuarios = new TreinamentoUsuariosViewModel
+        {
+            treinamentos = new Treinamento(),
+            usuarios = usuario,
+            listaTreinamentos = treinamentosEmpresa,
+            ProgressoPorTreinamento = progressoPorTreinamento
+        };
+        return View(treinamentoUsuarios);
     }
 
     public IActionResult Privacy()
