@@ -1,4 +1,8 @@
+@using System.Security.Claims;
+@using Projeto_Trainee_Hub.Controllers;
+@model Projeto_Trainee_Hub.ViewModel.AulaTreinamentosViewModel;
 @{
+    var today = DateTime.Today;
     ViewData["Title"] = "Aula";
 }
 
@@ -33,5 +37,19 @@
         <div class="painel">
             <p>Conteúdo...</p>
         </div>
+
+           
+        <form asp-controller="Treinamentos" asp-action="ComecarTreinamento" method="post">
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.IdTreinamentos" value="@Model.treinamento.IdTreinamentos" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.Avaliacao" value="0" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.DataInicio" value="@today.ToString("yyyy-MM-dd")" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.DataTermino" value="@Model.treinamento.DataFim" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.IdUsuarios" value="@Model.usuarios.IdUsuarios" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.Progresso" value="0%" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.StatusTreinamento" value="1" />
+            <button type="submit" class="btn btn-success mt-3">Começar Treinamento</button>
+        </form>
+
+
     </div>
 </div>
