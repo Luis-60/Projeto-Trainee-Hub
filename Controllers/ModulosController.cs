@@ -8,6 +8,7 @@ using Projeto_Trainee_Hub.Repository;
 using Projeto_Trainee_Hub.ViewModel;
 using Projeto_Trainee_Hub.Helper;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Projeto_Trainee_Hub.Controllers;
 
@@ -101,20 +102,45 @@ public class ModulosController : Controller
     public async Task<IActionResult> CriarModulo(TreinamentoModuloViewModel treinamentoModulo)
     {
         var idTreinamento = treinamentoModulo.treinamentos.IdTreinamentos;
-        if (idTreinamento == null)
+        if (idTreinamento == 0) // corrigido para int zero
         {
             return NotFound();
         }
+
         var usuario = _sessao.BuscarSessaoUsuario();
         if (usuario == null)
         {
             return RedirectToAction("Login", "Home");
         }
+
         treinamentoModulo.modulos.IdTreinamento = idTreinamento;
+
+        // Calcula o último número de sequência para esse treinamento
+        var ultimoSequencia = await _context.Modulos
+            .Where(m => m.IdTreinamento == idTreinamento)
+            .MaxAsync(m => (int?)m.Sequencia) ?? 0;
+
+        treinamentoModulo.modulos.Sequencia = ultimoSequencia + 1;
+
         await _moduloRepository.AddAsync(treinamentoModulo.modulos);
         _moduloRepository.Save();
+        var role = _sessao.BuscarSessaoUsuarioRole();
 
         var id = treinamentoModulo.modulos.IdModulos;
-        return RedirectToAction("Modulos", "KeyUser", new {id});
+        if (role == "2")
+        {
+            return RedirectToAction("Modulos", "KeyUser", new { id });
+        }
+        if (role == "3")
+        {
+            return RedirectToAction("Modulos", "Gestor", new { id });
+        }
+        if (role == "4")
+        {
+            return RedirectToAction("Modulos", "Encarregado", new { id });
+        }
+
+        // Se não for nenhum dos casos acima, redireciona para o login
+        return RedirectToAction("Login", "Home");
     }
 }

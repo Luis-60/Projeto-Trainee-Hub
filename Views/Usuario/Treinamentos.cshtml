@@ -1,0 +1,36 @@
+﻿@model Projeto_Trainee_Hub.ViewModel.TreinamentoModuloViewModel
+@{
+    ViewData["Title"] = "Treinamentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="texto_modulo" style="margin-left: 160px;">
+    <div class="d-flex align-items-center gap-4">
+        <h1 class="m-0" style="font-size: 64px; margin-top: 40px; line-break: anywhere">@Model.treinamentos.Nome</h1>
+        <p class="m-0" style="font-size: 20px; line-break: anywhere; margin-left: 10px;">@Model.treinamentos.Descricao</p>
+    </div>
+    </div>
+
+<hr>
+
+<ul class="bloco_modulos">
+    @foreach (var modulo in Model.listaModulos)
+    {
+        <li class="header">
+            <div class="Modulos">
+                <h2>MÓDULO @modulo.Sequencia - @modulo.Nome</h2>
+                <div class="Botoes">
+                    <a asp-action="Modulos" asp-controller="Usuario" asp-route-id="@modulo.IdModulos" aspclass="conteudo">📄 CONTEÚDO</a>
+                </div>
+
+                @foreach (var aula in Model.listaAulas.Where(a => a.IdModulo == modulo.IdModulos))
+                {
+                    <div class="selecionar">
+                        <input type="checkbox" id="modulo1">
+                        <label for="modulo1">@aula.Nome</label>
+                    </div>
+                }
+
+            </div>
+        </li>
+    }
+</ul>

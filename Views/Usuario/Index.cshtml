@@ -80,6 +80,9 @@
                             <i class="ri-time-line"></i>
                             <span>@treinamento.DataInicio</span>
                         </div>
+                        <div class="progressbar">
+                            <span data-width="@treinamento.UsuariosTreinamentos?.FirstOrDefault()?.Progresso ?? 0"></span>
+                        </div>
                     </div>   
                     }   
                 </div>

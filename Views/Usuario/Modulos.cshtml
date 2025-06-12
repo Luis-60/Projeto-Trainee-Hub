@@ -1,0 +1,98 @@
+@model Projeto_Trainee_Hub.ViewModel.AulaModuloDocViewModel
+
+@{
+    ViewData["Title"] = "Treinamento Completo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-aula">
+    <div class="overlay"></div>
+
+    <!-- Vídeo e informações -->
+    <div class="video-info">
+        <div class="video">
+            @{
+                var primeiraAula = Model.listaAulas.FirstOrDefault();
+                var videoUrl = primeiraAula?.VideoUrl?.Replace("watch?v=", "embed/");
+            }
+            @if (!string.IsNullOrEmpty(videoUrl))
+            {
+                <iframe width="100%" height="400" src="@videoUrl" frameborder="0" allowfullscreen></iframe>
+            }
+        </div>
+
+        <div class="video-title">
+            <h1>@Model.treinamentos?.Nome</h1>
+        </div>
+
+        <div class="video-text">
+            <p>@Model.treinamentos?.Descricao</p>
+        </div>
+    </div>
+
+    <!-- Accordion dos módulos -->
+    <div class="painel-accordion-modulo">
+        @{
+            var modulosOrdenados = Model.listaModulos.OrderBy(m => m.Sequencia).ToList();
+        }
+        @for (int i = 0; i < modulosOrdenados.Count; i++)
+        {
+            var modulo = modulosOrdenados[i];
+            <button class="accordion">Módulo @(i + 1) - @modulo.Nome</button>
+            <div class="painel" style="display:none;">
+                <p>@modulo.Descricao</p>
+                <a href="@Url.Action("Modulos", "Usuario", new { id = modulo.IdModulos })" class="btn btn-primary mb-3">
+                    Ver módulo completo
+                </a>
+
+                @foreach (var aula in Model.listaAulas.Where(a => a.IdModulo == modulo.IdModulos))
+                {
+                    <div class="mb-3">
+                        <h5>@aula.Nome</h5>
+                        <p>@aula.Descricao</p>
+
+                        @if (aula.Documentos != null && aula.Documentos.Any())
+                        {
+                            <div>
+                                <strong>Documentos:</strong>
+                                <ul>
+                                    @foreach (var doc in aula.Documentos)
+                                    {
+                                        <li>
+                                            <a href="/Uploads/@doc.Nome" target="_blank">@doc.Nome</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                        <form asp-controller="Aulas" asp-action="ConcluirAula" method="post">
+                            <input type="hidden" name="idAula" value="@aula.IdAula" />
+                            <button type="submit" class="btn btn-success mt-2">Concluir Aula</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordions = document.getElementsByClassName("accordion");
+            for (let i = 0; i < accordions.length; i++) {
+                accordions[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    const painel = this.nextElementSibling;
+                    if (painel.style.display === "block") {
+                        painel.style.display = "none";
+                    } else {
+                        painel.style.display = "block";
+                    }
+                });
+            }
+        });
+
+    </script>
+}

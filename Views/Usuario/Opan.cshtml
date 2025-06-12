@@ -1,0 +1,84 @@
+﻿@model Projeto_Trainee_Hub.ViewModel.AulaModuloDocViewModel
+
+@{
+    ViewData["Title"] = "Módulo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="texto_modulo">
+    <h1>@Model.modulos?.Nome</h1>
+    <div class="paragrafo_modulo">
+        <p>@Model.modulos?.Descricao</p>
+    </div>
+</div>
+
+<hr>
+
+@if (Model.listaAulas != null && Model.listaAulas.Any())
+{
+    <ul class="list-group mt-3">
+        @foreach (var aula in Model.listaAulas)
+        {
+            <li class="list-group-item">
+                <strong>@aula.Nome</strong> - @aula.Descricao
+
+                @if (aula.Documentos != null && aula.Documentos.Any())
+                {
+                    <div class="mt-2">
+                        <span><strong>Documentos:</strong></span>
+                        <ul>
+                            @foreach (var doc in aula.Documentos)
+                            {
+                                <li>
+                                    <a href="/Uploads/@doc.Nome" target="_blank">@doc.Nome</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="@aula.VideoUrl.Replace("watch?v=", "embed/")" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <form asp-controller="Aulas" asp-action="ConcluirAula" method="post">
+                    <input type="hidden" name="idAula" value="@aula.IdAula" />
+                    <button type="submit" class="btn btn-success mt-3">Concluir Aula</button>
+                </form>
+
+             
+            </li>
+        }
+    </ul>
+}
+
+
+
+@section Scripts {
+    <script>
+        function abrirModalCriar() {
+            document.getElementById('modalAulaLabel').innerText = "Criar Aula";
+            document.getElementById('formAula').action = "/Aulas/Criar";
+            document.getElementById('inputIdAula').value = "";
+            document.getElementById('inputNome').value = "";
+            document.getElementById('inputDescricao').value = "";
+            document.getElementById('inputIdModulo').value = "@Model.modulos.IdModulos";
+            document.getElementById('inputVideoUrl').value = "";
+            document.getElementById('divArquivo').style.display = 'block';
+        }
+
+        function abrirModalEditar(id, nome, descricao, idModulo) {
+            document.getElementById('modalAulaLabel').innerText = "Editar Aula";
+            document.getElementById('formAula').action = "/Aulas/Editar";
+            document.getElementById('inputIdAula').value = id;
+            document.getElementById('inputNome').value = nome;
+            document.getElementById('inputDescricao').value = descricao;
+            document.getElementById('inputIdModulo').value = idModulo;
+            document.getElementById('inputVideoUrl').value = videoUrl || "";
+            document.getElementById('divArquivo').style.display = 'block';
+        }
+    </script>
+}
+
+
+
