@@ -73,4 +73,23 @@
     </div> 
 </div>
 
-  
+    @section Scripts {
+            <script>
+                const senha = document.getElementById("senha");
+                const toggler = document.getElementById("toggleSenha");
+
+                if (senha && toggler) {
+                  toggler.addEventListener("click", () => {
+                    if (senha.type === "password") {
+                      senha.type = "text";
+                      toggler.classList.remove("fa-eye");
+                      toggler.classList.add("fa-eye-slash");
+                    } else {
+                      senha.type = "password";
+                      toggler.classList.remove("fa-eye-slash");
+                      toggler.classList.add("fa-eye");
+                    }
+                  });
+                }
+    </script>
+}

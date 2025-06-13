@@ -157,4 +157,46 @@ public class UsuarioController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    public IActionResult Aulas(int id)
+    {
+        var moduloAtual = _context.Modulos.FirstOrDefault(m => m.IdModulos == id);
+        if (moduloAtual == null) return NotFound();
+
+        var treinamento = _context.Treinamentos.FirstOrDefault(t => t.IdTreinamentos == moduloAtual.IdTreinamento);
+        if (treinamento == null) return NotFound();
+
+        var todosModulos = _context.Modulos
+            .Where(m => m.IdTreinamento == treinamento.IdTreinamentos)
+            .OrderBy(m => m.Sequencia)
+            .ToList();
+
+        var idsModulos = todosModulos.Select(m => m.IdModulos).ToList();
+
+        var aulas = _context.Aulas
+            .Where(a => idsModulos.Contains(a.IdModulo))
+            .Include(a => a.Documentos)
+            .OrderBy(a => a.IdModulo) // Garante ordem de módulos
+            .ToList();
+
+        // Prioriza a exibição da primeira aula do módulo selecionado
+        var aulasOrdenadas = aulas
+            .Where(a => a.IdModulo == moduloAtual.IdModulos)
+            .ToList();
+
+        var primeiraAulaDoModulo = aulasOrdenadas.FirstOrDefault();
+
+        var viewModel = new AulaModuloDocViewModel
+        {
+            treinamentos = treinamento,
+            listaModulos = todosModulos,
+            listaAulas = aulas,
+            modulos = moduloAtual,
+            aulas = primeiraAulaDoModulo ?? new Aula()
+        };
+
+        return View(viewModel);
+    }
+
+
+
 }

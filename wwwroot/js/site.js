@@ -109,20 +109,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-const toggler = document.getElementById("toggler");
-const senha = document.getElementById("senha");
 
-toggler.addEventListener("click", () => {
-  if (senha.type === "password") {
-    senha.type = "text";
-    toggler.classList.remove("fa-eye");
-    toggler.classList.add("fa-eye-slash");
-  } else {
-    senha.type = "password";
-    toggler.classList.remove("fa-eye-slash");
-    toggler.classList.add("fa-eye");
-  }
-});
 
 //Adicionar e Excluir Conteúdos
 function addTreinamento() {
@@ -148,8 +135,13 @@ function addTreinamento() {
 
 }
 
-document.getElementById("dropcontainer").addEventListener("click", function() {
-  document.getElementById("images-treinamento").click(); // Simula o clique no input
-});
+const dropContainer = document.getElementById("dropcontainer");
+const imagesInput = document.getElementById("images-treinamento");
+
+if (dropContainer && imagesInput) {
+    dropContainer.addEventListener("click", function () {
+        imagesInput.click();
+    });
+}
 
 
