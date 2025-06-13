@@ -26,7 +26,7 @@
                 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a>
                             <img class="w-fit" src="~/images/OIP.jpeg">
                             <div class="carousel-caption">
                                 <h3>Seu histórico de treinamentos aqui!</h3>
@@ -35,7 +35,7 @@
                     </div>
                     @foreach (var treinamento in @Model.listaTreinamentos){
                     <div class="item">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a asp-area="" asp-controller="Usuario" asp-action="Aula">
                             <img class="w-fit" src="~/images/upload/treinamentos/@treinamento.Imagem">
                             <div class="carousel-caption">
                                 <h3>@treinamento.Nome</h3>
