@@ -181,11 +181,23 @@ public class TreinamentosController : Controller
         return RedirectToAction("Login", "Home");
 
     }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ComecarTreinamento(AulaTreinamentosViewModel aulaTreinamentos)
+    {
+        var usuario = _sessao.BuscarSessaoUsuario();
+        if (usuario == null)
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
+        return RedirectToAction("", ""); 
+    }
 
     private bool TreinamentoExists(int id)
     {
-            return _context.Treinamentos.Any(e => e.IdTreinamentos == id);
-     }
+        return _context.Treinamentos.Any(e => e.IdTreinamentos == id);
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

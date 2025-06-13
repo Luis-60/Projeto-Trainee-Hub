@@ -47,6 +47,7 @@ namespace Projeto_Trainee_Hub.Repository
                 .ToListAsync();
         }
 
+        
         internal object GetTreinamentosEmpresa(Empresa? idEmpresa)
         {
             throw new NotImplementedException();

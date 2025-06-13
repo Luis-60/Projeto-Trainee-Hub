@@ -26,6 +26,7 @@
                 
                 <div class="carousel-inner">
                     <div class="item active">
+<<<<<<< HEAD
                         <img class="w-fit" src="~/images/OIP.jpeg">
                         <div class="carousel-caption">
                             <h3>Seu histórico de treinamentos aqui!</h3>
@@ -34,6 +35,18 @@
                     @foreach (var treinamento in @Model.listaTreinamentos){
                     <div class="item">
                         <a asp-area="" asp-controller="Usuario" asp-action="Aulas" asp-route-idTreinamento="@treinamento.IdTreinamentos"">
+=======
+                        <a>
+                            <img class="w-fit" src="~/images/OIP.jpeg">
+                            <div class="carousel-caption">
+                                <h3>Seu histórico de treinamentos aqui!</h3>
+                            </div>
+                        </a>
+                    </div>
+                    @foreach (var treinamento in @Model.listaTreinamentos){
+                    <div class="item">
+                        <a asp-area="" asp-controller="Usuario" asp-action="Aula">
+>>>>>>> c918605571c3a4d339bf7bcc3a9ef99bc49c2fa7
                             <img class="w-fit" src="~/images/upload/treinamentos/@treinamento.Imagem">
                             <div class="carousel-caption">
                                 <h3>@treinamento.Nome</h3>

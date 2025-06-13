@@ -16,15 +16,17 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class UsuarioController : Controller
 {
     private readonly UsuariosRepository _usuariosRepository;
+    private readonly ModuloRepository _moduloRepository;
+    private readonly AulaRepository _aulaRepository;
     private readonly ISessao _sessao;
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly ModuloRepository _moduloRepository;
     private readonly AulaRepository _aulaRepository;
     private readonly MasterContext _context;
 
-    public UsuarioController(UsuariosRepository usuariosRepository, ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
+    public UsuarioController(UsuariosRepository usuariosRepository,ModuloRepository moduloRepository,
+     ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, AulaRepository aulaRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
     {
-        _usuariosRepository = usuariosRepository;
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
         _moduloRepository = moduloRepository;
@@ -59,7 +61,54 @@ public class UsuarioController : Controller
     {
         return View();
     }
+    
+    [ValidateAntiForgeryToken]
+    [HttpPost]
+    public async Task<IActionResult> AulaAsync(AulaTreinamentosViewModel aulaTreinamentos)
+        {
+            // Obtém o ID do módulo (você precisa ajustar conforme a estrutura do seu ViewModel)
+            var moduloId = aulaTreinamentos.modulos.IdModulos;
+            var treinamentoId = aulaTreinamentos.treinamento.IdTreinamentos;
+            // Busca o usuário logado
+            var usuario = _sessao.BuscarSessaoUsuario();
+            if (usuario == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
+            // Obtém os módulos do treinamento (supondo que você tenha um método que aceite o ID do treinamento)
+            var listaModulos = await _moduloRepository.GetByIdTreinamentoAsync(treinamentoId);
+
+            // Aqui você provavelmente precisa buscar também as aulas do módulo, então algo como:
+            var listaAulas = await _aulaRepository.GetByIdModuloAsync(moduloId);
+
+            // Prepara a ViewModel com os dados
+            var viewModel = new AulaTreinamentosViewModel
+            {
+                usuarios = usuario,
+                listaModulos = listaModulos,
+                listaAulas = listaAulas
+                
+            };
+
+            
+            return View("Aula", viewModel);
+        }
+
+        //     {
+        // public class AulaTreinamentosViewModel
+        //         public Usuarios usuarios { get; set; }
+        //         public Aula aulas { get; set; }
+        //         public Modulo modulos { get; set; }
+        //         public IEnumerable<Aula> listaAulas { get; set; }
+        //         public IEnumerable<Modulo> listaModulos { get; set; }
+        //         public Documento documentos { get; set; }
+        //         public Treinamento treinamento { get; set; }
+        //         public UsuariosTreinamento usuariosTreinamento { get; set; }
+        //     }
+        // }
+    
+    
     public async Task<IActionResult> PerfilAsync()
     {
         var usuario = _sessao.BuscarSessaoUsuario();

@@ -1,0 +1,55 @@
+@using System.Security.Claims;
+@using Projeto_Trainee_Hub.Controllers;
+@model Projeto_Trainee_Hub.ViewModel.AulaTreinamentosViewModel;
+@{
+    var today = DateTime.Today;
+    ViewData["Title"] = "Aula";
+}
+
+
+<div class="container-aula">
+    <div class="overlay"></div>
+
+    <div class="video-info">
+        <div class="video">
+
+        </div>
+        <div class="video-title">
+            <h1>LOREM IPSUM</h1>
+        </div>
+        <div class="video-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestias sequi expedita odit nobis. Error, doloremque cumque autem consequatur nemo beatae animi quis itaque ipsum, eius temporibus hic molestias sapiente?</p>
+        </div>
+    </div>
+
+    <div class="painel-accordion-modulo">
+        <button class="accordion">Seção 1</button>
+        <div class="painel">
+            <p>Conteúdo...</p>
+        </div>
+
+        <button class="accordion">Seção 2</button>
+        <div class="painel">
+            <p>Conteúdo...</p>
+        </div>
+
+        <button class="accordion">Seção 3</button>
+        <div class="painel">
+            <p>Conteúdo...</p>
+        </div>
+
+           
+        <form asp-controller="Treinamentos" asp-action="ComecarTreinamento" method="post">
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.IdTreinamentos" value="@Model.treinamento.IdTreinamentos" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.Avaliacao" value="0" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.DataInicio" value="@today.ToString("yyyy-MM-dd")" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.DataTermino" value="@Model.treinamento.DataFim" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.IdUsuarios" value="@Model.usuarios.IdUsuarios" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.Progresso" value="0%" />
+            <input type="hidden" asp-for="@Model.usuariosTreinamento.StatusTreinamento" value="1" />
+            <button type="submit" class="btn btn-success mt-3">Começar Treinamento</button>
+        </form>
+
+
+    </div>
+</div>
