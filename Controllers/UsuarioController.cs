@@ -59,7 +59,6 @@ public class UsuarioController : Controller
         return View();
     }
     
-    [HttpPost]
     [ValidateAntiForgeryToken]
     [HttpPost]
     public async Task<IActionResult> AulaAsync(AulaTreinamentosViewModel aulaTreinamentos)
@@ -86,15 +85,15 @@ public class UsuarioController : Controller
                 usuarios = usuario,
                 listaModulos = listaModulos,
                 listaAulas = listaAulas
-
+                
             };
 
             
             return View("Aula", viewModel);
         }
 
-        // public class AulaTreinamentosViewModel
         //     {
+        // public class AulaTreinamentosViewModel
         //         public Usuarios usuarios { get; set; }
         //         public Aula aulas { get; set; }
         //         public Modulo modulos { get; set; }
