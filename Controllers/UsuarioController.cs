@@ -16,16 +16,15 @@ namespace Projeto_Trainee_Hub.Controllers;
 public class UsuarioController : Controller
 {
     private readonly UsuariosRepository _usuariosRepository;
-    private readonly ModuloRepository _moduloRepository;
-    private readonly AulaRepository _aulaRepository;
+
     private readonly ISessao _sessao;
     private readonly TreinamentoRepository _treinamentoRepository;
     private readonly ModuloRepository _moduloRepository;
     private readonly AulaRepository _aulaRepository;
     private readonly MasterContext _context;
 
-    public UsuarioController(UsuariosRepository usuariosRepository,ModuloRepository moduloRepository,
-     ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, AulaRepository aulaRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
+    public UsuarioController(UsuariosRepository usuariosRepository,
+     ModuloRepository moduloRepository, TreinamentoRepository treinamentoRepository, ISessao sessao, MasterContext context, AulaRepository aulaRepository)
     {
         _treinamentoRepository = treinamentoRepository;
         _sessao = sessao;
