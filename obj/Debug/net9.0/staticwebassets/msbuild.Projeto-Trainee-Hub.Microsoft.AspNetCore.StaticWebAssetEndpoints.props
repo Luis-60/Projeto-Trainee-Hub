@@ -388,13 +388,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"aenhs8olw7"},{"Name":"integrity","Value":"sha256-sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8="},{"Name":"label","Value":"_content/Projeto-Trainee-Hub/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4137"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 14:59:18 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4137"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 15:54:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Projeto-Trainee-Hub/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4137"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 14:59:18 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4137"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022sgxwWSHlvSxyZ6M9kJNgxTAIH2a74D3sje7XLEWAiD8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 15:54:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Projeto-Trainee-Hub/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>
