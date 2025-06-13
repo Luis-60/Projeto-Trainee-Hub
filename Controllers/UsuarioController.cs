@@ -60,16 +60,6 @@ public class UsuarioController : Controller
         return View();
     }
 
-    public async Task<IActionResult> AulaAsync()
-    {
-        var usuario = _sessao.BuscarSessaoUsuario();
-        if (usuario == null)
-        {
-            return RedirectToAction("Login", "Home");
-        }
-        return View(usuario);
-    }
-
     public async Task<IActionResult> PerfilAsync()
     {
         var usuario = _sessao.BuscarSessaoUsuario();
@@ -126,13 +116,13 @@ public class UsuarioController : Controller
             return NotFound();
         }
 
-        // Busca os m骴ulos relacionados ao treinamento
+        // Busca os m锟絛ulos relacionados ao treinamento
         var modulosDoTreinamento = _context.Modulos
                                 .Where(m => m.IdTreinamento == id)
                                 .OrderBy(m => m.Sequencia)
                                 .ToList();
 
-        // Busca as aulas dos m骴ulos encontrados
+        // Busca as aulas dos m锟絛ulos encontrados
         var idsModulos = modulosDoTreinamento.Select(m => m.IdModulos).ToList();
         var aulasDosModulos = _context.Aulas
                                 .Where(a => idsModulos.Contains(a.IdModulo))
@@ -157,46 +147,46 @@ public class UsuarioController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    public IActionResult Aulas(int id)
+    public IActionResult Aulas(int idTreinamento)
     {
-        var moduloAtual = _context.Modulos.FirstOrDefault(m => m.IdModulos == id);
-        if (moduloAtual == null) return NotFound();
-
-        var treinamento = _context.Treinamentos.FirstOrDefault(t => t.IdTreinamentos == moduloAtual.IdTreinamento);
+        var treinamento = _context.Treinamentos.FirstOrDefault(t => t.IdTreinamentos == idTreinamento);
         if (treinamento == null) return NotFound();
 
+        // Pega todos os m贸dulos do treinamento, ordenados pela sequ锚ncia
         var todosModulos = _context.Modulos
-            .Where(m => m.IdTreinamento == treinamento.IdTreinamentos)
+            .Where(m => m.IdTreinamento == idTreinamento)
             .OrderBy(m => m.Sequencia)
             .ToList();
 
+        if (!todosModulos.Any()) return NotFound("Nenhum m贸dulo encontrado para esse treinamento.");
+
+        var primeiroModulo = todosModulos.First();
+
         var idsModulos = todosModulos.Select(m => m.IdModulos).ToList();
 
+        // Pega todas as aulas dos m贸dulos
         var aulas = _context.Aulas
             .Where(a => idsModulos.Contains(a.IdModulo))
             .Include(a => a.Documentos)
-            .OrderBy(a => a.IdModulo) // Garante ordem de m骴ulos
+            .OrderBy(a => a.IdModulo)
             .ToList();
 
-        // Prioriza a exibi玢o da primeira aula do m骴ulo selecionado
-        var aulasOrdenadas = aulas
-            .Where(a => a.IdModulo == moduloAtual.IdModulos)
+        // Filtra para pegar as aulas do primeiro m贸dulo
+        var aulasDoPrimeiroModulo = aulas
+            .Where(a => a.IdModulo == primeiroModulo.IdModulos)
             .ToList();
 
-        var primeiraAulaDoModulo = aulasOrdenadas.FirstOrDefault();
+        var primeiraAula = aulasDoPrimeiroModulo.FirstOrDefault();
 
         var viewModel = new AulaModuloDocViewModel
         {
             treinamentos = treinamento,
             listaModulos = todosModulos,
             listaAulas = aulas,
-            modulos = moduloAtual,
-            aulas = primeiraAulaDoModulo ?? new Aula()
+            modulos = primeiroModulo,
+            aulas = primeiraAula ?? new Aula()
         };
 
         return View(viewModel);
     }
-
-
-
 }

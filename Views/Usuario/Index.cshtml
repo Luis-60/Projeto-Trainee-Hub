@@ -26,16 +26,14 @@
                 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
-                            <img class="w-fit" src="~/images/OIP.jpeg">
-                            <div class="carousel-caption">
-                                <h3>Seu histórico de treinamentos aqui!</h3>
-                            </div>
-                        </a>
+                        <img class="w-fit" src="~/images/OIP.jpeg">
+                        <div class="carousel-caption">
+                            <h3>Seu histórico de treinamentos aqui!</h3>
+                        </div>
                     </div>
                     @foreach (var treinamento in @Model.listaTreinamentos){
                     <div class="item">
-                        <a asp-area="" asp-controller="Usuario" asp-action="Aula" asp-route-matricula="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+                        <a asp-area="" asp-controller="Usuario" asp-action="Aulas" asp-route-idTreinamento="@treinamento.IdTreinamentos"">
                             <img class="w-fit" src="~/images/upload/treinamentos/@treinamento.Imagem">
                             <div class="carousel-caption">
                                 <h3>@treinamento.Nome</h3>
@@ -66,24 +64,26 @@
                 <div class="block__content gap-10 flex flex-wrap">
                     @foreach(var treinamento in @Model.listaTreinamentos){
 
-                    <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl  shadow-lg shadow-cyan-800/50 border-cyan-500">
-                        <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aulas" asp-route-idTreinamento="@treinamento.IdTreinamentos" class="block">
+                        <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl shadow-lg shadow-cyan-800/50 border-cyan-500">
+                            <div class="image__card max-h-3xs">
+                                <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+                            </div>
+                            <div class="title__card text-bold text-4xl py-6">
+                                @treinamento.Nome
+                            </div>
+                            <div class="info__card mb-3 text-cyan-950 line-clamp-3">
+                                <span>@treinamento.Descricao</span>
+                            </div>
+                            <div class="date__card">
+                                <i class="ri-time-line"></i>
+                                <span>@treinamento.DataInicio</span>
+                            </div>
+                            <div class="progressbar">
+                                <span data-width="@treinamento.UsuariosTreinamentos?.FirstOrDefault()?.Progresso ?? 0"></span>
+                            </div>
                         </div>
-                        <div class="title__card text-bold text-4xl py-6">
-                            @treinamento.Nome
-                        </div>
-                        <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>@treinamento.Descricao</span>
-                        </div>
-                        <div class="date__card">
-                            <i class="ri-time-line"></i>
-                            <span>@treinamento.DataInicio</span>
-                        </div>
-                        <div class="progressbar">
-                            <span data-width="@treinamento.UsuariosTreinamentos?.FirstOrDefault()?.Progresso ?? 0"></span>
-                        </div>
-                    </div>   
+                    </a>
                     }   
                 </div>
                 </div>
@@ -100,22 +100,25 @@
                 </div>
                 <div class="block__content">
                     @foreach(var treinamento in @Model.listaTreinamentos){
+                    
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aulas" asp-route-idTreinamento="@treinamento.IdTreinamentos" class="block">
 
-                    <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
-                        <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+                        <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
+                            <div class="image__card max-h-3xs">
+                                <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+                            </div>
+                            <div class="title__card text-bold text-4xl py-6">
+                                @treinamento.Nome
+                            </div>
+                            <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
+                                <span>@treinamento.Descricao</span>
+                            </div>
+                            <div class="date__card">
+                                <i class="ri-time-line"></i>
+                                <span>@treinamento.DataInicio</span>
+                            </div>
                         </div>
-                        <div class="title__card text-bold text-4xl py-6">
-                            @treinamento.Nome
-                        </div>
-                        <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>@treinamento.Descricao</span>
-                        </div>
-                        <div class="date__card">
-                            <i class="ri-time-line"></i>
-                            <span>@treinamento.DataInicio</span>
-                        </div>
-                    </div>   
+                    </a>   
                     }
                 </div>
             </div>
@@ -131,21 +134,24 @@
                 </div>
                 <div class="block__content">
                     @foreach(var treinamento in @Model.listaTreinamentos){
-                    <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
-                        <div class="image__card max-h-3xs">
-                            <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+
+                    <a asp-area="" asp-controller="Usuario" asp-action="Aulas" asp-route-idTreinamento="@treinamento.IdTreinamentos" class="block">
+                        <div class="item__card w-[360px] p-5 border-solid border-1 rounded-xl">
+                            <div class="image__card max-h-3xs">
+                                <img class="rounded-xl" src="~/images/upload/treinamentos/@treinamento.Imagem" alt="">
+                            </div>
+                            <div class="title__card text-bold text-4xl py-6">
+                                @treinamento.Nome
+                            </div>
+                            <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
+                                <span>@treinamento.Descricao</span>
+                            </div>
+                            <div class="date__card">
+                                <i class="ri-time-line"></i>
+                                <span>@treinamento.DataInicio</span>
+                            </div>
                         </div>
-                        <div class="title__card text-bold text-4xl py-6">
-                            @treinamento.Nome
-                        </div>
-                        <div class="info__card mb-3 text-cyan-950 line-clamp-3 hover:">
-                            <span>@treinamento.Descricao</span>
-                        </div>
-                        <div class="date__card">
-                            <i class="ri-time-line"></i>
-                            <span>@treinamento.DataInicio</span>
-                        </div>
-                    </div>
+                    </a>
                     }
                 </div>    
             </div>
